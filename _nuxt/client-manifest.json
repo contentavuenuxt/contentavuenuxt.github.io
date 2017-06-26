@@ -2,13 +2,13 @@
   "publicPath": "/_nuxt/",
   "all": [
     "icons/icon_120.9qid3ZBUcQn.png",
-    "0.nuxt.bundle.a77aa6330776d9fe4d9f.js",
-    "2.nuxt.bundle.e510cb7b12bda091aacd.js",
-    "vendor.bundle.6e11a1538b3dc7aed1d4.js",
+    "0.nuxt.bundle.4c61d08c3bc34a8064eb.js",
+    "2.nuxt.bundle.c54ddc4210d4fb43e879.js",
+    "vendor.bundle.e8b00d1706781dffadc5.js",
     "nuxt.bundle.30d36fed0dd2823cc347.js",
-    "manifest.b426410f12c9be338fd3.js",
+    "manifest.083772f0d3dd31662232.js",
     "icons/icon_16.9qid3ZBUcQn.png",
-    "1.nuxt.bundle.cda29518b94fe697a17f.js",
+    "1.nuxt.bundle.85c43d992d336dec0b18.js",
     "icons/icon_144.9qid3ZBUcQn.png",
     "icons/icon_152.9qid3ZBUcQn.png",
     "icons/icon_192.9qid3ZBUcQn.png",
@@ -18,14 +18,14 @@
     "index.html"
   ],
   "initial": [
-    "manifest.b426410f12c9be338fd3.js",
-    "vendor.bundle.6e11a1538b3dc7aed1d4.js",
+    "manifest.083772f0d3dd31662232.js",
+    "vendor.bundle.e8b00d1706781dffadc5.js",
     "nuxt.bundle.30d36fed0dd2823cc347.js"
   ],
   "async": [
-    "0.nuxt.bundle.a77aa6330776d9fe4d9f.js",
-    "2.nuxt.bundle.e510cb7b12bda091aacd.js",
-    "1.nuxt.bundle.cda29518b94fe697a17f.js"
+    "0.nuxt.bundle.4c61d08c3bc34a8064eb.js",
+    "2.nuxt.bundle.c54ddc4210d4fb43e879.js",
+    "1.nuxt.bundle.85c43d992d336dec0b18.js"
   ],
   "modules": {
     "15665315": [
@@ -100,9 +100,6 @@
     "7fb651ab": [
       3
     ],
-    "40dcd7ce": [
-      3
-    ],
     "465e8b53": [
       3
     ],
@@ -119,6 +116,9 @@
       3
     ],
     "6471ac8a": [
+      3
+    ],
+    "40dcd7ce": [
       3
     ],
     "ef344262": [
@@ -484,9 +484,6 @@
     "72d973d9": [
       1
     ],
-    "658b5736": [
-      1
-    ],
     "31fdda34": [
       1
     ],
@@ -544,9 +541,6 @@
     "a73b0022": [
       1
     ],
-    "b7f68eca": [
-      1
-    ],
     "389518b3": [
       1
     ],
@@ -583,16 +577,16 @@
     "878b2cc6": [
       1
     ],
+    "62487f67": [
+      1
+    ],
     "eeb7b88e": [
       1
     ],
     "403a696b": [
       1
     ],
-    "032773d0": [
-      1
-    ],
-    "024792f7": [
+    "ed0accde": [
       1
     ],
     "2f38f244": [
@@ -627,6 +621,9 @@
     ],
     "691b0485": [
       7
+    ],
+    "658b5736": [
+      1
     ]
   }
 }
