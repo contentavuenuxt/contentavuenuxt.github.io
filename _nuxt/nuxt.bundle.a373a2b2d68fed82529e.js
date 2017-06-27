@@ -1,9 +1,9 @@
-webpackJsonp([4],{
+webpackJsonp([7],{
 
 /***/ 123:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(63)(true);
+exports = module.exports = __webpack_require__(49)(true);
 // imports
 
 
@@ -18,7 +18,7 @@ exports.push([module.i, ".error-page[data-v-68f3aac7]{color:#000;background:#fff
 /***/ 124:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(63)(true);
+exports = module.exports = __webpack_require__(49)(true);
 // imports
 
 
@@ -175,7 +175,7 @@ var content = __webpack_require__(123);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(65)("32b32624", content, true);
+var update = __webpack_require__(50)("32b32624", content, true);
 
 /***/ }),
 
@@ -189,7 +189,7 @@ var content = __webpack_require__(124);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(65)("151b7a09", content, true);
+var update = __webpack_require__(50)("151b7a09", content, true);
 
 /***/ }),
 
@@ -229,7 +229,7 @@ webpackEmptyContext.id = 137;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_typeof___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_typeof__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_object_keys__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_object_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_object_keys__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue__ = __webpack_require__(3);
 
@@ -308,7 +308,7 @@ function getContext(context, app) {
     payload: context.payload,
     error: context.error,
     base: '/',
-    env: { "contentaJSONAPIBaseUrl": "https://dev-contentacms.pantheonsite.io/api", "siteTitle": "UMAMI" },
+    env: { "contentaJSONAPIBaseUrl": "https://dev-contentacms.pantheonsite.io/api" },
     hotReload: context.hotReload || false
   };
   var next = context.next;
@@ -611,7 +611,7 @@ function escapeGroup(group) {
 
 /***/ }),
 
-/***/ 49:
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -662,7 +662,7 @@ var listenersKeys = ['beforeEnter', 'enter', 'afterEnter', 'enterCancelled', 'be
 
 /***/ }),
 
-/***/ 64:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 function injectStyle (ssrContext) {
@@ -695,7 +695,7 @@ module.exports = Component.exports
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_object_assign__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_object_assign__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_extends__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_extends__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise__);
@@ -706,9 +706,9 @@ module.exports = Component.exports
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_vue_meta___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_vue_meta__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__router_js__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__store_js__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_nuxt_child_js__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_nuxt_child_js__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_nuxt_link_js__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_nuxt_error_vue__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_nuxt_error_vue__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_nuxt_error_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_nuxt_error_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_nuxt_vue__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_nuxt_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_nuxt_vue__);
@@ -1587,11 +1587,23 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__index__["b" /* createApp */])
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["default"]);
 
 var _6a025582 = function _6a025582() {
-  return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 140));
+  return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 140));
 };
 
 var _59d701d5 = function _59d701d5() {
-  return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 141));
+  return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 143));
+};
+
+var _42e85d00 = function _42e85d00() {
+  return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 144));
+};
+
+var _2cc21bf2 = function _2cc21bf2() {
+  return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 142));
+};
+
+var _1ecaa598 = function _1ecaa598() {
+  return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 141));
 };
 
 var scrollBehavior = function scrollBehavior(to, from, savedPosition) {
@@ -1632,7 +1644,20 @@ function createRouter() {
     }, {
       path: "/recipes",
       component: _59d701d5,
-      name: "recipes"
+      name: "recipes",
+      children: [{
+        path: ":id?",
+        component: _42e85d00,
+        name: "recipes-id"
+      }]
+    }, {
+      path: "/recipes-latest",
+      component: _2cc21bf2,
+      name: "recipes-latest"
+    }, {
+      path: "/recipes-category/:category?",
+      component: _1ecaa598,
+      name: "recipes-category-category"
     }]
   });
 }
@@ -1786,7 +1811,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var layouts = {
 
   "_default": function _default() {
-    return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 139));
+    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 139));
   }
 
 };
@@ -1977,8 +2002,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nuxt_child__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nuxt_error_vue__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__nuxt_child__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nuxt_error_vue__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nuxt_error_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__nuxt_error_vue__);
 //
 //
