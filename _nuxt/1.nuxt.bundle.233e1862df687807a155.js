@@ -1,12 +1,12 @@
-webpackJsonp([2],Array(141).concat([
-/* 141 */
+webpackJsonp([1],Array(143).concat([
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(199),
+  __webpack_require__(200),
   /* template */
-  __webpack_require__(215),
+  __webpack_require__(209),
   /* styles */
   null,
   /* scopeId */
@@ -19,8 +19,6 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 142 */,
-/* 143 */,
 /* 144 */,
 /* 145 */,
 /* 146 */,
@@ -2432,7 +2430,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "nodes"
   }, [_c('h3', {
-    staticClass: "title is-3"
+    staticClass: "title is-3 has-text-centered"
   }, [_vm._v(_vm._s(_vm.title))]), _c('BulmaGrid', {
     attrs: {
       "items": _vm.nodes,
@@ -2512,7 +2510,8 @@ module.exports = function(module) {
 /* 196 */,
 /* 197 */,
 /* 198 */,
-/* 199 */
+/* 199 */,
+/* 200 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2547,13 +2546,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllByCategoryName(params.category, 20);
+              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllLatest(params.category, 20);
 
             case 2:
               recipes = _context.sent;
               return _context.abrupt('return', {
-                recipes: recipes,
-                categoryName: params.category
+                recipes: recipes
               });
 
             case 4:
@@ -2573,7 +2571,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 200 */,
 /* 201 */,
 /* 202 */,
 /* 203 */,
@@ -2582,13 +2579,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* 206 */,
 /* 207 */,
 /* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */
+/* 209 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2596,7 +2587,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('recipes-cards', {
     attrs: {
-      "title": _vm.categoryName,
+      "title": "Latest recipes",
       "nodes": _vm.recipes
     }
   })], 1)
