@@ -166,11 +166,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "nav-item",
     attrs: {
       "to": "/"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.displayMobileMenu = false
+      }
     }
   }, [_vm._v(" Home ")]), _c('nuxt-link', {
     staticClass: "nav-item",
     attrs: {
       "to": "/recipes"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.displayMobileMenu = false
+      }
     }
   }, [_vm._v(" Recipes ")])], 1)])])
 },staticRenderFns: []}
@@ -194,7 +204,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "app-version"
-  }, [_c('small', [_vm._v("0.0.1")])])
+  }, [_c('small', [_vm._v("0.0.2")])])
 }]}
 
 /***/ })
