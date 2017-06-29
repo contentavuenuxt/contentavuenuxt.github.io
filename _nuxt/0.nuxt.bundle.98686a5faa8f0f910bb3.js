@@ -2627,7 +2627,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   components: { RecipesAsCards: __WEBPACK_IMPORTED_MODULE_4__components_RecipesAsCards___default.a, ButtonLink: __WEBPACK_IMPORTED_MODULE_5__components_ButtonLink___default.a },
   asyncData: function () {
     var _ref = __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
-      var recipesLatest, categories, recipesByCategory, categoryIndex;
+      var recipesLatest, categories, recipesByCategory;
       return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -2650,10 +2650,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             case 8:
               recipesByCategory = _context.sent;
 
-              // put recipes in their corresponding category object
-              for (categoryIndex in categories) {
-                categories[categoryIndex].recipes = recipesByCategory[categoryIndex];
-              }
+              // put returned recipes objects in their corresponding category object
+              categories.map(function (category, index) {
+                return category.recipes = recipesByCategory[index];
+              });
               return _context.abrupt('return', { recipesLatest: recipesLatest, categories: categories });
 
             case 11:

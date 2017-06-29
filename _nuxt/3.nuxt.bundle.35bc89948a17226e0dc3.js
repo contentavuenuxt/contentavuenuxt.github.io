@@ -7,7 +7,7 @@ var Component = __webpack_require__(17)(
   /* script */
   __webpack_require__(199),
   /* template */
-  __webpack_require__(215),
+  __webpack_require__(214),
   /* styles */
   null,
   /* scopeId */
@@ -26,6 +26,11 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_AppVersion__);
+//
+//
+//
 //
 //
 //
@@ -55,7 +60,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  components: { AppVersion: __WEBPACK_IMPORTED_MODULE_0__components_AppVersion___default.a },
   data: function data() {
     return {
       displayMobileMenu: false
@@ -70,10 +77,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Navigation__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_SiteTitle__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_SiteTitle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_SiteTitle__);
 //
 //
 //
@@ -81,11 +86,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: { Navigation: __WEBPACK_IMPORTED_MODULE_0__components_Navigation___default.a, SiteTitle: __WEBPACK_IMPORTED_MODULE_1__components_SiteTitle___default.a }
+  components: { Navigation: __WEBPACK_IMPORTED_MODULE_0__components_Navigation___default.a }
 });
 
 /***/ }),
@@ -95,9 +99,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(198),
+  null,
   /* template */
-  __webpack_require__(209),
+  __webpack_require__(215),
   /* styles */
   null,
   /* scopeId */
@@ -116,9 +120,9 @@ module.exports = Component.exports
 
 var Component = __webpack_require__(17)(
   /* script */
-  null,
+  __webpack_require__(198),
   /* template */
-  __webpack_require__(212),
+  __webpack_require__(209),
   /* styles */
   null,
   /* scopeId */
@@ -140,7 +144,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('nav', {
     staticClass: "nav"
-  }, [_vm._m(0), _c('span', {
+  }, [_c('div', {
+    staticClass: "nav-left"
+  }, [_c('span', {
+    staticClass: "nav-item"
+  }, [_vm._v("\n        UMAMI food magazine\n      ")]), _c('span', {
+    staticClass: "nav-item"
+  }, [_c('AppVersion')], 1)]), _c('span', {
     staticClass: "nav-toggle",
     on: {
       "click": function($event) {
@@ -163,28 +173,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "to": "/recipes"
     }
   }, [_vm._v(" Recipes ")])], 1)])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "nav-left"
-  }, [_c('span', {
-    staticClass: "nav-item"
-  })])
-}]}
+},staticRenderFns: []}
 
 /***/ }),
 
-/***/ 212:
+/***/ 214:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "container"
-  }, [_c('h1', {
-    staticClass: "title is-1"
-  }, [_vm._v("UMAMI, food magazine")])])
-}]}
+  return _c('div', [_c('Navigation'), _c('nuxt')], 1)
+},staticRenderFns: []}
 
 /***/ }),
 
@@ -192,8 +190,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('Navigation'), _c('nuxt')], 1)
-},staticRenderFns: []}
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "app-version"
+  }, [_c('small', [_vm._v("0.0.1")])])
+}]}
 
 /***/ })
 
