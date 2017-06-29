@@ -1,4 +1,4 @@
-webpackJsonp([9],{
+webpackJsonp([8],{
 
 /***/ 123:
 /***/ (function(module, exports, __webpack_require__) {
@@ -1587,94 +1587,86 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__index__["b" /* createApp */])
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["default"]);
 
 var _6a025582 = function _6a025582() {
-		return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 140));
-};
-
-var _59d701d5 = function _59d701d5() {
-		return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 144));
+  return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, 140));
 };
 
 var _5a2e1498 = function _5a2e1498() {
-		return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 146));
-};
-
-var _42e85d00 = function _42e85d00() {
-		return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 145));
-};
-
-var _4f3246ae = function _4f3246ae() {
-		return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, 142));
+  return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 145));
 };
 
 var _2cc21bf2 = function _2cc21bf2() {
-		return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 143));
+  return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 143));
+};
+
+var _4f3246ae = function _4f3246ae() {
+  return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, 142));
 };
 
 var _1ecaa598 = function _1ecaa598() {
-		return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 141));
+  return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 141));
+};
+
+var _42e85d00 = function _42e85d00() {
+  return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 144));
 };
 
 var scrollBehavior = function scrollBehavior(to, from, savedPosition) {
-		// savedPosition is only available for popstate navigations.
-		if (savedPosition) {
-				return savedPosition;
-		} else {
-				var position = {};
-				// if no children detected
-				if (to.matched.length < 2) {
-						// scroll to the top of the page
-						position = { x: 0, y: 0 };
-				} else if (to.matched.some(function (r) {
-						return r.components.default.options.scrollToTop;
-				})) {
-						// if one of the children has scrollToTop option set to true
-						position = { x: 0, y: 0 };
-				}
-				// if link has anchor,  scroll to anchor by returning the selector
-				if (to.hash) {
-						position = { selector: to.hash };
-				}
-				return position;
-		}
+  // savedPosition is only available for popstate navigations.
+  if (savedPosition) {
+    return savedPosition;
+  } else {
+    var position = {};
+    // if no children detected
+    if (to.matched.length < 2) {
+      // scroll to the top of the page
+      position = { x: 0, y: 0 };
+    } else if (to.matched.some(function (r) {
+      return r.components.default.options.scrollToTop;
+    })) {
+      // if one of the children has scrollToTop option set to true
+      position = { x: 0, y: 0 };
+    }
+    // if link has anchor,  scroll to anchor by returning the selector
+    if (to.hash) {
+      position = { selector: to.hash };
+    }
+    return position;
+  }
 };
 
 function createRouter() {
-		return new __WEBPACK_IMPORTED_MODULE_1_vue_router__["default"]({
-				mode: 'history',
-				base: '/',
-				linkActiveClass: 'nuxt-link-active',
-				linkExactActiveClass: 'nuxt-link-exact-active',
-				scrollBehavior: scrollBehavior,
-				routes: [{
-						path: "/",
-						component: _6a025582,
-						name: "index"
-				}, {
-						path: "/recipes",
-						component: _59d701d5,
-						children: [{
-								path: "",
-								component: _5a2e1498,
-								name: "recipes"
-						}, {
-								path: ":id",
-								component: _42e85d00,
-								name: "recipes-id"
-						}]
-				}, {
-						path: "/recipes-category",
-						component: _4f3246ae,
-						name: "recipes-category"
-				}, {
-						path: "/recipes-latest",
-						component: _2cc21bf2,
-						name: "recipes-latest"
-				}, {
-						path: "/recipes-category/:category?",
-						component: _1ecaa598,
-						name: "recipes-category-category"
-				}]
-		});
+  return new __WEBPACK_IMPORTED_MODULE_1_vue_router__["default"]({
+    mode: 'history',
+    base: '/',
+    linkActiveClass: 'nuxt-link-active',
+    linkExactActiveClass: 'nuxt-link-exact-active',
+    scrollBehavior: scrollBehavior,
+    routes: [{
+      path: "/",
+      component: _6a025582,
+      name: "index"
+    }, {
+      path: "/recipes",
+      component: _5a2e1498,
+      name: "recipes"
+    }, {
+      path: "/recipes-latest",
+      component: _2cc21bf2,
+      name: "recipes-latest"
+    }, {
+      path: "/recipes-category",
+      component: _4f3246ae,
+      name: "recipes-category"
+    }, {
+      path: "/recipes-category/:category",
+      component: _1ecaa598,
+      name: "recipes-category-category"
+    }, {
+      path: "/recipes/:id",
+      component: _42e85d00,
+      name: "recipes-id"
+    }]
+  });
 }
 
 /***/ }),
@@ -1826,7 +1818,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var layouts = {
 
   "_default": function _default() {
-    return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 139));
+    return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 139));
   }
 
 };
