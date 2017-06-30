@@ -1,12 +1,12 @@
-webpackJsonp([1],Array(145).concat([
-/* 145 */
+webpackJsonp([2],Array(143).concat([
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(205),
+  __webpack_require__(204),
   /* template */
-  __webpack_require__(211),
+  __webpack_require__(215),
   /* styles */
   null,
   /* scopeId */
@@ -19,6 +19,8 @@ module.exports = Component.exports
 
 
 /***/ }),
+/* 144 */,
+/* 145 */,
 /* 146 */,
 /* 147 */,
 /* 148 */
@@ -1792,6 +1794,12 @@ var Recipes = function () {
       return findOneById;
     }()
   }, {
+    key: 'findAllCategoriesFromCache',
+    value: function findAllCategoriesFromCache() {
+      var cache = '{"data":[{"type":"categories","id":"893ac8d7-ce93-472a-8641-5122e8b01586","attributes":{"internalId":1,"name":"Main course","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/893ac8d7-ce93-472a-8641-5122e8b01586"}},{"type":"categories","id":"b2103ccf-4866-45f1-809d-870be192771f","attributes":{"internalId":2,"name":"Starter","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/b2103ccf-4866-45f1-809d-870be192771f"}},{"type":"categories","id":"d4391f2f-861e-4e00-bf0b-343da766113a","attributes":{"internalId":3,"name":"Snack","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/d4391f2f-861e-4e00-bf0b-343da766113a"}},{"type":"categories","id":"2306ef55-1562-45f3-8232-3b820a632aca","attributes":{"internalId":4,"name":"Salad","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/2306ef55-1562-45f3-8232-3b820a632aca"}}],"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories?page%5Blimit%5D=20"}}';
+      return __WEBPACK_IMPORTED_MODULE_7_jsonapi_parse___default.a.parse(JSON.parse(cache)).data;
+    }
+  }, {
     key: 'findAllCategories',
     value: function () {
       var _ref2 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2() {
@@ -2660,8 +2668,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /* 201 */,
 /* 202 */,
 /* 203 */,
-/* 204 */,
-/* 205 */
+/* 204 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2697,12 +2704,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllLatest(params.category, 20);
+              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllByCategoryName(params.category, 20);
 
             case 2:
               recipes = _context.sent;
               return _context.abrupt('return', {
-                recipes: recipes
+                recipes: recipes,
+                categoryName: params.category
               });
 
             case 4:
@@ -2722,12 +2730,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
+/* 205 */,
 /* 206 */,
 /* 207 */,
 /* 208 */,
 /* 209 */,
 /* 210 */,
-/* 211 */
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2735,9 +2748,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('h3', {
     staticClass: "title is-h3 has-text-centered"
-  }, [_vm._v(" Latest recipes ")]), _c('RecipesAsCards', {
+  }, [_vm._v(" " + _vm._s(_vm.categoryName) + " ")]), _c('RecipesAsCards', {
     attrs: {
-      "title": "Latest recipes",
       "nodes": _vm.recipes
     }
   })], 1)
