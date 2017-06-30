@@ -204,7 +204,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "app-version"
-  }, [_c('small', [_vm._v("0.0.3 - "), _c('em', [_vm._v(" with categories from cache")])])])
+  }, [_c('small', [_vm._v("0.0.3 - ")])])
 }]}
 
 /***/ })
