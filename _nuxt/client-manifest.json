@@ -1,16 +1,16 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "manifest.cb1340beb991cd044d74.js",
-    "0.nuxt.bundle.e9f48da34ea7a4647e2c.js",
-    "2.nuxt.bundle.37f0892a98c2290ca552.js",
-    "3.nuxt.bundle.5e5d2dc092882b902c73.js",
-    "4.nuxt.bundle.eaca49f7bf4748234a4a.js",
-    "5.nuxt.bundle.ac303a3243adb484e3c6.js",
-    "6.nuxt.bundle.7db01852e3d188ed6260.js",
+    "manifest.e76a899ba70ff63e3bda.js",
+    "0.nuxt.bundle.8482d2404fad14953bd2.js",
+    "2.nuxt.bundle.e7689ef145f2afbdd2cc.js",
+    "3.nuxt.bundle.f00b26c72b577bcb5007.js",
+    "4.nuxt.bundle.8c9bf933b6aa6588f105.js",
+    "5.nuxt.bundle.4fdf4fe1d5abd37ee504.js",
+    "6.nuxt.bundle.ecc0067fdc175eea6ba2.js",
     "vendor.bundle.8c053661befc6f3403ef.js",
     "nuxt.bundle.dff7e2c48ac4b1e66f84.js",
-    "1.nuxt.bundle.af0555bcdeb969d59d88.js",
+    "1.nuxt.bundle.a16009cc8ade447023ca.js",
     "icons/icon_16.9qid3ZBUcQn.png",
     "icons/icon_120.9qid3ZBUcQn.png",
     "icons/icon_144.9qid3ZBUcQn.png",
@@ -22,18 +22,18 @@
     "index.html"
   ],
   "initial": [
-    "manifest.cb1340beb991cd044d74.js",
+    "manifest.e76a899ba70ff63e3bda.js",
     "vendor.bundle.8c053661befc6f3403ef.js",
     "nuxt.bundle.dff7e2c48ac4b1e66f84.js"
   ],
   "async": [
-    "0.nuxt.bundle.e9f48da34ea7a4647e2c.js",
-    "2.nuxt.bundle.37f0892a98c2290ca552.js",
-    "3.nuxt.bundle.5e5d2dc092882b902c73.js",
-    "4.nuxt.bundle.eaca49f7bf4748234a4a.js",
-    "5.nuxt.bundle.ac303a3243adb484e3c6.js",
-    "6.nuxt.bundle.7db01852e3d188ed6260.js",
-    "1.nuxt.bundle.af0555bcdeb969d59d88.js"
+    "0.nuxt.bundle.8482d2404fad14953bd2.js",
+    "2.nuxt.bundle.e7689ef145f2afbdd2cc.js",
+    "3.nuxt.bundle.f00b26c72b577bcb5007.js",
+    "4.nuxt.bundle.8c9bf933b6aa6588f105.js",
+    "5.nuxt.bundle.4fdf4fe1d5abd37ee504.js",
+    "6.nuxt.bundle.ecc0067fdc175eea6ba2.js",
+    "1.nuxt.bundle.a16009cc8ade447023ca.js"
   ],
   "modules": {
     "15665315": [
@@ -483,11 +483,17 @@
     "853f99d8": [
       1
     ],
+    "74a89552": [
+      1
+    ],
     "25aa191a": [
       4
     ],
     "2a591f52": [
       3
+    ],
+    "e28e1b9a": [
+      1
     ],
     "575e4a54": [
       5
@@ -507,11 +513,20 @@
     "04d17bb2": [
       4
     ],
+    "7e376e7c": [
+      1
+    ],
     "2f38f244": [
       4
     ],
     "719da481": [
       3
+    ],
+    "6ff628dd": [
+      1
+    ],
+    "07541da4": [
+      1
     ],
     "0b225714": [
       9
@@ -527,6 +542,9 @@
     ],
     "5b1c3860": [
       2
+    ],
+    "f5d7afee": [
+      1
     ],
     "1ad7ec22": [
       3

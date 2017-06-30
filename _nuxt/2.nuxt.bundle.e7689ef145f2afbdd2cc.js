@@ -4,9 +4,9 @@ webpackJsonp([2],Array(143).concat([
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(204),
+  __webpack_require__(203),
   /* template */
-  __webpack_require__(215),
+  __webpack_require__(217),
   /* styles */
   null,
   /* scopeId */
@@ -2310,26 +2310,6 @@ module.exports = function(module) {
 
 /***/ }),
 /* 186 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(17)(
-  /* script */
-  __webpack_require__(188),
-  /* template */
-  __webpack_require__(197),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2380,39 +2360,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 188 */
+/* 187 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: {
-    to: {
-      type: String | Array,
-      default: '/'
-    }
-  },
-  data: function data() {
-    return {
-      isLoading: false
-    };
-  }
-});
-
-/***/ }),
-/* 189 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_BulmaCard__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_BulmaCard__ = __webpack_require__(189);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_BulmaCard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_BulmaCard__);
 //
 //
@@ -2435,25 +2388,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: { BulmaCard: __WEBPACK_IMPORTED_MODULE_0__components_BulmaCard___default.a },
   props: {
-    node: {
-      type: Object,
-      default: {}
-    }
+    recipe: { type: Object, default: function _default() {
+        return [];
+      } }
   }
 });
 
 /***/ }),
-/* 190 */
+/* 188 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ButtonLink__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ButtonLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_ButtonLink__);
 //
 //
 //
@@ -2464,18 +2414,59 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: { RecipeAsTeaser: __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser___default.a, BulmaGrid: __WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid___default.a, ButtonLink: __WEBPACK_IMPORTED_MODULE_2__components_ButtonLink___default.a },
+  components: { RecipeAsTeaser: __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser___default.a, BulmaGrid: __WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid___default.a },
   props: {
     title: { type: String, default: '' },
     moreLink: { type: String, default: '' },
-    nodes: { type: Array, default: [] }
+    recipes: { type: Array, default: function _default() {
+        return [];
+      } }
   }
 });
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(17)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(194),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(17)(
+  /* script */
+  __webpack_require__(186),
+  /* template */
+  __webpack_require__(193),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
 
 /***/ }),
 /* 191 */
@@ -2483,7 +2474,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var Component = __webpack_require__(17)(
   /* script */
-  null,
+  __webpack_require__(187),
   /* template */
   __webpack_require__(196),
   /* styles */
@@ -2503,7 +2494,7 @@ module.exports = Component.exports
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(187),
+  __webpack_require__(188),
   /* template */
   __webpack_require__(195),
   /* styles */
@@ -2519,46 +2510,6 @@ module.exports = Component.exports
 
 /***/ }),
 /* 193 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(17)(
-  /* script */
-  __webpack_require__(189),
-  /* template */
-  __webpack_require__(199),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 194 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(17)(
-  /* script */
-  __webpack_require__(190),
-  /* template */
-  __webpack_require__(198),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 195 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2578,7 +2529,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ }),
-/* 196 */
+/* 194 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2592,36 +2543,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ }),
-/* 197 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('nuxt-link', {
-    staticClass: "button more-link is-primary",
-    class: {
-      'is-loading': _vm.isLoading
-    },
-    attrs: {
-      "to": _vm.to
-    },
-    nativeOn: {
-      "click": function($event) {
-        _vm.isLoading = !_vm.isLoading
-      }
-    }
-  }, [_vm._t("default")], 2)
-},staticRenderFns: []}
-
-/***/ }),
-/* 198 */
+/* 195 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "nodes"
+    staticClass: "recipes"
   }, [_c('BulmaGrid', {
     attrs: {
-      "items": _vm.nodes,
+      "items": _vm.recipes,
       "itemsByRow": "4"
     },
     scopedSlots: _vm._u([{
@@ -2629,7 +2559,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       fn: function(props) {
         return [_c('RecipeAsTeaser', {
           attrs: {
-            "node": props.item
+            "recipe": props.item
           }
         })]
       }
@@ -2638,37 +2568,39 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ }),
-/* 199 */
+/* 196 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('nuxt-link', {
     attrs: {
-      "to": '/recipes/' + _vm.node.id
+      "to": '/recipes/' + _vm.recipe.id
     }
-  }, [_c('BulmaCard', [(_vm.node.image.thumbnail) ? _c('div', {
+  }, [_c('BulmaCard', [(_vm.recipe.image.thumbnail) ? _c('div', {
     staticClass: "thumbnail",
     slot: "image"
   }, [_c('img', {
     directives: [{
       name: "lazy",
       rawName: "v-lazy",
-      value: (_vm.node.image.thumbnail.filename),
-      expression: "node.image.thumbnail.filename"
+      value: (_vm.recipe.image.thumbnail.filename),
+      expression: "recipe.image.thumbnail.filename"
     }]
   })]) : _vm._e(), _c('div', {
     slot: "content"
   }, [_c('div', {
     staticClass: "difficulty"
-  }, [_vm._v("\n        difficulty : " + _vm._s(_vm.node.difficulty) + "\n      ")]), _c('h3', [_vm._v(_vm._s(_vm.node.title))])])])], 1)
+  }, [_vm._v("\n        difficulty : " + _vm._s(_vm.recipe.difficulty) + "\n      ")]), _c('h3', [_vm._v(_vm._s(_vm.recipe.title))])])])], 1)
 },staticRenderFns: []}
 
 /***/ }),
+/* 197 */,
+/* 198 */,
+/* 199 */,
 /* 200 */,
 /* 201 */,
 /* 202 */,
-/* 203 */,
-/* 204 */
+/* 203 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2678,7 +2610,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_Recipes__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards__);
 
 
@@ -2730,6 +2662,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
+/* 204 */,
 /* 205 */,
 /* 206 */,
 /* 207 */,
@@ -2740,7 +2673,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* 212 */,
 /* 213 */,
 /* 214 */,
-/* 215 */
+/* 215 */,
+/* 216 */,
+/* 217 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2750,7 +2685,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "title is-h3 has-text-centered"
   }, [_vm._v(" " + _vm._s(_vm.categoryName) + " ")]), _c('RecipesAsCards', {
     attrs: {
-      "nodes": _vm.recipes
+      "recipes": _vm.recipes
     }
   })], 1)
 },staticRenderFns: []}
