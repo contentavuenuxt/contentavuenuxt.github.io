@@ -1,12 +1,12 @@
-webpackJsonp([1],Array(145).concat([
-/* 145 */
+webpackJsonp([2],Array(143).concat([
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(204),
+  __webpack_require__(203),
   /* template */
-  __webpack_require__(213),
+  __webpack_require__(217),
   /* styles */
   null,
   /* scopeId */
@@ -19,6 +19,8 @@ module.exports = Component.exports
 
 
 /***/ }),
+/* 144 */,
+/* 145 */,
 /* 146 */,
 /* 147 */,
 /* 148 */
@@ -1854,7 +1856,7 @@ var Recipes = function () {
                   },
                   include: ['image', 'image.thumbnail'],
                   fields: {
-                    recipes: ['difficulty', 'image'],
+                    recipes: ['title', 'difficulty', 'image'],
                     images: ['name', 'thumbnail'],
                     files: ['filename']
                   }
@@ -1926,7 +1928,7 @@ var Recipes = function () {
                     }
                   },
                   fields: {
-                    recipes: ['difficulty', 'image'],
+                    recipes: ['title', 'difficulty', 'image'],
                     images: ['name', 'thumbnail'],
                     files: ['filename']
                   },
@@ -2598,8 +2600,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /* 200 */,
 /* 201 */,
 /* 202 */,
-/* 203 */,
-/* 204 */
+/* 203 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2635,12 +2636,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllLatest(params.category, 20);
+              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllByCategoryName(params.category, 20);
 
             case 2:
               recipes = _context.sent;
               return _context.abrupt('return', {
-                recipes: recipes
+                recipes: recipes,
+                categoryName: params.category
               });
 
             case 4:
@@ -2660,6 +2662,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
+/* 204 */,
 /* 205 */,
 /* 206 */,
 /* 207 */,
@@ -2668,7 +2671,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* 210 */,
 /* 211 */,
 /* 212 */,
-/* 213 */
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2676,9 +2683,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('h3', {
     staticClass: "title is-h3 has-text-centered"
-  }, [_vm._v(" Latest recipes ")]), _c('RecipesAsCards', {
+  }, [_vm._v(" " + _vm._s(_vm.categoryName) + " ")]), _c('RecipesAsCards', {
     attrs: {
-      "title": "Latest recipes",
       "recipes": _vm.recipes
     }
   })], 1)
