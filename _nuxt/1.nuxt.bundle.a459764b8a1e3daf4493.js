@@ -1,12 +1,12 @@
-webpackJsonp([2],Array(143).concat([
-/* 143 */
+webpackJsonp([1],Array(145).concat([
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(204),
+  __webpack_require__(205),
   /* template */
-  __webpack_require__(215),
+  __webpack_require__(211),
   /* styles */
   null,
   /* scopeId */
@@ -19,8 +19,6 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 144 */,
-/* 145 */,
 /* 146 */,
 /* 147 */,
 /* 148 */
@@ -1743,6 +1741,7 @@ var JSONAPIClient = function () {
 
 
 
+
 /**
  * Get recipes from JSON API server
  */
@@ -1847,7 +1846,12 @@ var Recipes = function () {
                   page: {
                     limit: limit
                   },
-                  include: ['image', 'image.thumbnail', 'tags']
+                  include: ['image', 'image.thumbnail'],
+                  fields: {
+                    recipes: ['difficulty', 'image'],
+                    images: ['name', 'thumbnail'],
+                    files: ['filename']
+                  }
                 };
                 _context3.next = 3;
                 return this.jsonapi.get(this.resourceUri, options);
@@ -1870,64 +1874,43 @@ var Recipes = function () {
 
       return findAllLatest;
     }()
-  }, {
-    key: 'subRequestsFromCategories',
-    value: function () {
-      var _ref4 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4(categories) {
-        var requests, index;
-        return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                requests = [];
 
-                for (index in categories) {
-                  requests.push({
-                    "requestId": index,
-                    "uri": "/api/recipes?include=category,image,image.thumbnail&filter[category.name][value]=" + encodeURI(categories[index].name) + '&page[limit]=4',
-                    "action": "view",
-                    "headers": {
-                      "Accept": "application/json",
-                      "Content-Type": "application/vnd.api+json"
-                    }
-                  });
-                }
-                return _context4.abrupt('return', __WEBPACK_IMPORTED_MODULE_5_axios___default.a.post("https://dev-contentacms.pantheonsite.io/subrequests?_format=json", requests).then(function (response) {
-                  return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__subRequestsResponseParser__["parse"])(response).map(function (r) {
-                    return __WEBPACK_IMPORTED_MODULE_7_jsonapi_parse___default.a.parse(r).data;
-                  });
-                }));
-
-              case 3:
-              case 'end':
-                return _context4.stop();
-            }
+    /*
+    async subRequestsFromCategories (categories) {
+      const requests = []
+      for (const index in categories) {
+        requests.push({
+          "requestId": index,
+          "uri": "/api/recipes?include=category,image,image.thumbnail&filter[category.name][value]=" + encodeURI(categories[index].name) + '&page[limit]=4',
+          "action": "view",
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/vnd.api+json",
           }
-        }, _callee4, this);
-      }));
-
-      function subRequestsFromCategories(_x4) {
-        return _ref4.apply(this, arguments);
+        })
       }
+      return axios.post("https://dev-contentacms.pantheonsite.io/subrequests?_format=json", requests).then(response => {
+        return parse(response).map(r => jsonapiParse.parse(r).data)
+      })
+    }
+    */
 
-      return subRequestsFromCategories;
-    }()
   }, {
     key: 'findAllByCategoryName',
     value: function () {
-      var _ref5 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee5(categoryName) {
+      var _ref4 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4(categoryName) {
         var limit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
         var options;
-        return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
+        return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
           while (1) {
-            switch (_context5.prev = _context5.next) {
+            switch (_context4.prev = _context4.next) {
               case 0:
                 options = {
                   sortCreated: {
                     path: 'created',
                     direction: 'DESC'
                   },
-                  include: ['image', 'image.thumbnail', 'tags'],
+                  include: ['image', 'image.thumbnail'],
                   filter: {
                     categoryName: {
                       condition: {
@@ -1936,27 +1919,32 @@ var Recipes = function () {
                       }
                     }
                   },
+                  fields: {
+                    recipes: ['difficulty', 'image'],
+                    images: ['name', 'thumbnail'],
+                    files: ['filename']
+                  },
                   page: {
                     offset: 0,
                     limit: limit
                   }
                 };
-                _context5.next = 3;
+                _context4.next = 3;
                 return this.jsonapi.get(this.resourceUri, options);
 
               case 3:
-                return _context5.abrupt('return', _context5.sent);
+                return _context4.abrupt('return', _context4.sent);
 
               case 4:
               case 'end':
-                return _context5.stop();
+                return _context4.stop();
             }
           }
-        }, _callee5, this);
+        }, _callee4, this);
       }));
 
-      function findAllByCategoryName(_x6) {
-        return _ref5.apply(this, arguments);
+      function findAllByCategoryName(_x5) {
+        return _ref4.apply(this, arguments);
       }
 
       return findAllByCategoryName;
@@ -2650,17 +2638,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "to": '/recipes/' + _vm.node.id
     }
-  }, [_c('BulmaCard', [(_vm.node.image) ? _c('div', {
+  }, [_c('BulmaCard', [(_vm.node.image.thumbnail) ? _c('div', {
     staticClass: "thumbnail",
     slot: "image"
-  }, [(_vm.node.image) ? _c('img', {
+  }, [_c('img', {
     directives: [{
       name: "lazy",
       rawName: "v-lazy",
       value: (_vm.node.image.thumbnail.filename),
       expression: "node.image.thumbnail.filename"
     }]
-  }) : _vm._e()]) : _vm._e(), _c('div', {
+  })]) : _vm._e(), _c('div', {
     slot: "content"
   }, [_c('div', {
     staticClass: "difficulty"
@@ -2672,7 +2660,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /* 201 */,
 /* 202 */,
 /* 203 */,
-/* 204 */
+/* 204 */,
+/* 205 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2708,13 +2697,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllByCategoryName(params.category, 20);
+              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllLatest(params.category, 20);
 
             case 2:
               recipes = _context.sent;
               return _context.abrupt('return', {
-                recipes: recipes,
-                categoryName: params.category
+                recipes: recipes
               });
 
             case 4:
@@ -2734,17 +2722,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 205 */,
 /* 206 */,
 /* 207 */,
 /* 208 */,
 /* 209 */,
 /* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */
+/* 211 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2752,8 +2735,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('h3', {
     staticClass: "title is-h3 has-text-centered"
-  }, [_vm._v(" " + _vm._s(_vm.categoryName) + " ")]), _c('RecipesAsCards', {
+  }, [_vm._v(" Latest recipes ")]), _c('RecipesAsCards', {
     attrs: {
+      "title": "Latest recipes",
       "nodes": _vm.recipes
     }
   })], 1)

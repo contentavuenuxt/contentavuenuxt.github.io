@@ -1739,6 +1739,7 @@ var JSONAPIClient = function () {
 
 
 
+
 /**
  * Get recipes from JSON API server
  */
@@ -1843,7 +1844,12 @@ var Recipes = function () {
                   page: {
                     limit: limit
                   },
-                  include: ['image', 'image.thumbnail', 'tags']
+                  include: ['image', 'image.thumbnail'],
+                  fields: {
+                    recipes: ['difficulty', 'image'],
+                    images: ['name', 'thumbnail'],
+                    files: ['filename']
+                  }
                 };
                 _context3.next = 3;
                 return this.jsonapi.get(this.resourceUri, options);
@@ -1866,64 +1872,43 @@ var Recipes = function () {
 
       return findAllLatest;
     }()
-  }, {
-    key: 'subRequestsFromCategories',
-    value: function () {
-      var _ref4 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4(categories) {
-        var requests, index;
-        return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                requests = [];
 
-                for (index in categories) {
-                  requests.push({
-                    "requestId": index,
-                    "uri": "/api/recipes?include=category,image,image.thumbnail&filter[category.name][value]=" + encodeURI(categories[index].name) + '&page[limit]=4',
-                    "action": "view",
-                    "headers": {
-                      "Accept": "application/json",
-                      "Content-Type": "application/vnd.api+json"
-                    }
-                  });
-                }
-                return _context4.abrupt('return', __WEBPACK_IMPORTED_MODULE_5_axios___default.a.post("https://dev-contentacms.pantheonsite.io/subrequests?_format=json", requests).then(function (response) {
-                  return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__subRequestsResponseParser__["parse"])(response).map(function (r) {
-                    return __WEBPACK_IMPORTED_MODULE_7_jsonapi_parse___default.a.parse(r).data;
-                  });
-                }));
-
-              case 3:
-              case 'end':
-                return _context4.stop();
-            }
+    /*
+    async subRequestsFromCategories (categories) {
+      const requests = []
+      for (const index in categories) {
+        requests.push({
+          "requestId": index,
+          "uri": "/api/recipes?include=category,image,image.thumbnail&filter[category.name][value]=" + encodeURI(categories[index].name) + '&page[limit]=4',
+          "action": "view",
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/vnd.api+json",
           }
-        }, _callee4, this);
-      }));
-
-      function subRequestsFromCategories(_x4) {
-        return _ref4.apply(this, arguments);
+        })
       }
+      return axios.post("https://dev-contentacms.pantheonsite.io/subrequests?_format=json", requests).then(response => {
+        return parse(response).map(r => jsonapiParse.parse(r).data)
+      })
+    }
+    */
 
-      return subRequestsFromCategories;
-    }()
   }, {
     key: 'findAllByCategoryName',
     value: function () {
-      var _ref5 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee5(categoryName) {
+      var _ref4 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee4(categoryName) {
         var limit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
         var options;
-        return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
+        return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
           while (1) {
-            switch (_context5.prev = _context5.next) {
+            switch (_context4.prev = _context4.next) {
               case 0:
                 options = {
                   sortCreated: {
                     path: 'created',
                     direction: 'DESC'
                   },
-                  include: ['image', 'image.thumbnail', 'tags'],
+                  include: ['image', 'image.thumbnail'],
                   filter: {
                     categoryName: {
                       condition: {
@@ -1932,27 +1917,32 @@ var Recipes = function () {
                       }
                     }
                   },
+                  fields: {
+                    recipes: ['difficulty', 'image'],
+                    images: ['name', 'thumbnail'],
+                    files: ['filename']
+                  },
                   page: {
                     offset: 0,
                     limit: limit
                   }
                 };
-                _context5.next = 3;
+                _context4.next = 3;
                 return this.jsonapi.get(this.resourceUri, options);
 
               case 3:
-                return _context5.abrupt('return', _context5.sent);
+                return _context4.abrupt('return', _context4.sent);
 
               case 4:
               case 'end':
-                return _context5.stop();
+                return _context4.stop();
             }
           }
-        }, _callee5, this);
+        }, _callee4, this);
       }));
 
-      function findAllByCategoryName(_x6) {
-        return _ref5.apply(this, arguments);
+      function findAllByCategoryName(_x5) {
+        return _ref4.apply(this, arguments);
       }
 
       return findAllByCategoryName;
@@ -2646,17 +2636,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "to": '/recipes/' + _vm.node.id
     }
-  }, [_c('BulmaCard', [(_vm.node.image) ? _c('div', {
+  }, [_c('BulmaCard', [(_vm.node.image.thumbnail) ? _c('div', {
     staticClass: "thumbnail",
     slot: "image"
-  }, [(_vm.node.image) ? _c('img', {
+  }, [_c('img', {
     directives: [{
       name: "lazy",
       rawName: "v-lazy",
       value: (_vm.node.image.thumbnail.filename),
       expression: "node.image.thumbnail.filename"
     }]
-  }) : _vm._e()]) : _vm._e(), _c('div', {
+  })]) : _vm._e(), _c('div', {
     slot: "content"
   }, [_c('div', {
     staticClass: "difficulty"
@@ -2678,13 +2668,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_Recipes__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ButtonLink__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ButtonLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_ButtonLink__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_Recipes__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_RecipesAsCards__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_RecipesAsCards___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_RecipesAsCards__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_ButtonLink__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_ButtonLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_ButtonLink__);
+
 
 
 //
@@ -2715,43 +2708,43 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   transition: 'page',
-  components: { RecipesAsCards: __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards___default.a, ButtonLink: __WEBPACK_IMPORTED_MODULE_4__components_ButtonLink___default.a },
+  components: { RecipesAsCards: __WEBPACK_IMPORTED_MODULE_4__components_RecipesAsCards___default.a, ButtonLink: __WEBPACK_IMPORTED_MODULE_5__components_ButtonLink___default.a },
   asyncData: function () {
-    var _ref = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
-      var recipesLatest, categories, recipesByCategory;
+    var _ref = __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
+      var promises, categories;
       return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              _context.next = 2;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllLatest(4);
+              promises = [];
+              categories = [];
 
-            case 2:
-              recipesLatest = _context.sent;
-              _context.next = 5;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllCategories();
+              // get latest recipes
+
+              promises.push(__WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllLatest(4));
+
+              // in paralell, get all categories and the 4 recipes for each category
+              promises.push(__WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllCategories().then(function (result) {
+                return categories = result;
+              }).then(function (categories) {
+                return __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise___default.a.all(categories.map(function (category) {
+                  return __WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllByCategoryName(category.name, 4);
+                }));
+              }).then(function (recipesByCategory) {
+                return categories.map(function (category, index) {
+                  category.recipes = recipesByCategory[index];
+                  return category;
+                });
+              }));
+
+              return _context.abrupt('return', __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise___default.a.all(promises).then(function (promisesResults) {
+                return {
+                  recipesLatest: promisesResults[0],
+                  categories: promisesResults[1]
+                };
+              }));
 
             case 5:
-              categories = _context.sent;
-              _context.next = 8;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].subRequestsFromCategories(categories);
-
-            case 8:
-              recipesByCategory = _context.sent;
-
-              // fetch  4 recipes for each category
-              /*
-              const recipesByCategory = await Promise.all(categories.map(category =>
-                Recipes.findAllByCategoryName(category.name, 4)
-              ))
-              */
-              // put returned recipes objects in their corresponding category object
-              categories.map(function (category, index) {
-                return category.recipes = recipesByCategory[index];
-              });
-              return _context.abrupt('return', { recipesLatest: recipesLatest, categories: categories });
-
-            case 11:
             case 'end':
               return _context.stop();
           }

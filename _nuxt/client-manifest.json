@@ -1,16 +1,16 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "manifest.dff42d5512a4a12e5f8a.js",
-    "0.nuxt.bundle.8afb86922b2f87f87feb.js",
-    "2.nuxt.bundle.7cac6be0c48274497e39.js",
-    "3.nuxt.bundle.3865cbe96aa10be9c73d.js",
+    "manifest.47495f3bb05b6cad9390.js",
+    "0.nuxt.bundle.82fe23ed4a102c65069a.js",
+    "2.nuxt.bundle.bc9bbf5cd7a3f8cf6001.js",
+    "3.nuxt.bundle.f718e7c6b7d090f5b67b.js",
     "4.nuxt.bundle.8f4e652555a316e4ff64.js",
     "5.nuxt.bundle.ac303a3243adb484e3c6.js",
     "6.nuxt.bundle.7db01852e3d188ed6260.js",
-    "vendor.bundle.a1c6ec22b6609c988177.js",
-    "nuxt.bundle.caf2ede03618314c915d.js",
-    "1.nuxt.bundle.e34b40395577244b7148.js",
+    "vendor.bundle.8c053661befc6f3403ef.js",
+    "nuxt.bundle.dff7e2c48ac4b1e66f84.js",
+    "1.nuxt.bundle.a459764b8a1e3daf4493.js",
     "icons/icon_16.9qid3ZBUcQn.png",
     "icons/icon_120.9qid3ZBUcQn.png",
     "icons/icon_144.9qid3ZBUcQn.png",
@@ -22,18 +22,18 @@
     "index.html"
   ],
   "initial": [
-    "manifest.dff42d5512a4a12e5f8a.js",
-    "vendor.bundle.a1c6ec22b6609c988177.js",
-    "nuxt.bundle.caf2ede03618314c915d.js"
+    "manifest.47495f3bb05b6cad9390.js",
+    "vendor.bundle.8c053661befc6f3403ef.js",
+    "nuxt.bundle.dff7e2c48ac4b1e66f84.js"
   ],
   "async": [
-    "0.nuxt.bundle.8afb86922b2f87f87feb.js",
-    "2.nuxt.bundle.7cac6be0c48274497e39.js",
-    "3.nuxt.bundle.3865cbe96aa10be9c73d.js",
+    "0.nuxt.bundle.82fe23ed4a102c65069a.js",
+    "2.nuxt.bundle.bc9bbf5cd7a3f8cf6001.js",
+    "3.nuxt.bundle.f718e7c6b7d090f5b67b.js",
     "4.nuxt.bundle.8f4e652555a316e4ff64.js",
     "5.nuxt.bundle.ac303a3243adb484e3c6.js",
     "6.nuxt.bundle.7db01852e3d188ed6260.js",
-    "1.nuxt.bundle.e34b40395577244b7148.js"
+    "1.nuxt.bundle.a459764b8a1e3daf4493.js"
   ],
   "modules": {
     "15665315": [
@@ -81,13 +81,13 @@
     "5c21445e": [
       7
     ],
+    "e4a41e94": [
+      7
+    ],
     "5d4a44e5": [
       7
     ],
     "c4911650": [
-      7
-    ],
-    "e4a41e94": [
       7
     ],
     "f7201c00": [
