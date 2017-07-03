@@ -1,13 +1,13 @@
-webpackJsonp([4],{
+webpackJsonp([5],{
 
-/***/ 141:
+/***/ 140:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
   __webpack_require__(201),
   /* template */
-  __webpack_require__(221),
+  __webpack_require__(219),
   /* styles */
   null,
   /* scopeId */
@@ -77,7 +77,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Navigation__);
 //
 //
@@ -101,7 +101,7 @@ var Component = __webpack_require__(17)(
   /* script */
   null,
   /* template */
-  __webpack_require__(222),
+  __webpack_require__(220),
   /* styles */
   null,
   /* scopeId */
@@ -115,14 +115,14 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 209:
+/***/ 208:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
   __webpack_require__(198),
   /* template */
-  __webpack_require__(215),
+  __webpack_require__(214),
   /* styles */
   null,
   /* scopeId */
@@ -136,7 +136,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 215:
+/***/ 214:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -187,7 +187,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 221:
+/***/ 219:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -196,7 +196,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 222:
+/***/ 220:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -204,7 +204,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "app-version"
-  }, [_c('small', [_vm._v("0.0.3 - ")])])
+  }, [_c('small', [_vm._v("0.0.4 ")])])
 }]}
 
 /***/ })
