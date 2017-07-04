@@ -1,7 +1,7 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "5.nuxt.bundle.3e74499512402e678017.js",
+    "5.nuxt.bundle.f71ab899029d5484c283.js",
     "img/book.d98ea2b.svg",
     "1.nuxt.bundle.254e05bb3adc8cf94c2f.js",
     "2.nuxt.bundle.32ec9f6e93ac15dd39fa.js",
@@ -12,16 +12,16 @@
     "7.nuxt.bundle.90a48fbd2e9b20368521.js",
     "vendor.bundle.d0f112723d8d23fb102d.js",
     "nuxt.bundle.40c29981a703d7a47f10.js",
-    "manifest.1fe41ade5162021b6f3f.js",
+    "manifest.a2b8a6513d0f96460821.js",
     "index.html"
   ],
   "initial": [
-    "manifest.1fe41ade5162021b6f3f.js",
+    "manifest.a2b8a6513d0f96460821.js",
     "vendor.bundle.d0f112723d8d23fb102d.js",
     "nuxt.bundle.40c29981a703d7a47f10.js"
   ],
   "async": [
-    "5.nuxt.bundle.3e74499512402e678017.js",
+    "5.nuxt.bundle.f71ab899029d5484c283.js",
     "1.nuxt.bundle.254e05bb3adc8cf94c2f.js",
     "2.nuxt.bundle.32ec9f6e93ac15dd39fa.js",
     "3.nuxt.bundle.3c80b14bd0ac3524e2f6.js",
