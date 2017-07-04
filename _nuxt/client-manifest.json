@@ -1,34 +1,34 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "5.nuxt.bundle.f71ab899029d5484c283.js",
+    "5.nuxt.bundle.c199ad3c995bb4bf5452.js",
     "img/book.d98ea2b.svg",
-    "1.nuxt.bundle.254e05bb3adc8cf94c2f.js",
-    "2.nuxt.bundle.32ec9f6e93ac15dd39fa.js",
-    "3.nuxt.bundle.3c80b14bd0ac3524e2f6.js",
-    "4.nuxt.bundle.03baa214b4600e1d39ed.js",
-    "0.nuxt.bundle.8dcce4097767eb48ac93.js",
-    "6.nuxt.bundle.02e00f617e83db7d7479.js",
-    "7.nuxt.bundle.90a48fbd2e9b20368521.js",
+    "1.nuxt.bundle.1e0ac37fba709e31beae.js",
+    "2.nuxt.bundle.e98633849ae333b12fa8.js",
+    "3.nuxt.bundle.1493907b8727eafe2916.js",
+    "4.nuxt.bundle.38d44b2758374880ec60.js",
+    "0.nuxt.bundle.24f4867e911a98e2fe07.js",
+    "6.nuxt.bundle.bfd678c7c3e31791fdeb.js",
+    "7.nuxt.bundle.0ee38b6ccc696f4aa532.js",
     "vendor.bundle.d0f112723d8d23fb102d.js",
     "nuxt.bundle.40c29981a703d7a47f10.js",
-    "manifest.a2b8a6513d0f96460821.js",
+    "manifest.61cfba7e278d2db50a03.js",
     "index.html"
   ],
   "initial": [
-    "manifest.a2b8a6513d0f96460821.js",
+    "manifest.61cfba7e278d2db50a03.js",
     "vendor.bundle.d0f112723d8d23fb102d.js",
     "nuxt.bundle.40c29981a703d7a47f10.js"
   ],
   "async": [
-    "5.nuxt.bundle.f71ab899029d5484c283.js",
-    "1.nuxt.bundle.254e05bb3adc8cf94c2f.js",
-    "2.nuxt.bundle.32ec9f6e93ac15dd39fa.js",
-    "3.nuxt.bundle.3c80b14bd0ac3524e2f6.js",
-    "4.nuxt.bundle.03baa214b4600e1d39ed.js",
-    "0.nuxt.bundle.8dcce4097767eb48ac93.js",
-    "6.nuxt.bundle.02e00f617e83db7d7479.js",
-    "7.nuxt.bundle.90a48fbd2e9b20368521.js"
+    "5.nuxt.bundle.c199ad3c995bb4bf5452.js",
+    "1.nuxt.bundle.1e0ac37fba709e31beae.js",
+    "2.nuxt.bundle.e98633849ae333b12fa8.js",
+    "3.nuxt.bundle.1493907b8727eafe2916.js",
+    "4.nuxt.bundle.38d44b2758374880ec60.js",
+    "0.nuxt.bundle.24f4867e911a98e2fe07.js",
+    "6.nuxt.bundle.bfd678c7c3e31791fdeb.js",
+    "7.nuxt.bundle.0ee38b6ccc696f4aa532.js"
   ],
   "modules": {
     "15665315": [
@@ -486,11 +486,15 @@
       6,
       1
     ],
+    "1f15446d": [
+      6,
+      1
+    ],
+    "7aed183c": [
+      2
+    ],
     "2a591f52": [
       5
-    ],
-    "d547d838": [
-      2
     ],
     "575e4a54": [
       6,
@@ -532,11 +536,15 @@
       6,
       1
     ],
+    "55dcc3fa": [
+      6,
+      1
+    ],
+    "80d174e8": [
+      2
+    ],
     "719da481": [
       5
-    ],
-    "db2c34e4": [
-      2
     ],
     "7ebd4378": [
       0
@@ -554,14 +562,18 @@
     "c53c2f98": [
       7
     ],
-    "d0b62c40": [
-      2
-    ],
     "b4fc326c": [
       8
     ],
+    "584185a2": [
+      6,
+      1
+    ],
     "5b1c3860": [
       4
+    ],
+    "f566e172": [
+      2
     ],
     "1ad7ec22": [
       5

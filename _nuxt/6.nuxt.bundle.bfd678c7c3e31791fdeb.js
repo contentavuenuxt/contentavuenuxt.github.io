@@ -1,6 +1,6 @@
-webpackJsonp([7],{
+webpackJsonp([6],{
 
-/***/ 142:
+/***/ 144:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
@@ -25,16 +25,8 @@ module.exports = Component.exports
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('section', {
-    staticClass: "content"
-  }, [_c('div', {
-    staticClass: "container"
-  }, [_c('h1', {
-    staticClass: "has-text-centered title is-1"
-  }, [_vm._v("Magazine page")])])])
-}]}
+  return _c('div', [_vm._v("\n  category index\n")])
+},staticRenderFns: []}
 
 /***/ })
 
