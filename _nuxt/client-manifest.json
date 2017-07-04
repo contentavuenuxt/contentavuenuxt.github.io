@@ -10,15 +10,15 @@
     "2.nuxt.bundle.3d157175c030f8fb15ac.js",
     "img/difficulty.67f1bc4.svg",
     "4.nuxt.bundle.a0358e45b783f82cb654.js",
-    "5.nuxt.bundle.2052383350ae7fe39852.js",
+    "5.nuxt.bundle.f3b99525953bbca22055.js",
     "6.nuxt.bundle.4b11f680cd81a3f7a08f.js",
     "vendor.bundle.f8e7aa830fb23210a2b0.js",
     "nuxt.bundle.854dbc8f1ffc31ab8e22.js",
-    "manifest.de6b9966da6bbdf76cb2.js",
+    "manifest.2f3d1ffda90c76354102.js",
     "index.html"
   ],
   "initial": [
-    "manifest.de6b9966da6bbdf76cb2.js",
+    "manifest.2f3d1ffda90c76354102.js",
     "vendor.bundle.f8e7aa830fb23210a2b0.js",
     "nuxt.bundle.854dbc8f1ffc31ab8e22.js"
   ],
@@ -28,7 +28,7 @@
     "1.nuxt.bundle.53b469dbfa72196abc8c.js",
     "2.nuxt.bundle.3d157175c030f8fb15ac.js",
     "4.nuxt.bundle.a0358e45b783f82cb654.js",
-    "5.nuxt.bundle.2052383350ae7fe39852.js",
+    "5.nuxt.bundle.f3b99525953bbca22055.js",
     "6.nuxt.bundle.4b11f680cd81a3f7a08f.js"
   ],
   "modules": {
