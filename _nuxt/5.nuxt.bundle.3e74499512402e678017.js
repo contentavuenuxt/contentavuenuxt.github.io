@@ -5,9 +5,9 @@ webpackJsonp([5],{
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(201),
+  __webpack_require__(203),
   /* template */
-  __webpack_require__(223),
+  __webpack_require__(228),
   /* styles */
   null,
   /* scopeId */
@@ -21,13 +21,14 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_AppVersion__);
+//
 //
 //
 //
@@ -72,13 +73,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 201:
+/***/ 203:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Navigation__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppNavigation__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppNavigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_AppNavigation__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_AppFooter__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_AppFooter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_AppFooter__);
 //
 //
 //
@@ -87,14 +90,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: { Navigation: __WEBPACK_IMPORTED_MODULE_0__components_Navigation___default.a }
+  components: { AppNavigation: __WEBPACK_IMPORTED_MODULE_0__components_AppNavigation___default.a, AppFooter: __WEBPACK_IMPORTED_MODULE_1__components_AppFooter___default.a }
 });
 
 /***/ }),
@@ -102,32 +102,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ 209:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(17)(
-  /* script */
-  null,
-  /* template */
-  __webpack_require__(224),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
+exports = module.exports = __webpack_require__(47)(true);
+// imports
 
-module.exports = Component.exports
+
+// module
+exports.push([module.i, "", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"AppNavigation.vue","sourceRoot":""}]);
+
+// exports
 
 
 /***/ }),
 
-/***/ 211:
+/***/ 212:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(198),
+  null,
   /* template */
-  __webpack_require__(217),
+  __webpack_require__(230),
   /* styles */
   null,
   /* scopeId */
@@ -141,7 +135,52 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 217:
+/***/ 213:
+/***/ (function(module, exports, __webpack_require__) {
+
+function injectStyle (ssrContext) {
+  __webpack_require__(232)
+}
+var Component = __webpack_require__(17)(
+  /* script */
+  __webpack_require__(199),
+  /* template */
+  __webpack_require__(218),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 214:
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(17)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(229),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 218:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -187,20 +226,54 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.displayMobileMenu = false
       }
     }
-  }, [_vm._v(" Recipes ")])], 1)])])
+  }, [_vm._v(" Recipes ")]), _c('nuxt-link', {
+    staticClass: "nav-item",
+    attrs: {
+      "to": "/magazine"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.displayMobileMenu = false
+      }
+    }
+  }, [_vm._v(" Magazine ")])], 1)])])
 },staticRenderFns: []}
 
 /***/ }),
 
-/***/ 223:
+/***/ 228:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('Navigation'), _c('nuxt'), _vm._m(0)], 1)
+  return _c('div', [_c('AppNavigation'), _c('nuxt'), _c('AppFooter')], 1)
+},staticRenderFns: []}
+
+/***/ }),
+
+/***/ 229:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: "app-version"
+  }, [_c('small', [_vm._v("0.0.4 ")])])
+}]}
+
+/***/ }),
+
+/***/ 230:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', {
+    staticClass: "footer"
+  }, [_c('div', {
     staticClass: "has-text-centered"
-  }, [_vm._v("Icons made by\n    "), _c('a', {
+  }, [_vm._v("\n    Icons made by\n    "), _c('a', {
     attrs: {
       "href": "http://www.flaticon.com/authors/pixel-perfect",
       "title": "Pixel perfect"
@@ -216,21 +289,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "title": "Creative Commons BY 3.0",
       "target": "_blank"
     }
-  }, [_vm._v("CC 3.0 BY")])])
+  }, [_vm._v("CC 3.0 BY")])])])
 }]}
 
 /***/ }),
 
-/***/ 224:
-/***/ (function(module, exports) {
+/***/ 232:
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "app-version"
-  }, [_c('small', [_vm._v("0.0.4 ")])])
-}]}
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(209);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(48)("55060086", content, true);
 
 /***/ })
 
