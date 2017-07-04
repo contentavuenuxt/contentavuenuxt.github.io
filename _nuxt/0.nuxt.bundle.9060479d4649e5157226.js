@@ -1,12 +1,12 @@
-webpackJsonp([3],Array(142).concat([
-/* 142 */
+webpackJsonp([0],Array(141).concat([
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(203),
+  __webpack_require__(202),
   /* template */
-  __webpack_require__(216),
+  __webpack_require__(222),
   /* styles */
   null,
   /* scopeId */
@@ -19,6 +19,7 @@ module.exports = Component.exports
 
 
 /***/ }),
+/* 142 */,
 /* 143 */,
 /* 144 */,
 /* 145 */,
@@ -1821,6 +1822,34 @@ var Recipes = function () {
 
       return findOneById;
     }()
+
+    /**
+     * Promoted recipes sorted by created DESC
+     * @param {int} limit 
+     */
+
+  }, {
+    key: 'findAllPromoted',
+    value: function findAllPromoted() {
+      var limit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 4;
+
+      var options = {
+        page: { limit: limit },
+        filter: {
+          isPromoted: {
+            path: 'isPromoted',
+            value: 1
+          }
+        },
+        include: ['image', 'image.thumbnail'],
+        fields: {
+          recipes: ['title', 'difficulty', 'image'],
+          images: ['name', 'thumbnail'],
+          files: ['filename']
+        },
+        sort: '-created'
+      };
+    }
   }, {
     key: 'findAllCategoriesFromCache',
     value: function findAllCategoriesFromCache() {
@@ -1991,7 +2020,7 @@ var Recipes = function () {
         }, _callee5, this);
       }));
 
-      function findAllByCategoryName(_x6) {
+      function findAllByCategoryName(_x7) {
         return _ref5.apply(this, arguments);
       }
 
@@ -2447,6 +2476,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: { RecipeAsTeaser: __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser___default.a, BulmaGrid: __WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid___default.a },
   props: {
+    cardsByRow: { type: Number, default: 4 },
     title: { type: String, default: '' },
     moreLink: { type: String, default: '' },
     recipes: { type: Array, default: function _default() {
@@ -2579,7 +2609,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('BulmaGrid', {
     attrs: {
       "items": _vm.recipes,
-      "itemsByRow": "4"
+      "itemsByRow": _vm.cardsByRow
     },
     scopedSlots: _vm._u([{
       key: "default",
@@ -2621,15 +2651,79 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ }),
-/* 195 */,
-/* 196 */,
-/* 197 */,
+/* 195 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    to: {
+      type: String | Array,
+      default: '/'
+    }
+  },
+  data: function data() {
+    return {
+      isLoading: false
+    };
+  }
+});
+
+/***/ }),
+/* 196 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(17)(
+  /* script */
+  __webpack_require__(195),
+  /* template */
+  __webpack_require__(197),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 197 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('nuxt-link', {
+    staticClass: "button more-link is-primary",
+    class: {
+      'is-loading': _vm.isLoading
+    },
+    attrs: {
+      "to": _vm.to
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.isLoading = !_vm.isLoading
+      }
+    }
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+
+/***/ }),
 /* 198 */,
 /* 199 */,
 /* 200 */,
 /* 201 */,
-/* 202 */,
-/* 203 */
+/* 202 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2641,6 +2735,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_Recipes__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ButtonLink__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ButtonLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_ButtonLink__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_MonthEdition__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_MonthEdition___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_MonthEdition__);
 
 
 //
@@ -2650,12 +2748,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   transition: 'page',
-  components: { RecipesAsCards: __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards___default.a },
+  components: { RecipesAsCards: __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards___default.a, MonthEdition: __WEBPACK_IMPORTED_MODULE_5__components_MonthEdition___default.a },
   asyncData: function () {
     var _ref2 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(_ref) {
       var params = _ref.params;
@@ -2665,13 +2781,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllByCategoryName(params.category, 20);
+              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllLatest(4);
 
             case 2:
               recipes = _context.sent;
               return _context.abrupt('return', {
-                recipes: recipes,
-                categoryName: params.category
+                recipes: recipes
               });
 
             case 4:
@@ -2691,32 +2806,132 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
+/* 203 */,
 /* 204 */,
 /* 205 */,
 /* 206 */,
-/* 207 */,
-/* 208 */,
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(47)(true);
+// imports
+
+
+// module
+exports.push([module.i, "#book{max-height:40vh}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contenta_vue/components/MonthEdition.vue"],"names":[],"mappings":"AACA,MACE,eAAe,CAChB","file":"MonthEdition.vue","sourcesContent":["\n#book {\n  max-height:40vh\n}\n"],"sourceRoot":""}]);
+
+// exports
+
+
+/***/ }),
+/* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/book.d98ea2b.svg";
+
+/***/ }),
 /* 209 */,
-/* 210 */,
+/* 210 */
+/***/ (function(module, exports, __webpack_require__) {
+
+function injectStyle (ssrContext) {
+  __webpack_require__(226)
+}
+var Component = __webpack_require__(17)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(214),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
 /* 211 */,
 /* 212 */,
 /* 213 */,
-/* 214 */,
+/* 214 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', {
+    staticClass: "month-edition"
+  }, [_c('div', {
+    staticClass: "columns"
+  }, [_c('div', {
+    staticClass: "column"
+  }, [_c('img', {
+    attrs: {
+      "id": "book",
+      "src": __webpack_require__(208)
+    }
+  })]), _c('div', {
+    staticClass: "column"
+  }, [_c('h3', {
+    staticClass: "title is-3"
+  }, [_vm._v("In this month's edition")]), _c('p', [_vm._v("\n        Dumque ibi diu moratur commeatus opperiens, quorum translationem ex Aquitania verni imbres solito crebriores prohibebant auctique torrentes, Herculanus advenit protector domesticus, Hermogenis ex magistro equitum filius, apud Constantinopolim, ut supra rettulimus, populari quondam turbela discerpti. quo verissime referente quae Gallus egerat, damnis super praeteritis maerens et futurorum timore suspensus angorem animi quam diu potuit emendabat.\n      ")])])])])
+}]}
+
+/***/ }),
 /* 215 */,
-/* 216 */
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return _c('div', [_vm._m(0), _c('MonthEdition'), _c('div', {
     staticClass: "container"
   }, [_c('h3', {
-    staticClass: "title is-h3 has-text-centered"
-  }, [_vm._v(" " + _vm._s(_vm.categoryName) + " ")]), _c('RecipesAsCards', {
+    staticClass: "title is-3 has-text-centered"
+  }, [_vm._v("Recipes")]), _c('h4', {
+    staticClass: "title is-4 has-text-centered"
+  }, [_vm._v("Explore recipes across every type of occasion, ingredient and skill level")]), _c('recipesAsCards', {
     attrs: {
-      "recipes": _vm.recipes
+      "recipes": _vm.recipes,
+      "cardsByRow": "2"
     }
-  })], 1)
-},staticRenderFns: []}
+  })], 1)], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', {
+    staticClass: "hero is-primary"
+  }, [_c('div', {
+    staticClass: "hero-body"
+  }, [_c('div', {
+    staticClass: "container"
+  }, [_c('h1', {
+    staticClass: "title"
+  }, [_vm._v("\n          UMAMI FOOD MAGAZINE\n        ")])])])])
+}]}
+
+/***/ }),
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(207);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(48)("451efa47", content, true);
 
 /***/ })
 ]));

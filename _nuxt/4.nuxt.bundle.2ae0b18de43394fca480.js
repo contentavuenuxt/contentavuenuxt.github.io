@@ -7,7 +7,7 @@ var Component = __webpack_require__(17)(
   /* script */
   __webpack_require__(205),
   /* template */
-  __webpack_require__(213),
+  __webpack_require__(216),
   /* styles */
   null,
   /* scopeId */
@@ -1848,6 +1848,34 @@ var Recipes = function () {
 
       return findOneById;
     }()
+
+    /**
+     * Promoted recipes sorted by created DESC
+     * @param {int} limit 
+     */
+
+  }, {
+    key: 'findAllPromoted',
+    value: function findAllPromoted() {
+      var limit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 4;
+
+      var options = {
+        page: { limit: limit },
+        filter: {
+          isPromoted: {
+            path: 'isPromoted',
+            value: 1
+          }
+        },
+        include: ['image', 'image.thumbnail'],
+        fields: {
+          recipes: ['title', 'difficulty', 'image'],
+          images: ['name', 'thumbnail'],
+          files: ['filename']
+        },
+        sort: '-created'
+      };
+    }
   }, {
     key: 'findAllCategoriesFromCache',
     value: function findAllCategoriesFromCache() {
@@ -2018,7 +2046,7 @@ var Recipes = function () {
         }, _callee5, this);
       }));
 
-      function findAllByCategoryName(_x6) {
+      function findAllByCategoryName(_x7) {
         return _ref5.apply(this, arguments);
       }
 
@@ -2443,7 +2471,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_Recipes__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail__);
 
 
@@ -2490,14 +2518,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 209:
+/***/ 212:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
   __webpack_require__(199),
   /* template */
-  __webpack_require__(217),
+  __webpack_require__(221),
   /* styles */
   null,
   /* scopeId */
@@ -2511,7 +2539,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 213:
+/***/ 216:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2524,7 +2552,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 217:
+/***/ 221:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

@@ -7,7 +7,7 @@ var Component = __webpack_require__(17)(
   /* script */
   __webpack_require__(201),
   /* template */
-  __webpack_require__(219),
+  __webpack_require__(223),
   /* styles */
   null,
   /* scopeId */
@@ -26,7 +26,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_AppVersion__);
 //
 //
@@ -77,8 +77,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Navigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Navigation__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -94,14 +99,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 207:
+/***/ 209:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
   null,
   /* template */
-  __webpack_require__(220),
+  __webpack_require__(224),
   /* styles */
   null,
   /* scopeId */
@@ -115,14 +120,14 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 208:
+/***/ 211:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
   __webpack_require__(198),
   /* template */
-  __webpack_require__(214),
+  __webpack_require__(217),
   /* styles */
   null,
   /* scopeId */
@@ -136,7 +141,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 214:
+/***/ 217:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -187,16 +192,36 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 219:
+/***/ 223:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('Navigation'), _c('nuxt')], 1)
-},staticRenderFns: []}
+  return _c('div', [_c('Navigation'), _c('nuxt'), _vm._m(0)], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "has-text-centered"
+  }, [_vm._v("Icons made by\n    "), _c('a', {
+    attrs: {
+      "href": "http://www.flaticon.com/authors/pixel-perfect",
+      "title": "Pixel perfect"
+    }
+  }, [_vm._v("Pixel perfect")]), _vm._v(" from\n    "), _c('a', {
+    attrs: {
+      "href": "http://www.flaticon.com",
+      "title": "Flaticon"
+    }
+  }, [_vm._v("www.flaticon.com")]), _vm._v(" is licensed by\n    "), _c('a', {
+    attrs: {
+      "href": "http://creativecommons.org/licenses/by/3.0/",
+      "title": "Creative Commons BY 3.0",
+      "target": "_blank"
+    }
+  }, [_vm._v("CC 3.0 BY")])])
+}]}
 
 /***/ }),
 
-/***/ 220:
+/***/ 224:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;

@@ -6,7 +6,7 @@ var Component = __webpack_require__(17)(
   /* script */
   __webpack_require__(204),
   /* template */
-  __webpack_require__(212),
+  __webpack_require__(215),
   /* styles */
   null,
   /* scopeId */
@@ -1819,6 +1819,34 @@ var Recipes = function () {
 
       return findOneById;
     }()
+
+    /**
+     * Promoted recipes sorted by created DESC
+     * @param {int} limit 
+     */
+
+  }, {
+    key: 'findAllPromoted',
+    value: function findAllPromoted() {
+      var limit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 4;
+
+      var options = {
+        page: { limit: limit },
+        filter: {
+          isPromoted: {
+            path: 'isPromoted',
+            value: 1
+          }
+        },
+        include: ['image', 'image.thumbnail'],
+        fields: {
+          recipes: ['title', 'difficulty', 'image'],
+          images: ['name', 'thumbnail'],
+          files: ['filename']
+        },
+        sort: '-created'
+      };
+    }
   }, {
     key: 'findAllCategoriesFromCache',
     value: function findAllCategoriesFromCache() {
@@ -1989,7 +2017,7 @@ var Recipes = function () {
         }, _callee5, this);
       }));
 
-      function findAllByCategoryName(_x6) {
+      function findAllByCategoryName(_x7) {
         return _ref5.apply(this, arguments);
       }
 
@@ -2445,6 +2473,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: { RecipeAsTeaser: __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser___default.a, BulmaGrid: __WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid___default.a },
   props: {
+    cardsByRow: { type: Number, default: 4 },
     title: { type: String, default: '' },
     moreLink: { type: String, default: '' },
     recipes: { type: Array, default: function _default() {
@@ -2577,7 +2606,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('BulmaGrid', {
     attrs: {
       "items": _vm.recipes,
-      "itemsByRow": "4"
+      "itemsByRow": _vm.cardsByRow
     },
     scopedSlots: _vm._u([{
       key: "default",
@@ -2696,7 +2725,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* 209 */,
 /* 210 */,
 /* 211 */,
-/* 212 */
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
