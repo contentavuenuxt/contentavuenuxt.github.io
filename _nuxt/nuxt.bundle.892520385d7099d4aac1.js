@@ -1818,7 +1818,7 @@ var layouts = {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  head: { "link": [{ "rel": "stylesheet", "type": "text/css", "href": "/css/bulma.css" }, { "rel": "stylesheet", "type": "text/css", "href": "/css/app.css" }], "meta": [], "style": [], "script": [] },
+  head: { "meta": [{ "name": "viewport", "content": "width=device-width, user-scalable=no" }], "link": [{ "rel": "stylesheet", "type": "text/css", "href": "/css/bulma.css" }, { "rel": "stylesheet", "type": "text/css", "href": "/css/app.css" }], "style": [], "script": [] },
   data: function data() {
     return {
       layout: null,
