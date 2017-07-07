@@ -1921,9 +1921,14 @@ module.exports = function spread(callback) {
  *        path: 'created',
  *      }
  *    },
- *    include: ['tags'],   
+ *    include: 'tags,image',
+ *    fields: {
+ *       images:title,filename,
+ *       recipes:title, description
+ *    }
  *  }
- *  const datas = await this.jsonapi.get('/recipes', queryParams)
+ *  const jsonapi = new JSONAPIClient(http://mydomain)
+ *  const datas = await jsonapi.get('recipes', queryParams)
  * 
  */
 
@@ -2041,7 +2046,7 @@ var Recipes = function () {
             switch (_context.prev = _context.next) {
               case 0:
                 options = {
-                  include: ['image'].join(',')
+                  include: 'image'
                 };
                 _context.next = 3;
                 return this.api.get('recipes', options, id);
@@ -2087,11 +2092,11 @@ var Recipes = function () {
                       value: 1
                     }
                   },
-                  include: "image,image.thumbnail",
+                  include: 'image,image.thumbnail',
                   fields: {
-                    recipes: "title,difficulty,image",
-                    images: "name,thumbnail",
-                    files: "filename"
+                    recipes: 'title,difficulty,image',
+                    images: 'name,thumbnail',
+                    files: 'filename'
                   },
                   sort: '-created'
                 };
@@ -2169,11 +2174,11 @@ var Recipes = function () {
                 options = {
                   sort: '-created',
                   page: { limit: limit },
-                  include: ['image', 'image.thumbnail'].join(','),
+                  include: 'image,image.thumbnail',
                   fields: {
-                    recipes: ['title', 'difficulty', 'image'].join(','),
-                    images: ['name', 'thumbnail'].join(','),
-                    files: ['filename'].join(',')
+                    recipes: 'title,difficulty,image',
+                    images: 'name,thumbnail',
+                    files: 'filename'
                   }
                 };
                 return _context4.abrupt('return', this.api.get('recipes', options));
@@ -2197,7 +2202,7 @@ var Recipes = function () {
     value: function () {
       var _ref5 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee5() {
         var limit = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 4;
-        var options, datas;
+        var options;
         return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
@@ -2212,21 +2217,20 @@ var Recipes = function () {
                   page: {
                     limit: limit
                   },
-                  include: ['image', 'image.thumbnail'].join(','),
+                  include: 'image, image.thumbnail',
                   fields: {
-                    recipes: ['title', 'difficulty', 'image'].join(','),
-                    images: ['name', 'thumbnail'].join(','),
-                    files: ['filename'].join(',')
+                    recipes: 'title,difficulty,image',
+                    images: 'name,thumbnail',
+                    files: 'filename'
                   }
                 };
                 _context5.next = 3;
                 return this.api.get(this.resourceUri, options);
 
               case 3:
-                datas = _context5.sent;
-                return _context5.abrupt('return', datas);
+                return _context5.abrupt('return', _context5.sent);
 
-              case 5:
+              case 4:
               case 'end':
                 return _context5.stop();
             }
@@ -2262,9 +2266,9 @@ var Recipes = function () {
                     }
                   },
                   fields: {
-                    recipes: ['title', 'difficulty', 'image'].join(','),
-                    images: ['name', 'thumbnail'].join(','),
-                    files: ['filename'].join(',')
+                    recipes: 'title,difficulty,image',
+                    images: 'name,thumbnail',
+                    files: 'filename'
                   },
                   page: {
                     offset: 0,
