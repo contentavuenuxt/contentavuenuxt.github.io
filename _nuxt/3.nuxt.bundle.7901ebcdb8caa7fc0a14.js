@@ -1,13 +1,12 @@
-webpackJsonp([4],{
-
-/***/ 145:
+webpackJsonp([3],Array(142).concat([
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(213),
+  __webpack_require__(223),
   /* template */
-  __webpack_require__(232),
+  __webpack_require__(247),
   /* styles */
   null,
   /* scopeId */
@@ -20,15 +19,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-
-/***/ 147:
+/* 143 */,
+/* 144 */,
+/* 145 */,
+/* 146 */,
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var bind = __webpack_require__(154);
-var isBuffer = __webpack_require__(181);
+var bind = __webpack_require__(155);
+var isBuffer = __webpack_require__(185);
 
 /*global toString:true*/
 
@@ -331,15 +333,33 @@ module.exports = {
 
 
 /***/ }),
+/* 148 */
+/***/ (function(module, exports) {
 
-/***/ 148:
+// Store the HTTP methods here.
+module.exports = {
+  get: 'get',
+  patch: 'patch',
+  post: 'post',
+  delete: 'delete'
+};
+
+
+/***/ }),
+/* 149 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(163);
+
+/***/ }),
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(147);
-var normalizeHeaderName = __webpack_require__(172);
+var normalizeHeaderName = __webpack_require__(177);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -355,10 +375,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(150);
+    adapter = __webpack_require__(151);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(150);
+    adapter = __webpack_require__(151);
   }
   return adapter;
 }
@@ -429,30 +449,22 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(182)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(186)))
 
 /***/ }),
-
-/***/ 149:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(158);
-
-/***/ }),
-
-/***/ 150:
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(147);
-var settle = __webpack_require__(164);
-var buildURL = __webpack_require__(167);
-var parseHeaders = __webpack_require__(173);
-var isURLSameOrigin = __webpack_require__(171);
-var createError = __webpack_require__(153);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(166);
+var settle = __webpack_require__(169);
+var buildURL = __webpack_require__(172);
+var parseHeaders = __webpack_require__(178);
+var isURLSameOrigin = __webpack_require__(176);
+var createError = __webpack_require__(154);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(171);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -549,7 +561,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(169);
+      var cookies = __webpack_require__(174);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -627,8 +639,7 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-
-/***/ 151:
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -654,8 +665,7 @@ module.exports = Cancel;
 
 
 /***/ }),
-
-/***/ 152:
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -667,14 +677,13 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-
-/***/ 153:
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var enhanceError = __webpack_require__(163);
+var enhanceError = __webpack_require__(168);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -693,8 +702,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-
-/***/ 154:
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -712,8 +720,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-
-/***/ 155:
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -728,8 +735,7 @@ exports.default = function (instance, Constructor) {
 };
 
 /***/ }),
-
-/***/ 156:
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -737,7 +743,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(177);
+var _defineProperty = __webpack_require__(182);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -762,25 +768,295 @@ exports.default = function () {
 }();
 
 /***/ }),
-
-/***/ 157:
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {!function(t,n){function r(t){var n,r,o={};return p(t.included,function(t){var n=t.type+"-"+t.id;o[n]=t}),i(t.data)?n=s(t.data,function(t){return e(t,o),a(t)}):c(t.data)&&(e(t.data,o),n=a(t.data)),r={data:n,jsonapi:t.jsonapi||{}},t.meta&&(r.meta=t.meta),t.errors&&(r.errors=t.errors),r}function e(t,n,r){t.relationships&&(r=r?r.concat([t]):[t]),p(t.relationships,function(e,a){e.data&&(i(e.data)?t.attributes[a]=s(e.data,function(t){return o(t,n,r)}):t.attributes[a]=o(e.data,n,r))})}function o(t,n,r){var o,i;if(o=l(r,{id:t.id,type:t.type}))return t;var u=t.type+"-"+t.id;return(i=n[u])?(e(i,n,r),a(i)):t}function a(t){return j({},{links:t.links},t.attributes,{id:t.id})}function i(t){return"[object Array]"===Object.prototype.toString.call(t)}function u(t){return"[object String]"===Object.prototype.toString.call(t)}function c(t){return"[object Object]"===Object.prototype.toString.call(t)}function f(t){return t===n}function p(t,n){var r;if(i(t))for(r=0;r<t.length;r+=1)n(t[r],r);else if(c(t))for(r in t)Object.prototype.hasOwnProperty.call(t,r)&&n(t[r],r)}function s(t,n){var r=[];return p(t,function(t,e){r.push(n(t,e))}),r}function d(t){var n=!0;return p(t,function(t){t!==!0&&(n=!1)}),n}function l(t,n){var r;return p(t,function(t){var e=s(n,function(n,r){return t[r]===n});d(e)&&(r=t)}),r}function j(){var t=Object(null),n=Array.prototype.slice.call(arguments);return p(n,function(n){p(n,function(n,r){t[r]=n})}),t}var y=t.jsonapi||(t.jsonapi={});y.parse=function(n){var e,o;if(u(n))try{e=t.JSON.parse(n)}catch(a){if("SyntaxError"===a.name)return n;throw a}else{if(!c(n))return n;e=n}return f(e.data)&&f(e.errors)&&f(e.meta)?e:e.jsonapi&&e.jsonapi.parsed?e:(o=r(e),o.jsonapi.parsed=!0,o)}, true?c(module)&&c(module.exports)&&(exports=module.exports=y):t.jsonapi=y}("undefined"==typeof window?this:window);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(183)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(195)(module)))
 
 /***/ }),
+/* 159 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 158:
+"use strict";
+
+
+var replace = String.prototype.replace;
+var percentTwenties = /%20/g;
+
+module.exports = {
+    'default': 'RFC3986',
+    formatters: {
+        RFC1738: function (value) {
+            return replace.call(value, percentTwenties, '+');
+        },
+        RFC3986: function (value) {
+            return value;
+        }
+    },
+    RFC1738: 'RFC1738',
+    RFC3986: 'RFC3986'
+};
+
+
+/***/ }),
+/* 160 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var stringify = __webpack_require__(188);
+var parse = __webpack_require__(187);
+var formats = __webpack_require__(159);
+
+module.exports = {
+    formats: formats,
+    parse: parse,
+    stringify: stringify
+};
+
+
+/***/ }),
+/* 161 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var has = Object.prototype.hasOwnProperty;
+
+var hexTable = (function () {
+    var array = [];
+    for (var i = 0; i < 256; ++i) {
+        array.push('%' + ((i < 16 ? '0' : '') + i.toString(16)).toUpperCase());
+    }
+
+    return array;
+}());
+
+exports.arrayToObject = function (source, options) {
+    var obj = options && options.plainObjects ? Object.create(null) : {};
+    for (var i = 0; i < source.length; ++i) {
+        if (typeof source[i] !== 'undefined') {
+            obj[i] = source[i];
+        }
+    }
+
+    return obj;
+};
+
+exports.merge = function (target, source, options) {
+    if (!source) {
+        return target;
+    }
+
+    if (typeof source !== 'object') {
+        if (Array.isArray(target)) {
+            target.push(source);
+        } else if (typeof target === 'object') {
+            if (options.plainObjects || options.allowPrototypes || !has.call(Object.prototype, source)) {
+                target[source] = true;
+            }
+        } else {
+            return [target, source];
+        }
+
+        return target;
+    }
+
+    if (typeof target !== 'object') {
+        return [target].concat(source);
+    }
+
+    var mergeTarget = target;
+    if (Array.isArray(target) && !Array.isArray(source)) {
+        mergeTarget = exports.arrayToObject(target, options);
+    }
+
+    if (Array.isArray(target) && Array.isArray(source)) {
+        source.forEach(function (item, i) {
+            if (has.call(target, i)) {
+                if (target[i] && typeof target[i] === 'object') {
+                    target[i] = exports.merge(target[i], item, options);
+                } else {
+                    target.push(item);
+                }
+            } else {
+                target[i] = item;
+            }
+        });
+        return target;
+    }
+
+    return Object.keys(source).reduce(function (acc, key) {
+        var value = source[key];
+
+        if (Object.prototype.hasOwnProperty.call(acc, key)) {
+            acc[key] = exports.merge(acc[key], value, options);
+        } else {
+            acc[key] = value;
+        }
+        return acc;
+    }, mergeTarget);
+};
+
+exports.decode = function (str) {
+    try {
+        return decodeURIComponent(str.replace(/\+/g, ' '));
+    } catch (e) {
+        return str;
+    }
+};
+
+exports.encode = function (str) {
+    // This code was originally written by Brian White (mscdex) for the io.js core querystring library.
+    // It has been adapted here for stricter adherence to RFC 3986
+    if (str.length === 0) {
+        return str;
+    }
+
+    var string = typeof str === 'string' ? str : String(str);
+
+    var out = '';
+    for (var i = 0; i < string.length; ++i) {
+        var c = string.charCodeAt(i);
+
+        if (
+            c === 0x2D || // -
+            c === 0x2E || // .
+            c === 0x5F || // _
+            c === 0x7E || // ~
+            (c >= 0x30 && c <= 0x39) || // 0-9
+            (c >= 0x41 && c <= 0x5A) || // a-z
+            (c >= 0x61 && c <= 0x7A) // A-Z
+        ) {
+            out += string.charAt(i);
+            continue;
+        }
+
+        if (c < 0x80) {
+            out = out + hexTable[c];
+            continue;
+        }
+
+        if (c < 0x800) {
+            out = out + (hexTable[0xC0 | (c >> 6)] + hexTable[0x80 | (c & 0x3F)]);
+            continue;
+        }
+
+        if (c < 0xD800 || c >= 0xE000) {
+            out = out + (hexTable[0xE0 | (c >> 12)] + hexTable[0x80 | ((c >> 6) & 0x3F)] + hexTable[0x80 | (c & 0x3F)]);
+            continue;
+        }
+
+        i += 1;
+        c = 0x10000 + (((c & 0x3FF) << 10) | (string.charCodeAt(i) & 0x3FF));
+        out += hexTable[0xF0 | (c >> 18)] + hexTable[0x80 | ((c >> 12) & 0x3F)] + hexTable[0x80 | ((c >> 6) & 0x3F)] + hexTable[0x80 | (c & 0x3F)]; // eslint-disable-line max-len
+    }
+
+    return out;
+};
+
+exports.compact = function (obj, references) {
+    if (typeof obj !== 'object' || obj === null) {
+        return obj;
+    }
+
+    var refs = references || [];
+    var lookup = refs.indexOf(obj);
+    if (lookup !== -1) {
+        return refs[lookup];
+    }
+
+    refs.push(obj);
+
+    if (Array.isArray(obj)) {
+        var compacted = [];
+
+        for (var i = 0; i < obj.length; ++i) {
+            if (obj[i] && typeof obj[i] === 'object') {
+                compacted.push(exports.compact(obj[i], refs));
+            } else if (typeof obj[i] !== 'undefined') {
+                compacted.push(obj[i]);
+            }
+        }
+
+        return compacted;
+    }
+
+    var keys = Object.keys(obj);
+    keys.forEach(function (key) {
+        obj[key] = exports.compact(obj[key], refs);
+    });
+
+    return obj;
+};
+
+exports.isRegExp = function (obj) {
+    return Object.prototype.toString.call(obj) === '[object RegExp]';
+};
+
+exports.isBuffer = function (obj) {
+    if (obj === null || typeof obj === 'undefined') {
+        return false;
+    }
+
+    return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
+};
+
+
+/***/ }),
+/* 162 */
+/***/ (function(module, exports) {
+
+module.exports = class Base {
+  /**
+   * Create an instance of the Base class.
+   * @param {object} options
+   *   The configuration used to create a new instance of Waterwheel.
+   * @param {string} options.base
+   *   The base URL.
+   */
+  constructor(options) {
+    this.options = Object.assign({
+      timeout: 500,
+      accessCheck: true,
+      validation: true
+    }, options);
+  }
+  /**
+   * Set the base url.
+   * @param {string} base
+   *   The base url.
+   */
+  setBase(base) {
+    this.options.base = base;
+  }
+
+  /**
+   * Get the base url.
+   * @return {string}
+   *   The base url.
+   */
+  getBase() {
+    return this.options.base;
+  }
+
+};
+
+
+/***/ }),
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(147);
-var bind = __webpack_require__(154);
-var Axios = __webpack_require__(160);
-var defaults = __webpack_require__(148);
+var bind = __webpack_require__(155);
+var Axios = __webpack_require__(165);
+var defaults = __webpack_require__(150);
 
 /**
  * Create an instance of Axios
@@ -813,15 +1089,15 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(151);
-axios.CancelToken = __webpack_require__(159);
-axios.isCancel = __webpack_require__(152);
+axios.Cancel = __webpack_require__(152);
+axios.CancelToken = __webpack_require__(164);
+axios.isCancel = __webpack_require__(153);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(174);
+axios.spread = __webpack_require__(179);
 
 module.exports = axios;
 
@@ -830,14 +1106,13 @@ module.exports.default = axios;
 
 
 /***/ }),
-
-/***/ 159:
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Cancel = __webpack_require__(151);
+var Cancel = __webpack_require__(152);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -895,19 +1170,18 @@ module.exports = CancelToken;
 
 
 /***/ }),
-
-/***/ 160:
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var defaults = __webpack_require__(148);
+var defaults = __webpack_require__(150);
 var utils = __webpack_require__(147);
-var InterceptorManager = __webpack_require__(161);
-var dispatchRequest = __webpack_require__(162);
-var isAbsoluteURL = __webpack_require__(170);
-var combineURLs = __webpack_require__(168);
+var InterceptorManager = __webpack_require__(166);
+var dispatchRequest = __webpack_require__(167);
+var isAbsoluteURL = __webpack_require__(175);
+var combineURLs = __webpack_require__(173);
 
 /**
  * Create a new instance of Axios
@@ -989,8 +1263,7 @@ module.exports = Axios;
 
 
 /***/ }),
-
-/***/ 161:
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1049,17 +1322,16 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-
-/***/ 162:
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(147);
-var transformData = __webpack_require__(165);
-var isCancel = __webpack_require__(152);
-var defaults = __webpack_require__(148);
+var transformData = __webpack_require__(170);
+var isCancel = __webpack_require__(153);
+var defaults = __webpack_require__(150);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -1136,8 +1408,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-
-/***/ 163:
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1165,14 +1436,13 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-
-/***/ 164:
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var createError = __webpack_require__(153);
+var createError = __webpack_require__(154);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -1199,8 +1469,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-
-/***/ 165:
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1227,8 +1496,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-
-/***/ 166:
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1271,8 +1539,7 @@ module.exports = btoa;
 
 
 /***/ }),
-
-/***/ 167:
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1347,8 +1614,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-
-/***/ 168:
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1369,8 +1635,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-
-/***/ 169:
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1430,8 +1695,7 @@ module.exports = (
 
 
 /***/ }),
-
-/***/ 170:
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1452,8 +1716,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-
-/***/ 171:
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1528,8 +1791,7 @@ module.exports = (
 
 
 /***/ }),
-
-/***/ 172:
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1548,8 +1810,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-
-/***/ 173:
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1593,8 +1854,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-
-/***/ 174:
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1628,8 +1888,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-
-/***/ 175:
+/* 180 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1637,16 +1896,14 @@ module.exports = function spread(callback) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_classCallCheck__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_classCallCheck__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_axios__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_d8_jsonapi_querystring__ = __webpack_require__(180);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_d8_jsonapi_querystring___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_d8_jsonapi_querystring__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jsonapi_parse__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_waterwheel__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_waterwheel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_waterwheel__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jsonapi_parse__);
 
 
 
@@ -1674,16 +1931,20 @@ module.exports = function spread(callback) {
 
 
 
-
 var JSONAPIClient = function () {
   function JSONAPIClient(baseUrl) {
     __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_classCallCheck___default()(this, JSONAPIClient);
 
     this.baseUrl = baseUrl;
+    this.waterwheel = new __WEBPACK_IMPORTED_MODULE_4_waterwheel___default.a({
+      base: this.baseUrl,
+      jsonapiPrefix: 'api',
+      accessCheck: false
+    }, null, {});
   }
 
   /**
-   * http GET request on JSON-API server
+   * http GET request on JSON-API server with waterwheel
    * 
    * @param {string} entity Uri . eg : "/recipes"
    * @param {object} JSONAPI query parameters as an objct, @see JSONAPIQueryBuilder
@@ -1695,79 +1956,39 @@ var JSONAPIClient = function () {
     value: function () {
       var _ref = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(uri) {
         var queryParams = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-        var queryString, result, url, response, parsedJson;
+        var id = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+        var response;
         return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                queryString = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_d8_jsonapi_querystring__["buildQueryString"])(queryParams);
-                result = null;
-                url = encodeURI(this.baseUrl) + encodeURI(uri) + '?' + queryString;
-                _context.prev = 3;
-                _context.next = 6;
-                return __WEBPACK_IMPORTED_MODULE_4_axios___default.a.get(url);
+                _context.prev = 0;
+                _context.next = 3;
+                return this.waterwheel.jsonapi.get(uri, queryParams, id);
 
-              case 6:
+              case 3:
                 response = _context.sent;
-                parsedJson = __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse___default.a.parse(response.data);
+                return _context.abrupt('return', __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse___default.a.parse(response).data);
 
-                result = parsedJson.data;
-                _context.next = 14;
-                break;
+              case 7:
+                _context.prev = 7;
+                _context.t0 = _context['catch'](0);
 
-              case 11:
-                _context.prev = 11;
-                _context.t0 = _context['catch'](3);
+                console.log(_context.t0.message);
 
-                console.error(_context.t0.message);
-
-              case 14:
-                return _context.abrupt('return', result);
-
-              case 15:
+              case 10:
               case 'end':
                 return _context.stop();
             }
           }
-        }, _callee, this, [[3, 11]]);
+        }, _callee, this, [[0, 7]]);
       }));
 
-      function get(_x2) {
+      function get(_x3) {
         return _ref.apply(this, arguments);
       }
 
       return get;
-    }()
-  }, {
-    key: 'send',
-    value: function () {
-      var _ref2 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(url) {
-        var result, datas;
-        return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
-          while (1) {
-            switch (_context2.prev = _context2.next) {
-              case 0:
-                _context2.next = 2;
-                return __WEBPACK_IMPORTED_MODULE_4_axios___default.a.get(url);
-
-              case 2:
-                result = _context2.sent;
-                datas = __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse___default.a.parse(result.data).data;
-                return _context2.abrupt('return', datas);
-
-              case 5:
-              case 'end':
-                return _context2.stop();
-            }
-          }
-        }, _callee2, this);
-      }));
-
-      function send(_x3) {
-        return _ref2.apply(this, arguments);
-      }
-
-      return send;
     }()
   }]);
 
@@ -1777,8 +1998,7 @@ var JSONAPIClient = function () {
 /* harmony default export */ __webpack_exports__["a"] = (JSONAPIClient);
 
 /***/ }),
-
-/***/ 176:
+/* 181 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1786,14 +2006,14 @@ var JSONAPIClient = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_classCallCheck__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_classCallCheck__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__D8JSONAPIClient__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__D8JSONAPIClient__ = __webpack_require__(180);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_axios__ = __webpack_require__(149);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse__ = __webpack_require__(157);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jsonapi_parse__);
 
 
@@ -1812,8 +2032,8 @@ var Recipes = function () {
   function Recipes() {
     __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_classCallCheck___default()(this, Recipes);
 
-    this.baseUri = "https://dev-contentacms.pantheonsite.io/api", this.resourceUri = '/recipes';
-    this.api = new __WEBPACK_IMPORTED_MODULE_4__D8JSONAPIClient__["a" /* default */]("https://dev-contentacms.pantheonsite.io/api");
+    this.resourceUri = 'recipes';
+    this.api = new __WEBPACK_IMPORTED_MODULE_4__D8JSONAPIClient__["a" /* default */]("https://dev-contentacms.pantheonsite.io");
   }
 
   __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass___default()(Recipes, [{
@@ -1826,10 +2046,10 @@ var Recipes = function () {
             switch (_context.prev = _context.next) {
               case 0:
                 options = {
-                  include: ['image']
+                  include: ['image'].join(',')
                 };
                 _context.next = 3;
-                return this.api.get(this.resourceUri + '/' + id, options);
+                return this.api.get('recipes', options, id);
 
               case 3:
                 return _context.abrupt('return', _context.sent);
@@ -1872,16 +2092,16 @@ var Recipes = function () {
                       value: 1
                     }
                   },
-                  include: ['image', 'image.thumbnail'],
+                  include: ['image', 'image.thumbnail'].join(','),
                   fields: {
-                    recipes: ['title', 'difficulty', 'image'],
-                    images: ['name', 'thumbnail'],
-                    files: ['filename']
+                    recipes: ['title', 'difficulty', 'image'].join(','),
+                    images: ['name', 'thumbnail'].join(','),
+                    files: ['filename'].join(',')
                   },
                   sort: '-created'
                 };
                 _context2.next = 3;
-                return this.api.get('/recipes', options);
+                return this.api.get('recipes', options);
 
               case 3:
                 return _context2.abrupt('return', _context2.sent);
@@ -1922,7 +2142,7 @@ var Recipes = function () {
                   }
                 };
                 _context3.next = 3;
-                return this.api.get('/categories', options);
+                return this.api.get('categories', options);
 
               case 3:
                 return _context3.abrupt('return', _context3.sent);
@@ -1954,14 +2174,14 @@ var Recipes = function () {
                 options = {
                   sort: '-created',
                   page: { limit: limit },
-                  include: ['image', 'image.thumbnail'],
+                  include: ['image', 'image.thumbnail'].join(','),
                   fields: {
-                    recipes: ['title', 'difficulty', 'image'],
-                    images: ['name', 'thumbnail'],
-                    files: ['filename']
+                    recipes: ['title', 'difficulty', 'image'].join(','),
+                    images: ['name', 'thumbnail'].join(','),
+                    files: ['filename'].join(',')
                   }
                 };
-                return _context4.abrupt('return', this.api.get('/recipes', options));
+                return _context4.abrupt('return', this.api.get('recipes', options));
 
               case 2:
               case 'end':
@@ -1997,11 +2217,11 @@ var Recipes = function () {
                   page: {
                     limit: limit
                   },
-                  include: ['image', 'image.thumbnail'],
+                  include: ['image', 'image.thumbnail'].join(','),
                   fields: {
-                    recipes: ['title', 'difficulty', 'image'],
-                    images: ['name', 'thumbnail'],
-                    files: ['filename']
+                    recipes: ['title', 'difficulty', 'image'].join(','),
+                    images: ['name', 'thumbnail'].join(','),
+                    files: ['filename'].join(',')
                   }
                 };
                 _context5.next = 3;
@@ -2037,7 +2257,7 @@ var Recipes = function () {
               case 0:
                 options = {
                   sort: '-created',
-                  include: ['image', 'image.thumbnail'],
+                  include: ['image', 'image.thumbnail'].join(','),
                   filter: {
                     categoryName: {
                       condition: {
@@ -2047,9 +2267,9 @@ var Recipes = function () {
                     }
                   },
                   fields: {
-                    recipes: ['title', 'difficulty', 'image'],
-                    images: ['name', 'thumbnail'],
-                    files: ['filename']
+                    recipes: ['title', 'difficulty', 'image'].join(','),
+                    images: ['name', 'thumbnail'].join(','),
+                    files: ['filename'].join(',')
                   },
                   page: {
                     offset: 0,
@@ -2084,26 +2304,23 @@ var Recipes = function () {
 /* harmony default export */ __webpack_exports__["a"] = (new Recipes());
 
 /***/ }),
-
-/***/ 177:
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(178), __esModule: true };
+module.exports = { "default": __webpack_require__(183), __esModule: true };
 
 /***/ }),
-
-/***/ 178:
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(179);
+__webpack_require__(184);
 var $Object = __webpack_require__(2).Object;
 module.exports = function defineProperty(it, key, desc){
   return $Object.defineProperty(it, key, desc);
 };
 
 /***/ }),
-
-/***/ 179:
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(13);
@@ -2111,71 +2328,7 @@ var $export = __webpack_require__(13);
 $export($export.S + $export.F * !__webpack_require__(5), 'Object', {defineProperty: __webpack_require__(6).f});
 
 /***/ }),
-
-/***/ 180:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Helper to create a JSON API query string from a nested Object.
- * @see https://www.drupal.org/docs/8/modules/json-api/json-api
- * 
- * USAGE :
- * To create the following query string :
- * "sort[sortCreated][path]=created&sort[sortCreated][direction]=DESC&fields[recipes]=title&include=tags,image&filter[categoryName][condition][path]=category.name&filter[categoryName][condition][value]=Main%20course&page[offset]=0&page[limit]=4"
- *  
- *  import {buildQueryString} from 'DrupalJSONAPIQueryString'
- * 
- *  buildQueryString({
- *    sort: {
- *      sortCreated: {
- *        path: 'created',
- *        direction: 'DESC'
- *      }
- *    },
- *    fields: {
- *      recipes: ['title']
- *    },
- *    include: ['tags', 'image'],
- *    filter: {
- *      categoryName: {
- *        condition: {
- *          path: 'category.name',
- *          value: "Main course"
- *        }
- *      },
- *    },
- *    page: {
- *      offset: 0,
- *      limit: 4
- *    }
- *  })
- * 
- * @param {object} queryParams as an object.
- */
-
-function buildQueryString(object) {
-  var stackedPath = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-  var stringsParts = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
-
-  Object.keys(object).forEach(function (key) {
-    var propertySyntax = stackedPath ? '[' + encodeURI(key) + ']' : key;
-    if (Object.getPrototypeOf(object[key]) === Object.prototype) {
-      buildQueryString(object[key], stackedPath + propertySyntax, stringsParts);
-    } else {
-      stringsParts.push(stackedPath + propertySyntax + '=' + encodeURI(object[key]));
-    }
-  });
-  return stringsParts.join("&");
-}
-
-module.exports.buildQueryString = buildQueryString;
-
-/***/ }),
-
-/***/ 181:
+/* 185 */
 /***/ (function(module, exports) {
 
 /*!
@@ -2202,8 +2355,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-
-/***/ 182:
+/* 186 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -2393,8 +2545,1074 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
+/* 187 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 183:
+"use strict";
+
+
+var utils = __webpack_require__(161);
+
+var has = Object.prototype.hasOwnProperty;
+
+var defaults = {
+    allowDots: false,
+    allowPrototypes: false,
+    arrayLimit: 20,
+    decoder: utils.decode,
+    delimiter: '&',
+    depth: 5,
+    parameterLimit: 1000,
+    plainObjects: false,
+    strictNullHandling: false
+};
+
+var parseValues = function parseQueryStringValues(str, options) {
+    var obj = {};
+    var parts = str.split(options.delimiter, options.parameterLimit === Infinity ? undefined : options.parameterLimit);
+
+    for (var i = 0; i < parts.length; ++i) {
+        var part = parts[i];
+        var pos = part.indexOf(']=') === -1 ? part.indexOf('=') : part.indexOf(']=') + 1;
+
+        var key, val;
+        if (pos === -1) {
+            key = options.decoder(part);
+            val = options.strictNullHandling ? null : '';
+        } else {
+            key = options.decoder(part.slice(0, pos));
+            val = options.decoder(part.slice(pos + 1));
+        }
+        if (has.call(obj, key)) {
+            obj[key] = [].concat(obj[key]).concat(val);
+        } else {
+            obj[key] = val;
+        }
+    }
+
+    return obj;
+};
+
+var parseObject = function parseObjectRecursive(chain, val, options) {
+    if (!chain.length) {
+        return val;
+    }
+
+    var root = chain.shift();
+
+    var obj;
+    if (root === '[]') {
+        obj = [];
+        obj = obj.concat(parseObject(chain, val, options));
+    } else {
+        obj = options.plainObjects ? Object.create(null) : {};
+        var cleanRoot = root.charAt(0) === '[' && root.charAt(root.length - 1) === ']' ? root.slice(1, -1) : root;
+        var index = parseInt(cleanRoot, 10);
+        if (
+            !isNaN(index) &&
+            root !== cleanRoot &&
+            String(index) === cleanRoot &&
+            index >= 0 &&
+            (options.parseArrays && index <= options.arrayLimit)
+        ) {
+            obj = [];
+            obj[index] = parseObject(chain, val, options);
+        } else {
+            obj[cleanRoot] = parseObject(chain, val, options);
+        }
+    }
+
+    return obj;
+};
+
+var parseKeys = function parseQueryStringKeys(givenKey, val, options) {
+    if (!givenKey) {
+        return;
+    }
+
+    // Transform dot notation to bracket notation
+    var key = options.allowDots ? givenKey.replace(/\.([^.[]+)/g, '[$1]') : givenKey;
+
+    // The regex chunks
+
+    var brackets = /(\[[^[\]]*])/;
+    var child = /(\[[^[\]]*])/g;
+
+    // Get the parent
+
+    var segment = brackets.exec(key);
+    var parent = segment ? key.slice(0, segment.index) : key;
+
+    // Stash the parent if it exists
+
+    var keys = [];
+    if (parent) {
+        // If we aren't using plain objects, optionally prefix keys
+        // that would overwrite object prototype properties
+        if (!options.plainObjects && has.call(Object.prototype, parent)) {
+            if (!options.allowPrototypes) {
+                return;
+            }
+        }
+
+        keys.push(parent);
+    }
+
+    // Loop through children appending to the array until we hit depth
+
+    var i = 0;
+    while ((segment = child.exec(key)) !== null && i < options.depth) {
+        i += 1;
+        if (!options.plainObjects && has.call(Object.prototype, segment[1].slice(1, -1))) {
+            if (!options.allowPrototypes) {
+                return;
+            }
+        }
+        keys.push(segment[1]);
+    }
+
+    // If there's a remainder, just add whatever is left
+
+    if (segment) {
+        keys.push('[' + key.slice(segment.index) + ']');
+    }
+
+    return parseObject(keys, val, options);
+};
+
+module.exports = function (str, opts) {
+    var options = opts || {};
+
+    if (options.decoder !== null && options.decoder !== undefined && typeof options.decoder !== 'function') {
+        throw new TypeError('Decoder has to be a function.');
+    }
+
+    options.delimiter = typeof options.delimiter === 'string' || utils.isRegExp(options.delimiter) ? options.delimiter : defaults.delimiter;
+    options.depth = typeof options.depth === 'number' ? options.depth : defaults.depth;
+    options.arrayLimit = typeof options.arrayLimit === 'number' ? options.arrayLimit : defaults.arrayLimit;
+    options.parseArrays = options.parseArrays !== false;
+    options.decoder = typeof options.decoder === 'function' ? options.decoder : defaults.decoder;
+    options.allowDots = typeof options.allowDots === 'boolean' ? options.allowDots : defaults.allowDots;
+    options.plainObjects = typeof options.plainObjects === 'boolean' ? options.plainObjects : defaults.plainObjects;
+    options.allowPrototypes = typeof options.allowPrototypes === 'boolean' ? options.allowPrototypes : defaults.allowPrototypes;
+    options.parameterLimit = typeof options.parameterLimit === 'number' ? options.parameterLimit : defaults.parameterLimit;
+    options.strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;
+
+    if (str === '' || str === null || typeof str === 'undefined') {
+        return options.plainObjects ? Object.create(null) : {};
+    }
+
+    var tempObj = typeof str === 'string' ? parseValues(str, options) : str;
+    var obj = options.plainObjects ? Object.create(null) : {};
+
+    // Iterate over the keys and setup the new object
+
+    var keys = Object.keys(tempObj);
+    for (var i = 0; i < keys.length; ++i) {
+        var key = keys[i];
+        var newObj = parseKeys(key, tempObj[key], options);
+        obj = utils.merge(obj, newObj, options);
+    }
+
+    return utils.compact(obj);
+};
+
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var utils = __webpack_require__(161);
+var formats = __webpack_require__(159);
+
+var arrayPrefixGenerators = {
+    brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
+        return prefix + '[]';
+    },
+    indices: function indices(prefix, key) { // eslint-disable-line func-name-matching
+        return prefix + '[' + key + ']';
+    },
+    repeat: function repeat(prefix) { // eslint-disable-line func-name-matching
+        return prefix;
+    }
+};
+
+var toISO = Date.prototype.toISOString;
+
+var defaults = {
+    delimiter: '&',
+    encode: true,
+    encoder: utils.encode,
+    encodeValuesOnly: false,
+    serializeDate: function serializeDate(date) { // eslint-disable-line func-name-matching
+        return toISO.call(date);
+    },
+    skipNulls: false,
+    strictNullHandling: false
+};
+
+var stringify = function stringify( // eslint-disable-line func-name-matching
+    object,
+    prefix,
+    generateArrayPrefix,
+    strictNullHandling,
+    skipNulls,
+    encoder,
+    filter,
+    sort,
+    allowDots,
+    serializeDate,
+    formatter,
+    encodeValuesOnly
+) {
+    var obj = object;
+    if (typeof filter === 'function') {
+        obj = filter(prefix, obj);
+    } else if (obj instanceof Date) {
+        obj = serializeDate(obj);
+    } else if (obj === null) {
+        if (strictNullHandling) {
+            return encoder && !encodeValuesOnly ? encoder(prefix) : prefix;
+        }
+
+        obj = '';
+    }
+
+    if (typeof obj === 'string' || typeof obj === 'number' || typeof obj === 'boolean' || utils.isBuffer(obj)) {
+        if (encoder) {
+            var keyValue = encodeValuesOnly ? prefix : encoder(prefix);
+            return [formatter(keyValue) + '=' + formatter(encoder(obj))];
+        }
+        return [formatter(prefix) + '=' + formatter(String(obj))];
+    }
+
+    var values = [];
+
+    if (typeof obj === 'undefined') {
+        return values;
+    }
+
+    var objKeys;
+    if (Array.isArray(filter)) {
+        objKeys = filter;
+    } else {
+        var keys = Object.keys(obj);
+        objKeys = sort ? keys.sort(sort) : keys;
+    }
+
+    for (var i = 0; i < objKeys.length; ++i) {
+        var key = objKeys[i];
+
+        if (skipNulls && obj[key] === null) {
+            continue;
+        }
+
+        if (Array.isArray(obj)) {
+            values = values.concat(stringify(
+                obj[key],
+                generateArrayPrefix(prefix, key),
+                generateArrayPrefix,
+                strictNullHandling,
+                skipNulls,
+                encoder,
+                filter,
+                sort,
+                allowDots,
+                serializeDate,
+                formatter,
+                encodeValuesOnly
+            ));
+        } else {
+            values = values.concat(stringify(
+                obj[key],
+                prefix + (allowDots ? '.' + key : '[' + key + ']'),
+                generateArrayPrefix,
+                strictNullHandling,
+                skipNulls,
+                encoder,
+                filter,
+                sort,
+                allowDots,
+                serializeDate,
+                formatter,
+                encodeValuesOnly
+            ));
+        }
+    }
+
+    return values;
+};
+
+module.exports = function (object, opts) {
+    var obj = object;
+    var options = opts || {};
+
+    if (options.encoder !== null && options.encoder !== undefined && typeof options.encoder !== 'function') {
+        throw new TypeError('Encoder has to be a function.');
+    }
+
+    var delimiter = typeof options.delimiter === 'undefined' ? defaults.delimiter : options.delimiter;
+    var strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;
+    var skipNulls = typeof options.skipNulls === 'boolean' ? options.skipNulls : defaults.skipNulls;
+    var encode = typeof options.encode === 'boolean' ? options.encode : defaults.encode;
+    var encoder = typeof options.encoder === 'function' ? options.encoder : defaults.encoder;
+    var sort = typeof options.sort === 'function' ? options.sort : null;
+    var allowDots = typeof options.allowDots === 'undefined' ? false : options.allowDots;
+    var serializeDate = typeof options.serializeDate === 'function' ? options.serializeDate : defaults.serializeDate;
+    var encodeValuesOnly = typeof options.encodeValuesOnly === 'boolean' ? options.encodeValuesOnly : defaults.encodeValuesOnly;
+    if (typeof options.format === 'undefined') {
+        options.format = formats.default;
+    } else if (!Object.prototype.hasOwnProperty.call(formats.formatters, options.format)) {
+        throw new TypeError('Unknown format option provided.');
+    }
+    var formatter = formats.formatters[options.format];
+    var objKeys;
+    var filter;
+
+    if (typeof options.filter === 'function') {
+        filter = options.filter;
+        obj = filter('', obj);
+    } else if (Array.isArray(options.filter)) {
+        filter = options.filter;
+        objKeys = filter;
+    }
+
+    var keys = [];
+
+    if (typeof obj !== 'object' || obj === null) {
+        return '';
+    }
+
+    var arrayFormat;
+    if (options.arrayFormat in arrayPrefixGenerators) {
+        arrayFormat = options.arrayFormat;
+    } else if ('indices' in options) {
+        arrayFormat = options.indices ? 'indices' : 'repeat';
+    } else {
+        arrayFormat = 'indices';
+    }
+
+    var generateArrayPrefix = arrayPrefixGenerators[arrayFormat];
+
+    if (!objKeys) {
+        objKeys = Object.keys(obj);
+    }
+
+    if (sort) {
+        objKeys.sort(sort);
+    }
+
+    for (var i = 0; i < objKeys.length; ++i) {
+        var key = objKeys[i];
+
+        if (skipNulls && obj[key] === null) {
+            continue;
+        }
+
+        keys = keys.concat(stringify(
+            obj[key],
+            key,
+            generateArrayPrefix,
+            strictNullHandling,
+            skipNulls,
+            encode ? encoder : null,
+            filter,
+            sort,
+            allowDots,
+            serializeDate,
+            formatter,
+            encodeValuesOnly
+        ));
+    }
+
+    return keys.join(delimiter);
+};
+
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const methods = __webpack_require__(148);
+
+module.exports = class Entity {
+  /**
+   * Construct a new Entity
+   * @param {object} options
+   *   The configuration used to create this entity.
+   * @param {string} options.base
+   *   The base URL
+   * @param {object} options.methods
+   *   The paths representing each CRUD action.
+   * @param {string} options.methods.get
+   *   GET Action
+   * @param {string} options.methods.patch
+   *   PATCH Action
+   * @param {string} options.methods.post
+   *   POST Action
+   * @param {string} options.methods.delete
+   *   DELETE Action
+   * @param {string} options.more
+   *   A path partial repreenting the location of field data about the expected bundle.
+   * @param {number} [options.timeout=500]
+   *   How long Axios should wait before canceling a request.
+   * @param {string} options.bundle
+   *   The bundle that this entity is included in.
+   * @param {string} options.entity
+   *   The name of the actual entity.
+   * @param {object} options.metadata
+   *   An object with field-level meta data.
+   * @param {array} options.metadata.requiredFields
+   *   An array of field names required when creating an entity.
+   * @param {object} options.metadata.properties
+   *   An object describing all the fields on a bundle and their properties.
+   * @param {object} request
+   *   A shared requestor class instance.
+   */
+  constructor(options, request) {
+    this.options = options;
+    this.request = request;
+  }
+
+  /**
+   * Get a content entity in Drupal through REST (GET).
+   * @param {number|string} identifier
+   *   The ID of name of the entity being requested.
+   * @param {string} [format=json]
+   *   The format for the requested content.
+   * @returns {Promise}
+   *   A Promise that when fulfilled returns a response containing the content entity.
+   * @TODO: Add fields argument for selectivity: entityType, entityId, format, fields, base, creds
+   */
+  get(identifier, format = 'json') {
+    return !this.options.methods.hasOwnProperty(methods.get) ?
+      Promise.reject(`The method, ${methods.get}, is not available.`) :
+      this.request.issueRequest(methods.get, `${this.options.methods.get.path.replace(this.options.methods.get.path.match(/\{.*?\}/), identifier)}?_format=${format}`, '');
+  }
+
+  /**
+   * Update or set a content entity in Drupal through REST (PATCH).
+   * @param {number|string} identifier
+   *   The ID of name of the entity being requested.
+   * @param {object} body
+   *   An object containing the request body to be sent.
+   * @param {string} [format=application/json]
+   *   The format for the requested content.
+   * @returns {Promise} A Promise that when fulfilled returns a response containing the content entity in JSON (as of 8.2).
+   */
+  patch(identifier, body = {}, format = 'application/json') {
+    return !this.options.methods.hasOwnProperty(methods.patch) ?
+      Promise.reject(`The method, ${methods.patch}, is not available.`) :
+      this.request.getXCSRFToken()
+        .then((csrfToken) => this.request.issueRequest(methods.patch, `${this.options.methods.patch.path.replace(this.options.methods.patch.path.match(/\{.*?\}/), identifier)}`, csrfToken, {'Content-Type': format}, body));
+  }
+
+  /**
+   * Create a content entity in Drupal through REST (POST).
+   * @param {object} body
+   *   An object containing the request body to be sent.
+   * @param {string} [format=application/json]
+   *   The format of the content being posted.
+   * @param {bool} skipFieldValidation
+   *   A shortcut to skip field validation.
+   * @returns {Promise}
+   *   A Promise that when fulfilled returns a response containing the content entity in JSON (as of 8.2).
+   */
+  post(body, format = 'application/json', skipFieldValidation) {
+    if (!this.options.methods.hasOwnProperty(methods.post)) {
+      return Promise.reject(`The method, ${methods.post}, is not available.`);
+    }
+    if (skipFieldValidation) {
+      // Check to see if the required fields match the passed fields.
+      const checkedFields = this.checkRequiredFields(body);
+      if (checkedFields.length) {
+        return Promise.reject(`The following fields, ${checkedFields.join(', ')}, are required.`);
+      }
+    }
+
+    return this.request.getXCSRFToken()
+      .then((csrfToken) => this.request.issueRequest(methods.post, this.options.methods.post.path, csrfToken, {'Content-Type': format}, body));
+  }
+
+  /**
+   * Delete a content entity in Drupal through REST (DELETE).
+   * @param {number|string} identifier
+   *   The ID of name of the entity being requested.
+   * @returns {Promise}
+   *   A Promise that when fulfilled returns a response containing the content entity in JSON (as of 8.2).
+   */
+  delete(identifier) {
+    return !this.options.methods.hasOwnProperty(methods.delete) ?
+      Promise.reject(`The method, ${methods.delete}, is not available.`) :
+      this.request.getXCSRFToken()
+        .then((csrfToken) => this.request.issueRequest(methods.delete, `${this.options.methods.delete.path.replace(this.options.methods.delete.path.match(/\{.*?\}/), identifier)}`, csrfToken));
+  }
+
+  /**
+   * Checks to see if the required fields are present when submitting a POST request.
+   * @param {object} body
+   *   The post body data.
+   * @returns {array}
+   *   An array of keys.
+   */
+  checkRequiredFields(body) {
+    const availableBodyKeys = Object.keys(body);
+    return this.options.metadata.requiredFields.filter(key => !availableBodyKeys.includes(key));
+  }
+
+  /**
+   * Set a field on a specific entity
+   * @param  {string|number} identifier
+   *   The entity we are setting the field on.
+   * @param  {object[]|object} fields
+   *   The field name we are setting the data on.
+   * @param  {object} additionalValues
+   *   Any additional values to be appended to the post body.
+   * @return  {Promise}
+   *   The resolved promise.
+   */
+  setFields(identifier, fields) {
+    const availableFieldKeys = Object.keys(this.options.metadata.properties);
+    const nonMatchedFields = Object.keys(fields)
+      .map(fieldKey => {
+        if (!availableFieldKeys.includes(fieldKey)) {
+          return fieldKey;
+        }
+        return false;
+      }).filter(Boolean);
+
+    if (nonMatchedFields.length){
+      return Promise.reject(new Error(`The ${nonMatchedFields.length > 1 ? 'fields' : 'field'}, ${nonMatchedFields.join(', ')}, ${nonMatchedFields.length > 1 ? 'are' : 'is'} not included within the bundle, ${this.options.bundle}.`));
+    }
+    let postBody = {};
+
+    Object.keys(fields).forEach(fieldNameToSet => {
+      const fieldSpec = this.options.metadata.properties[fieldNameToSet];
+
+      // This assumes we are always going to be wrapping the response in an array.
+      postBody[fieldNameToSet] = [];
+
+      const fieldValueWrapper = {};
+      Object.keys(fieldSpec.items.properties).forEach(prop => {
+        if (fields[fieldNameToSet].hasOwnProperty(prop)){
+          fieldValueWrapper[prop] = fields[fieldNameToSet][prop];
+        }
+      });
+
+      postBody[fieldNameToSet].push(fieldValueWrapper);
+    });
+
+    postBody.type = [{
+      target_id: this.options.bundle,
+      target_type: `${this.options.entity}_type`
+    }];
+    return this.patch(identifier, postBody);
+  }
+};
+
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const methods = __webpack_require__(148);
+const axios = __webpack_require__(149);
+const qs = __webpack_require__(160);
+
+module.exports = class OAuth {
+  constructor(basePath, OAuthOptions) {
+    this.basePath = basePath;
+    this.tokenInformation = Object.assign({}, OAuthOptions);
+    this.tokenInformation.grant_type = 'password'; // eslint-disable-line camelcase
+  }
+  /**
+   * Get an OAuth Token.
+   * @return {promise}
+   *   The resolved promise of fetching the oauth token.
+   */
+  getToken() {
+    const currentTime = new Date().getTime();
+    // Resolve if token already exists and is fresh
+    if (this.tokenInformation.access_token && (
+      this.hasOwnProperty('tokenExpireTime') &&
+      this.tokenExpireTime > currentTime
+    )) {
+      return Promise.resolve();
+    }
+    // If token is already being fetched, use that one.
+    else if (this.bearerPromise) {
+      return this.bearerPromise;
+    }
+    // If token has already been fetched switch grant_type to refresh_token.
+    else if (this.tokenInformation.access_token) {
+      this.tokenInformation.grant_type = 'refresh_token'; // eslint-disable-line camelcase
+    }
+
+    this.bearerPromise = axios({
+      method: methods.post,
+      url: `${this.basePath}/oauth/token`,
+      data: qs.stringify(this.tokenInformation)
+    })
+    .then(response => {
+      delete this.bearerPromise;
+      let t = new Date();
+      t.setSeconds(+t.getSeconds() + response.data.expires_in);
+      this.tokenExpireTime = t.getTime();
+      Object.assign(this.tokenInformation, response.data);
+      return response.data;
+    })
+    .catch(e => {
+      delete this.bearerPromise;
+      return Promise.reject(e);
+    });
+
+    return this.bearerPromise;
+  }
+};
+
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const Base = __webpack_require__(162);
+const methods = __webpack_require__(148);
+
+module.exports = class Request extends Base {
+  /**
+   * Create an instance of the Request class.
+   * @param {object} options
+   *   The configuration used to create a new instance of Waterwheel.
+   * @param {string} options.base
+   *   The base URL.
+   * @param {object} oauth
+   *   The OAuth options.
+   */
+  constructor(options, oauth) {
+    super(options);
+    this.oauth = oauth;
+    this.axios = __webpack_require__(149);
+  }
+
+  /**
+   * Issue a generic XMLHttpRequest.
+   * @param {string} method
+   *  The HTTP method to be used in the request.
+   * @param {string} url
+   *  The URL against which to issue the request.
+   * @param {string} XCSRFToken
+   *  An X-CSRF-Token from Drupals REST API.
+   * @param {object} additionalHeaders
+   *  An object containing additional request header key-value pairs.
+   * @param {object} body
+   *  An object containing the request body to be sent.
+   * @param {string} baseOverride
+   *   Override the base URL in special scenarios.
+   * @returns {Promise}
+   *  A Promise that when fulfilled returns a response from the request.
+   */
+  issueRequest(method, url, XCSRFToken, additionalHeaders, body, baseOverride) {
+    return (this.options.accessCheck && this.options.validation ?
+      this.oauth.getToken() :
+      Promise.resolve()
+    )
+    .then(() => {
+      const options = {
+        method: method,
+        timeout: this.options.timeout,
+        url: `${baseOverride || this.options.base}/${url.charAt(0) === '/' ? url.slice(1) : url}`,
+        headers: {
+          'X-CSRF-Token': XCSRFToken
+        }
+      };
+
+      if (this.options.accessCheck && this.options.validation) {
+        options.headers.Authorization = `Bearer ${this.oauth.tokenInformation.access_token}`;
+      }
+
+      // If this is a GET request,
+      // or we didn't pass a token drop the X-CSRF-Token header.
+      if (method === methods.get || !XCSRFToken) {
+        delete options.headers['X-CSRF-Token'];
+      }
+
+      // If we have additionalHeaders, set them.
+      // @TODO: This is NOT the safest way, so be careful.
+      if (additionalHeaders && Object.keys(additionalHeaders).length !== 0) {
+        Object.keys(additionalHeaders).forEach(key => {
+          options.headers[key] = additionalHeaders[key];
+        });
+      }
+
+      if (body) {
+        options.data = body;
+      }
+
+      return this.axios(options)
+        .then(res => Promise.resolve(res.data))
+        .catch(err => {
+          const error = new Error();
+          if (err.message && err.message.indexOf('timeout') !== -1) {
+            error.message = 'Timeout';
+            error.status = 408;
+          }
+          else {
+            error.message = err.response ? err.response.data.message : 'Unknown error.';
+            error.status = err.response ? err.response.status : 500;
+          }
+
+          return Promise.reject(error);
+        });
+    });
+  }
+  /**
+   * Get an X-CSRF-Token from Drupal's REST module.
+   * @return {Promise}
+   *  A Promise that when fulfilled returns a response containing the X-CSRF-Token.
+   */
+  getXCSRFToken() {
+    if (this.csrfToken) {
+      return Promise.resolve(this.csrfToken);
+    }
+    return new Promise((resolve, reject) => {
+      this.axios({method: 'get', url: `${this.options.base}/rest/session/token`})
+        .then(res => {
+          this.csrfToken = res.data;
+          return resolve(res.data);
+        })
+        .catch(err => reject(err));
+    });
+  }
+};
+
+
+/***/ }),
+/* 192 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const methods = __webpack_require__(148);
+
+const qs = __webpack_require__(160);
+
+module.exports = class JSONAPI {
+  constructor(options, request) {
+    this.request = request;
+    this.jsonapiPrefix = options.jsonapiPrefix || 'jsonapi';
+  }
+
+  /**
+   * GET jsonapi
+   *
+   * @param {string} resource
+   *   The relative path to fetch from the API.
+   * @param {object} params
+   *   GET arguments to send with the request.
+   * @param {string} id
+   *   An ID of an individual item to request.
+   * @return {promise}
+   *   Resolves when the request is fulfilled, rejects if there's an error.
+ */
+  get(resource, params, id = false) {
+    const format = 'api_json';
+    const url = `/${this.jsonapiPrefix}/${resource}${id ? `/${id}` : ''}?_format=${format}${Object.keys(params).length ? `&${qs.stringify(params, {indices: false})}` : ''}`;
+    return this.request.issueRequest(methods.get, url);
+  }
+
+  /**
+   * POST jsonapi
+   *
+   * @param {string} resource
+   *   The relative path to fetch from the API.
+   * @param  {object} body
+   *   JSON data sent to Drupal
+   * @return {promise}
+   *   Resolves when the request is fulfilled, rejects if there's an error.
+   */
+  post(resource, body) {
+    const format = 'api_json';
+    return this.request.issueRequest(
+      methods.post,
+      `/${this.jsonapiPrefix}/${resource}?_format=${format}`,
+      '',
+      {
+        'Content-Type': 'application/vnd.api+json'
+      },
+      body
+    );
+  }
+
+  /**
+   * PATCH jsonapi
+   *
+   * @param {string} resource
+   *   The relative path to fetch from the API.
+   * @param  {object} body
+   *   JSON data sent to Drupal
+   * @return {promise}
+   *   Resolves when the request is fulfilled, rejects if there's an error.
+   */
+  patch(resource, body) {
+    const format = 'api_json';
+    return this.request.issueRequest(
+      methods.patch,
+      `/${this.jsonapiPrefix}/${resource}?_format=${format}`,
+      '',
+      {
+        'Content-Type': 'application/vnd.api+json'
+      },
+      body
+    );
+  }
+
+  /**
+   * DELETE jsonapi
+   *
+   * @param {string} resource
+   *   The relative path to fetch from the API.
+   * @param {string} id
+   *   An ID of an individual item to delete.
+   * @return {promise}
+   *   Resolves when the request is fulfilled, rejects if there's an error.
+ */
+  delete(resource, id) {
+    const format = 'api_json';
+    const url = `/${this.jsonapiPrefix}/${resource}/${id}?_format=${format}`;
+    return this.request.issueRequest(
+      methods.delete,
+      url,
+      '',
+      {
+        'Content-Type': 'application/vnd.api+json'
+      }
+    );
+  }
+
+};
+
+
+/***/ }),
+/* 193 */
+/***/ (function(module, exports) {
+
+module.exports = class Swagger {
+  constructor(swaggerJSON) {
+    this.swagger = swaggerJSON;
+    this.entities = {};
+  }
+
+  collectEntities() {
+    Object.keys(this.swagger.paths).forEach(path => {
+      Object.keys(this.swagger.paths[path]).forEach(method => {
+        const entity = this.swagger.paths[path][method].tags[0];
+        const match = new RegExp(`${entity}\:(.*)`);
+        const definitions = Object.keys(this.swagger.definitions).filter(element => match.test(element));
+        (definitions.length ? definitions : [entity]).forEach(bundle => {
+
+          const bundleData = this.swagger.definitions[bundle].hasOwnProperty('allOf') ?
+            this.swagger.definitions[bundle].allOf[1] :
+            this.swagger.definitions[bundle];
+
+          if (this.swagger.definitions[bundle].hasOwnProperty('allOf')) {
+            bundleData.properties = Object.assign(
+              bundleData.properties,
+              this.swagger.definitions[this.swagger.definitions[bundle].allOf[0].$ref.split('/').pop()].properties
+            );
+          }
+
+          // Only create an Object if we don't have one previously.
+          if (!this.entities.hasOwnProperty(bundle)) {
+            this.entities[bundle] = {};
+          }
+
+          // Create the methods key if this is the first time.
+          this.entities[bundle].methods = this.entities[bundle].methods ? this.entities[bundle].methods : {};
+          // Setup method information.
+          this.entities[bundle].methods[method] = {
+            path: path,
+            parameters: this.swagger.paths[path][method].parameters
+          };
+
+          // Setup bundle properties.
+          this.entities[bundle].properties = this.entities[bundle].properties ?
+            this.entities[bundle].properties :
+            bundleData.properties;
+
+          // Setup required fields.
+          this.entities[bundle].requiredFields = this.entities[bundle].requiredFields ?
+            this.entities[bundle].requiredFields :
+            bundleData.required;
+
+        });
+      });
+    });
+
+    return this.entities;
+  }
+};
+
+
+/***/ }),
+/* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+const Base = __webpack_require__(162);
+
+const Request = __webpack_require__(191);
+const Entity = __webpack_require__(189);
+const JSONAPI = __webpack_require__(192);
+const Swagger = __webpack_require__(193);
+const OAuth = __webpack_require__(190);
+
+const methods = __webpack_require__(148);
+
+module.exports = class Waterwheel extends Base {
+  /**
+   * Create an instance of the Waterwheel class.
+   * @param {object} options
+   *   The configuration used to create a new instance of Waterwheel.
+   * @param {string} options.base
+   *   The base URL.
+   * @param {object} options.oauth
+   *   The credentials used with each request.
+   * @param {string} options.oauth.grant_type
+   *   The type of grant you are requesting.
+   * @param {string} options.oauth.client_id
+   *   The ID of the OAuth Client.
+   * @param {string} options.oauth.client_secret
+   *   The secret set when the Client was created.
+   * @param {string} options.oauth.username
+   *   The resource owner username.
+   * @param {string} options.oauth.password
+   *   The resource owner password.
+   * @param {string} options.oauth.scope
+   *   The scope of the access request.
+   * @param {string} options.timeout
+   *   How long AXIOS should wait before bailing on a request.
+   * @param {string} options.jsonapiPrefix
+   *   If you have overridden the JSON API prefix, specify it here and Waterwheel
+   *   will use this over the default of 'jsonapi'.
+   * @param {boolean} options.validation
+   *   Should the request use oauth validation or expect anonymous access.
+   */
+  constructor(options) {
+    super(options);
+    this.api = {};
+
+    this.oauth = new OAuth(this.options.base, this.options.oauth);
+    this.request = new Request(options, this.oauth);
+
+    this.jsonapi = new JSONAPI(options, this.request);
+
+    if (this.options.resources && Object.keys(this.options.resources).length) {
+      this.parseSwagger(this.options.resources, this.request);
+    }
+  }
+
+  /**
+   * Parse a Swagger compatible document and create Waterwheel entities.
+   * @param {object} swaggerResources
+   *   A JSON object representing your API in Swagger format.
+   * @param {object} request
+   *   A shared requestor class instance.
+   * @param {object} credentials
+   *   A credentials object for making requests.
+   */
+  parseSwagger(swaggerResources, request) {
+    let swagger = new Swagger(swaggerResources).collectEntities();
+
+    Object.keys(swagger).forEach(entity => {
+      let methods = {};
+      Object.keys(swagger[entity].methods).forEach(method => {
+        methods[method.toUpperCase()] = {
+          path: swagger[entity].methods[method].path
+        };
+      });
+      this.api[entity] = new Entity({
+        base: this.options.base,
+        methods: methods,
+        bundle: entity.indexOf(':') > -1 ? entity.split(':')[1] : entity,
+        entity: entity.indexOf(':') > -1 ? entity.split(':')[0] : entity,
+        metadata: {
+          requiredFields: swagger[entity].requiredFields,
+          properties: swagger[entity].properties
+        }
+      }, request);
+    });
+  }
+
+  /**
+   * Return an array of resources currently active in Waterwheel.
+   * @return {array}
+   *   The resources currently active in Waterwheel.
+   */
+  getAvailableResources(){
+    // Sort everything for readability.
+    return Object.keys(this.api).sort();
+  }
+
+  /**
+   * Populate Waterwheel.api with available resources from a Swagger endpoint.
+   * @param {string} resourcesLocation
+   *   The full HTTP path for your swagger resources.
+   * @return {Promise}
+   *   A completed promise after the requested resources were added.
+   */
+  populateResources(resourcesLocation) {
+    return this.request.issueRequest(methods.get, resourcesLocation, false, {}, false, false)
+      .then(res => {
+        this.parseSwagger(res, this.request);
+      });
+  }
+
+  /**
+   * Fetch embedded resources from HAL+JSON documents
+   * @param  {object} entityJSON
+   *   An object, usually returned from Drupal, containing _embedded information
+   * @param {string|array} [includedFields]
+   *  If specified, a series of embedded resources to fetch.
+   * @return {Promise}
+   *   If no _embedded key is found, a rejection is returned, else a resolved
+   *   promise with all the embedded resources requests completed.
+   */
+  fetchEmbedded(entityJSON, includedFields) {
+    if (!entityJSON || !entityJSON.hasOwnProperty('_embedded')) {
+      return Promise.reject('This is probably not HAL+JSON');
+    }
+
+    const fieldsToFilterBy = includedFields ?
+      (Array.isArray(includedFields) ? includedFields : [includedFields]) : false;
+
+    const embeddedResources = entityJSON._embedded;
+    const embeddedResourcesKeys = Object.keys(embeddedResources);
+
+    let links = [];
+
+    (fieldsToFilterBy ?
+      embeddedResourcesKeys.filter(key => fieldsToFilterBy.indexOf(key.split('/').pop()) !== -1) :
+      embeddedResourcesKeys
+    ).forEach(key => {
+      embeddedResources[key].forEach(ref => {
+        links.push(ref._links.self.href.split(this.options.base)[1]);
+      });
+    });
+
+    // Create a Set from the possibly-duplicate links array.
+    // Get an array from that set.
+    links = Array.from(new Set(links));
+
+    // Promise.all accepts an array of promises to resolve. The first item
+    // in this array is the original entity, adjacent to the embedded ones.
+    return Promise.all([Promise.resolve(entityJSON)].concat(links.map(link => this.request.issueRequest(methods.get, link))));
+  }
+
+};
+
+
+/***/ }),
+/* 195 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -2422,77 +3640,11 @@ module.exports = function(module) {
 
 
 /***/ }),
-
-/***/ 202:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/clock.3d323af.svg";
-
-/***/ }),
-
-/***/ 207:
+/* 196 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2517,13 +3669,308 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    recipe: { type: Object, default: {} }
+    itemsByRow: { type: String, default: "4" },
+    items: { type: Array, default: [] }
+  },
+  computed: {
+    columnClasses: function columnClasses() {
+      return 'column is-' + 12 / this.itemsByRow;
+    },
+    columns: function columns() {
+      var columnIndex = 0;
+      var columns = {};
+      for (var itemIndex in this.items) {
+        if (itemIndex % this.itemsByRow === 0) {
+          columns[++columnIndex] = [];
+        }
+        columns[columnIndex].push(this.items[itemIndex]);
+      }
+      return columns;
+    }
   }
 });
 
 /***/ }),
+/* 197 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/***/ 213:
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_BulmaCard__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_BulmaCard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_BulmaCard__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: { BulmaCard: __WEBPACK_IMPORTED_MODULE_0__components_BulmaCard___default.a },
+  props: {
+    recipe: { type: Object, default: function _default() {
+        return [];
+      } }
+  }
+});
+
+/***/ }),
+/* 198 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: { RecipeAsTeaser: __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsTeaser___default.a, BulmaGrid: __WEBPACK_IMPORTED_MODULE_1__components_BulmaGrid___default.a },
+  props: {
+    cardsByRow: { type: String, default: "4" },
+    title: { type: String, default: '' },
+    moreLink: { type: String, default: '' },
+    recipes: { type: Array, default: function _default() {
+        return [];
+      } }
+  }
+});
+
+/***/ }),
+/* 199 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(47)(true);
+// imports
+
+
+// module
+exports.push([module.i, ".columns .card[data-v-7612271a]{height:100%}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contenta_vue/components/RecipesAsCards.vue"],"names":[],"mappings":"AACA,gCACE,WAAa,CACd","file":"RecipesAsCards.vue","sourcesContent":["\n.columns .card[data-v-7612271a] {\n  height: 100%;\n}\n"],"sourceRoot":""}]);
+
+// exports
+
+
+/***/ }),
+/* 200 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(17)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(205),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 201 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(17)(
+  /* script */
+  __webpack_require__(196),
+  /* template */
+  __webpack_require__(204),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(17)(
+  /* script */
+  __webpack_require__(197),
+  /* template */
+  __webpack_require__(207),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 203 */
+/***/ (function(module, exports, __webpack_require__) {
+
+function injectStyle (ssrContext) {
+  __webpack_require__(208)
+}
+var Component = __webpack_require__(17)(
+  /* script */
+  __webpack_require__(198),
+  /* template */
+  __webpack_require__(206),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-7612271a",
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 204 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', _vm._l((_vm.columns), function(column, rowIndex) {
+    return _c('div', {
+      key: rowIndex,
+      staticClass: "columns"
+    }, _vm._l((column), function(item, index) {
+      return _c('div', {
+        key: index,
+        class: _vm.columnClasses
+      }, [_vm._t("default", null, {
+        item: item
+      })], 2)
+    }))
+  }))
+},staticRenderFns: []}
+
+/***/ }),
+/* 205 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "card"
+  }, [_c('div', {
+    staticClass: "card-image"
+  }, [_vm._t("image")], 2), _c('div', {
+    staticClass: "card-content"
+  }, [_vm._t("content")], 2)])
+},staticRenderFns: []}
+
+/***/ }),
+/* 206 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "recipes"
+  }, [_c('BulmaGrid', {
+    attrs: {
+      "items": _vm.recipes,
+      "itemsByRow": _vm.cardsByRow
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function(props) {
+        return [_c('RecipeAsTeaser', {
+          attrs: {
+            "recipe": props.item
+          }
+        })]
+      }
+    }])
+  })], 1)
+},staticRenderFns: []}
+
+/***/ }),
+/* 207 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('nuxt-link', {
+    attrs: {
+      "to": '/recipes/' + _vm.recipe.id
+    }
+  }, [_c('BulmaCard', [(_vm.recipe.image) ? _c('div', {
+    staticClass: "thumbnail",
+    slot: "image"
+  }, [_c('img', {
+    directives: [{
+      name: "lazy",
+      rawName: "v-lazy",
+      value: (_vm.recipe.image.thumbnail.filename),
+      expression: "recipe.image.thumbnail.filename"
+    }]
+  })]) : _vm._e(), _c('div', {
+    slot: "content"
+  }, [_c('div', {
+    staticClass: "difficulty"
+  }, [_vm._v("\n        difficulty : " + _vm._s(_vm.recipe.difficulty) + "\n      ")]), _c('h3', [_vm._v(_vm._s(_vm.recipe.title))])])])], 1)
+},staticRenderFns: []}
+
+/***/ }),
+/* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(199);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(48)("e38c527a", content, true);
+
+/***/ }),
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2532,11 +3979,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_Recipes__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_Recipes__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards__);
 
 
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2546,21 +3998,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   transition: 'page',
-  components: { RecipeAsDetail: __WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail___default.a },
+  components: { RecipesAsCards: __WEBPACK_IMPORTED_MODULE_3__components_RecipesAsCards___default.a },
   asyncData: function () {
     var _ref2 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(_ref) {
       var params = _ref.params;
-      var recipe;
+      var recipes;
       return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findOneById(params.id);
+              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllByCategoryName(params.category, 20);
 
             case 2:
-              recipe = _context.sent;
-              return _context.abrupt('return', { recipe: recipe });
+              recipes = _context.sent;
+              return _context.abrupt('return', {
+                recipes: recipes,
+                categoryName: params.category
+              });
 
             case 4:
             case 'end':
@@ -2579,175 +4034,43 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-
-/***/ 217:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(47)(true);
-// imports
-
-
-// module
-exports.push([module.i, ".icons[data-v-6b1c7ed8]{width:40px}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contenta_vue/components/RecipeAsDetail.vue"],"names":[],"mappings":"AACA,wBACE,UAAY,CACb","file":"RecipeAsDetail.vue","sourcesContent":["\n.icons[data-v-6b1c7ed8] {\n  width: 40px;\n}\n"],"sourceRoot":""}]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 218:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/difficulty.67f1bc4.svg";
-
-/***/ }),
-
-/***/ 219:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/serves.e88d7ff.svg";
-
-/***/ }),
-
-/***/ 227:
-/***/ (function(module, exports, __webpack_require__) {
-
-function injectStyle (ssrContext) {
-  __webpack_require__(246)
-}
-var Component = __webpack_require__(17)(
-  /* script */
-  __webpack_require__(207),
-  /* template */
-  __webpack_require__(237),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  "data-v-6b1c7ed8",
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 232:
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('RecipeAsDetail', {
+  return _c('section', [_c('div', {
+    staticClass: "container"
+  }, [_c('h3', {
+    staticClass: "title is-h3 has-text-centered"
+  }, [_vm._v(" " + _vm._s(_vm.categoryName) + " ")]), _c('RecipesAsCards', {
     attrs: {
-      "recipe": _vm.recipe
+      "recipes": _vm.recipes
     }
-  })
+  })], 1)])
 },staticRenderFns: []}
 
-/***/ }),
-
-/***/ 237:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('section', {
-    staticClass: "hero is-primary"
-  }, [_c('div', {
-    staticClass: "hero-body"
-  }, [_c('div', {
-    staticClass: "container"
-  }, [_c('h1', {
-    staticClass: "title is-1"
-  }, [_vm._v(" " + _vm._s(_vm.recipe.title) + " ")])])])]), _c('div', {
-    staticClass: "container"
-  }, [_c('section', [_c('div', {
-    staticClass: "columns"
-  }, [_c('div', {
-    staticClass: "column"
-  }, [_c('img', {
-    directives: [{
-      name: "lazy",
-      rawName: "v-lazy",
-      value: (_vm.recipe.image.name),
-      expression: "recipe.image.name"
-    }]
-  })]), _c('div', {
-    staticClass: "column"
-  }, [_c('div', {
-    staticClass: "columns"
-  }, [_c('div', {
-    staticClass: "column has-text-centered"
-  }, [_vm._m(0), _vm._v("\n              Preparation Time : " + _vm._s(_vm.recipe.preparationTime) + "\n            ")]), _c('div', {
-    staticClass: "column has-text-centered"
-  }, [_vm._m(1), _vm._v("\n              Cooking time : " + _vm._s(_vm.recipe.totalTime) + "\n            ")])]), _c('div', {
-    staticClass: "columns"
-  }, [_c('div', {
-    staticClass: "column has-text-centered"
-  }, [_vm._m(2), _vm._v("\n              Serves : " + _vm._s(_vm.recipe.numberOfServices) + "\n            ")]), _c('div', {
-    staticClass: "column has-text-centered"
-  }, [_vm._m(3), _vm._v("\n              Difficulty : " + _vm._s(_vm.recipe.Difficulty) + "\n            ")])])])])]), _c('section', [_c('h2', {
-    staticClass: "title is-2"
-  }, [_vm._v(" What you'll need and how to make this dish")]), _c('div', {
-    staticClass: "columns"
-  }, [_c('div', {
-    staticClass: "column"
-  }, [_c('div'), _c('h2', {
-    staticClass: "title is-2"
-  }, [_vm._v(" Ingredients ")]), _c('ul', {
-    staticClass: "ingredients"
-  }, _vm._l((_vm.recipe.ingredients), function(ingredient, index) {
-    return _c('li', {
-      key: index
-    }, [_vm._v("\n              " + _vm._s(ingredient) + "\n            ")])
-  }))]), _c('div', {
-    staticClass: "column"
-  }, [_c('h2', {
-    staticClass: "title is-2"
-  }, [_vm._v(" Method ")]), _c('p', [_vm._v("\n          " + _vm._s(_vm.recipe.instructions) + "\n          ")])])])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('img', {
-    staticClass: "icons",
-    attrs: {
-      "src": __webpack_require__(202)
-    }
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('img', {
-    staticClass: "icons",
-    attrs: {
-      "src": __webpack_require__(202)
-    }
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('img', {
-    staticClass: "icons",
-    attrs: {
-      "src": __webpack_require__(219)
-    }
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('img', {
-    staticClass: "icons",
-    attrs: {
-      "src": __webpack_require__(218)
-    }
-  })])
-}]}
-
-/***/ }),
-
-/***/ 246:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(217);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(48)("3ca5d05a", content, true);
-
 /***/ })
-
-});
+]));

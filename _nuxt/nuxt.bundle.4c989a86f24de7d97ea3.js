@@ -308,7 +308,7 @@ function getContext(context, app) {
     payload: context.payload,
     error: context.error,
     base: '/',
-    env: { "contentaJSONAPIBaseUrl": "https://dev-contentacms.pantheonsite.io/api" },
+    env: { "contentaJSONAPIBaseUrl": "https://dev-contentacms.pantheonsite.io" },
     hotReload: context.hotReload || false
   };
   var next = context.next;
