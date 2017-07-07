@@ -346,12 +346,6 @@ module.exports = {
 /* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(163);
-
-/***/ }),
-/* 150 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
@@ -447,6 +441,12 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = defaults;
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(186)))
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(163);
 
 /***/ }),
 /* 151 */
@@ -1053,7 +1053,7 @@ module.exports = class Base {
 var utils = __webpack_require__(147);
 var bind = __webpack_require__(155);
 var Axios = __webpack_require__(165);
-var defaults = __webpack_require__(150);
+var defaults = __webpack_require__(149);
 
 /**
  * Create an instance of Axios
@@ -1173,7 +1173,7 @@ module.exports = CancelToken;
 "use strict";
 
 
-var defaults = __webpack_require__(150);
+var defaults = __webpack_require__(149);
 var utils = __webpack_require__(147);
 var InterceptorManager = __webpack_require__(166);
 var dispatchRequest = __webpack_require__(167);
@@ -1328,7 +1328,7 @@ module.exports = InterceptorManager;
 var utils = __webpack_require__(147);
 var transformData = __webpack_require__(170);
 var isCancel = __webpack_require__(153);
-var defaults = __webpack_require__(150);
+var defaults = __webpack_require__(149);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -2008,10 +2008,8 @@ var JSONAPIClient = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__D8JSONAPIClient__ = __webpack_require__(180);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_axios__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jsonapi_parse__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jsonapi_parse__);
 
 
 
@@ -2020,7 +2018,6 @@ var JSONAPIClient = function () {
 /**
  * Get recipes from JSON API server
  */
-
 
 
 
@@ -2121,7 +2118,7 @@ var Recipes = function () {
     key: 'findAllCategoriesFromCache',
     value: function findAllCategoriesFromCache() {
       var cache = '{"data":[{"type":"categories","id":"893ac8d7-ce93-472a-8641-5122e8b01586","attributes":{"internalId":1,"name":"Main course","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/893ac8d7-ce93-472a-8641-5122e8b01586"}},{"type":"categories","id":"b2103ccf-4866-45f1-809d-870be192771f","attributes":{"internalId":2,"name":"Starter","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/b2103ccf-4866-45f1-809d-870be192771f"}},{"type":"categories","id":"d4391f2f-861e-4e00-bf0b-343da766113a","attributes":{"internalId":3,"name":"Snack","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/d4391f2f-861e-4e00-bf0b-343da766113a"}},{"type":"categories","id":"2306ef55-1562-45f3-8232-3b820a632aca","attributes":{"internalId":4,"name":"Salad","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/2306ef55-1562-45f3-8232-3b820a632aca"}}],"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories?page%5Blimit%5D=20"}}';
-      return __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse___default.a.parse(JSON.parse(cache)).data;
+      return __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse___default.a.parse(JSON.parse(cache)).data;
     }
   }, {
     key: 'findAllCategories',
@@ -3116,7 +3113,7 @@ module.exports = class Entity {
 /***/ (function(module, exports, __webpack_require__) {
 
 const methods = __webpack_require__(148);
-const axios = __webpack_require__(149);
+const axios = __webpack_require__(150);
 const qs = __webpack_require__(160);
 
 module.exports = class OAuth {
@@ -3191,7 +3188,7 @@ module.exports = class Request extends Base {
   constructor(options, oauth) {
     super(options);
     this.oauth = oauth;
-    this.axios = __webpack_require__(149);
+    this.axios = __webpack_require__(150);
   }
 
   /**

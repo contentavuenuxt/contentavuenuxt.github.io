@@ -1,12 +1,12 @@
-webpackJsonp([2],Array(144).concat([
-/* 144 */
+webpackJsonp([3],Array(142).concat([
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(224),
+  __webpack_require__(223),
   /* template */
-  __webpack_require__(243),
+  __webpack_require__(247),
   /* styles */
   null,
   /* scopeId */
@@ -19,6 +19,8 @@ module.exports = Component.exports
 
 
 /***/ }),
+/* 143 */,
+/* 144 */,
 /* 145 */,
 /* 146 */,
 /* 147 */
@@ -347,12 +349,6 @@ module.exports = {
 /* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(163);
-
-/***/ }),
-/* 150 */
-/***/ (function(module, exports, __webpack_require__) {
-
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
@@ -448,6 +444,12 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 module.exports = defaults;
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(186)))
+
+/***/ }),
+/* 150 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(163);
 
 /***/ }),
 /* 151 */
@@ -1054,7 +1056,7 @@ module.exports = class Base {
 var utils = __webpack_require__(147);
 var bind = __webpack_require__(155);
 var Axios = __webpack_require__(165);
-var defaults = __webpack_require__(150);
+var defaults = __webpack_require__(149);
 
 /**
  * Create an instance of Axios
@@ -1174,7 +1176,7 @@ module.exports = CancelToken;
 "use strict";
 
 
-var defaults = __webpack_require__(150);
+var defaults = __webpack_require__(149);
 var utils = __webpack_require__(147);
 var InterceptorManager = __webpack_require__(166);
 var dispatchRequest = __webpack_require__(167);
@@ -1329,7 +1331,7 @@ module.exports = InterceptorManager;
 var utils = __webpack_require__(147);
 var transformData = __webpack_require__(170);
 var isCancel = __webpack_require__(153);
-var defaults = __webpack_require__(150);
+var defaults = __webpack_require__(149);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -2009,10 +2011,8 @@ var JSONAPIClient = function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_createClass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__D8JSONAPIClient__ = __webpack_require__(180);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_axios__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_jsonapi_parse__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_jsonapi_parse__);
 
 
 
@@ -2021,7 +2021,6 @@ var JSONAPIClient = function () {
 /**
  * Get recipes from JSON API server
  */
-
 
 
 
@@ -2122,7 +2121,7 @@ var Recipes = function () {
     key: 'findAllCategoriesFromCache',
     value: function findAllCategoriesFromCache() {
       var cache = '{"data":[{"type":"categories","id":"893ac8d7-ce93-472a-8641-5122e8b01586","attributes":{"internalId":1,"name":"Main course","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/893ac8d7-ce93-472a-8641-5122e8b01586"}},{"type":"categories","id":"b2103ccf-4866-45f1-809d-870be192771f","attributes":{"internalId":2,"name":"Starter","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/b2103ccf-4866-45f1-809d-870be192771f"}},{"type":"categories","id":"d4391f2f-861e-4e00-bf0b-343da766113a","attributes":{"internalId":3,"name":"Snack","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/d4391f2f-861e-4e00-bf0b-343da766113a"}},{"type":"categories","id":"2306ef55-1562-45f3-8232-3b820a632aca","attributes":{"internalId":4,"name":"Salad","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/2306ef55-1562-45f3-8232-3b820a632aca"}}],"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories?page%5Blimit%5D=20"}}';
-      return __WEBPACK_IMPORTED_MODULE_6_jsonapi_parse___default.a.parse(JSON.parse(cache)).data;
+      return __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse___default.a.parse(JSON.parse(cache)).data;
     }
   }, {
     key: 'findAllCategories',
@@ -3117,7 +3116,7 @@ module.exports = class Entity {
 /***/ (function(module, exports, __webpack_require__) {
 
 const methods = __webpack_require__(148);
-const axios = __webpack_require__(149);
+const axios = __webpack_require__(150);
 const qs = __webpack_require__(160);
 
 module.exports = class OAuth {
@@ -3192,7 +3191,7 @@ module.exports = class Request extends Base {
   constructor(options, oauth) {
     super(options);
     this.oauth = oauth;
-    this.axios = __webpack_require__(149);
+    this.axios = __webpack_require__(150);
   }
 
   /**
@@ -3968,8 +3967,7 @@ var update = __webpack_require__(48)("e38c527a", content, true);
 /* 220 */,
 /* 221 */,
 /* 222 */,
-/* 223 */,
-/* 224 */
+/* 223 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4007,12 +4005,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllLatest(20);
+              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllByCategoryName(params.category, 20);
 
             case 2:
               recipes = _context.sent;
               return _context.abrupt('return', {
-                recipes: recipes
+                recipes: recipes,
+                categoryName: params.category
               });
 
             case 4:
@@ -4032,6 +4031,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
+/* 224 */,
 /* 225 */,
 /* 226 */,
 /* 227 */,
@@ -4050,7 +4050,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* 240 */,
 /* 241 */,
 /* 242 */,
-/* 243 */
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -4058,9 +4062,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('h3', {
     staticClass: "title is-h3 has-text-centered"
-  }, [_vm._v(" Latest recipes ")]), _c('RecipesAsCards', {
+  }, [_vm._v(" " + _vm._s(_vm.categoryName) + " ")]), _c('RecipesAsCards', {
     attrs: {
-      "title": "Latest recipes",
       "recipes": _vm.recipes
     }
   })], 1)])
