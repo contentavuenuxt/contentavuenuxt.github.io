@@ -1942,6 +1942,7 @@ var JSONAPIClient = function () {
     this.waterwheel = new __WEBPACK_IMPORTED_MODULE_4_waterwheel___default.a({
       base: this.baseUrl,
       jsonapiPrefix: 'api',
+      timeout: 2000,
       accessCheck: false
     }, null, {});
   }
