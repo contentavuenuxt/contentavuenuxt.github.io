@@ -1,35 +1,35 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "3.nuxt.bundle.29cd3865a89e4e57cfe6.js",
+    "3.nuxt.bundle.3a4e968eb92ae0e57f31.js",
     "img/clock.3d323af.svg",
     "img/serves.e88d7ff.svg",
     "img/book.d98ea2b.svg",
-    "0.nuxt.bundle.272696752eb17ca23de9.js",
-    "1.nuxt.bundle.bf796dd61fe3da53034f.js",
-    "2.nuxt.bundle.af22a5de11cef96c4981.js",
+    "0.nuxt.bundle.9fb5ddb6805509387013.js",
+    "1.nuxt.bundle.ec6f6db9f5ca3f25c2e8.js",
+    "2.nuxt.bundle.00460a1d549df02de2b4.js",
     "img/difficulty.67f1bc4.svg",
-    "4.nuxt.bundle.9d3e5932b5c630379368.js",
-    "5.nuxt.bundle.b63c1921dc8d502d3f90.js",
-    "6.nuxt.bundle.b7ecaecb27fe09a28dfc.js",
+    "4.nuxt.bundle.7a3aeaf6dd63e19430da.js",
+    "5.nuxt.bundle.b3bd30bb3fae22df09b4.js",
+    "6.nuxt.bundle.03f5a861db6e0a24e747.js",
     "vendor.bundle.f8e7aa830fb23210a2b0.js",
     "nuxt.bundle.4c989a86f24de7d97ea3.js",
-    "manifest.723d0c4707e78b577e62.js",
+    "manifest.97d338d7960eb6faa4fe.js",
     "index.html"
   ],
   "initial": [
-    "manifest.723d0c4707e78b577e62.js",
+    "manifest.97d338d7960eb6faa4fe.js",
     "vendor.bundle.f8e7aa830fb23210a2b0.js",
     "nuxt.bundle.4c989a86f24de7d97ea3.js"
   ],
   "async": [
-    "3.nuxt.bundle.29cd3865a89e4e57cfe6.js",
-    "0.nuxt.bundle.272696752eb17ca23de9.js",
-    "1.nuxt.bundle.bf796dd61fe3da53034f.js",
-    "2.nuxt.bundle.af22a5de11cef96c4981.js",
-    "4.nuxt.bundle.9d3e5932b5c630379368.js",
-    "5.nuxt.bundle.b63c1921dc8d502d3f90.js",
-    "6.nuxt.bundle.b7ecaecb27fe09a28dfc.js"
+    "3.nuxt.bundle.3a4e968eb92ae0e57f31.js",
+    "0.nuxt.bundle.9fb5ddb6805509387013.js",
+    "1.nuxt.bundle.ec6f6db9f5ca3f25c2e8.js",
+    "2.nuxt.bundle.00460a1d549df02de2b4.js",
+    "4.nuxt.bundle.7a3aeaf6dd63e19430da.js",
+    "5.nuxt.bundle.b3bd30bb3fae22df09b4.js",
+    "6.nuxt.bundle.03f5a861db6e0a24e747.js"
   ],
   "modules": {
     "15665315": [
@@ -489,6 +489,9 @@
     "7328c5ff": [
       9
     ],
+    "17ef2e06": [
+      9
+    ],
     "f7fd9cb8": [
       4,
       3
@@ -652,6 +655,9 @@
       1,
       7,
       2
+    ],
+    "5b25a4cd": [
+      9
     ]
   }
 }
