@@ -2371,6 +2371,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2379,6 +2383,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     recipe: { type: Object, default: function _default() {
         return [];
       } }
+  },
+  methods: {
+    classes: function classes(difficulty) {
+      return {
+        'tag is-primary': difficulty == 'easy',
+        'tag is-warning': difficulty == 'middle',
+        'tag is-danger': difficulty == 'hard'
+      };
+    }
   }
 });
 
@@ -3222,10 +3235,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       expression: "recipe.image.thumbnail.filename"
     }]
   })]) : _vm._e(), _c('div', {
+    staticClass: "has-text-centered",
     slot: "content"
   }, [_c('div', {
     staticClass: "difficulty"
-  }, [_vm._v("\n        difficulty : " + _vm._s(_vm.recipe.difficulty) + "\n      ")]), _c('h3', [_vm._v(_vm._s(_vm.recipe.title))])])])], 1)
+  }, [_c('small', [_c('span', {
+    class: _vm.classes(_vm.recipe.difficulty)
+  }, [_vm._v("  " + _vm._s(_vm.recipe.difficulty))])])]), _c('div', {
+    staticClass: "description"
+  }, [_c('h3', {
+    staticClass: "title is-6"
+  }, [_vm._v(_vm._s(_vm.recipe.title))])])])])], 1)
 },staticRenderFns: []}
 
 /***/ }),
