@@ -320,7 +320,7 @@ var update = __webpack_require__(48)("2f84756a", content, true);
 
 module.exports = {
 	"name": "contenta_vue",
-	"version": "0.0.11",
+	"version": "0.1.1",
 	"description": "Nuxt.js project",
 	"author": "yann <yann.boisselier@gmail.com>",
 	"private": true,

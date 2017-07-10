@@ -2122,12 +2122,6 @@ var Recipes = function () {
       return findAllPromoted;
     }()
   }, {
-    key: 'findAllCategoriesFromCache',
-    value: function findAllCategoriesFromCache() {
-      var cache = '{"data":[{"type":"categories","id":"893ac8d7-ce93-472a-8641-5122e8b01586","attributes":{"internalId":1,"name":"Main course","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/893ac8d7-ce93-472a-8641-5122e8b01586"}},{"type":"categories","id":"b2103ccf-4866-45f1-809d-870be192771f","attributes":{"internalId":2,"name":"Starter","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/b2103ccf-4866-45f1-809d-870be192771f"}},{"type":"categories","id":"d4391f2f-861e-4e00-bf0b-343da766113a","attributes":{"internalId":3,"name":"Snack","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/d4391f2f-861e-4e00-bf0b-343da766113a"}},{"type":"categories","id":"2306ef55-1562-45f3-8232-3b820a632aca","attributes":{"internalId":4,"name":"Salad","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/2306ef55-1562-45f3-8232-3b820a632aca"}}],"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories?page%5Blimit%5D=20"}}';
-      return __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse___default.a.parse(JSON.parse(cache)).data;
-    }
-  }, {
     key: 'findAllCategories',
     value: function () {
       var _ref3 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3() {

@@ -1,12 +1,12 @@
-webpackJsonp([2],Array(145).concat([
-/* 145 */
+webpackJsonp([1],Array(146).concat([
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(226),
+  __webpack_require__(227),
   /* template */
-  __webpack_require__(245),
+  __webpack_require__(256),
   /* styles */
   null,
   /* scopeId */
@@ -19,7 +19,6 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 146 */,
 /* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2121,12 +2120,6 @@ var Recipes = function () {
       return findAllPromoted;
     }()
   }, {
-    key: 'findAllCategoriesFromCache',
-    value: function findAllCategoriesFromCache() {
-      var cache = '{"data":[{"type":"categories","id":"893ac8d7-ce93-472a-8641-5122e8b01586","attributes":{"internalId":1,"name":"Main course","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/893ac8d7-ce93-472a-8641-5122e8b01586"}},{"type":"categories","id":"b2103ccf-4866-45f1-809d-870be192771f","attributes":{"internalId":2,"name":"Starter","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/b2103ccf-4866-45f1-809d-870be192771f"}},{"type":"categories","id":"d4391f2f-861e-4e00-bf0b-343da766113a","attributes":{"internalId":3,"name":"Snack","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/d4391f2f-861e-4e00-bf0b-343da766113a"}},{"type":"categories","id":"2306ef55-1562-45f3-8232-3b820a632aca","attributes":{"internalId":4,"name":"Salad","description":null,"weight":0,"updatedAt":"2017-06-30T14:59:28+0200","path":null},"relationships":{"parent":{"data":[]}},"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories/2306ef55-1562-45f3-8232-3b820a632aca"}}],"links":{"self":"https://dev-contentacms.pantheonsite.io/api/categories?page%5Blimit%5D=20"}}';
-      return __WEBPACK_IMPORTED_MODULE_5_jsonapi_parse___default.a.parse(JSON.parse(cache)).data;
-    }
-  }, {
     key: 'findAllCategories',
     value: function () {
       var _ref3 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3() {
@@ -3955,23 +3948,30 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/clock.3d323af.svg";
+function injectStyle (ssrContext) {
+  __webpack_require__(213)
+}
+var Component = __webpack_require__(17)(
+  /* script */
+  __webpack_require__(210),
+  /* template */
+  __webpack_require__(212),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-3ef70c53",
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
 
 /***/ }),
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */
+/* 210 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3982,6 +3982,86 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    to: {
+      type: String | Array,
+      default: '/'
+    }
+  },
+  data: function data() {
+    return {
+      isLoading: false
+    };
+  }
+});
+
+/***/ }),
+/* 211 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(47)(true);
+// imports
+
+
+// module
+exports.push([module.i, ".button[data-v-3ef70c53]{margin-top:4vh}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contenta_vue/components/ButtonLink.vue"],"names":[],"mappings":"AACA,yBACG,cAAe,CACjB","file":"ButtonLink.vue","sourcesContent":["\n.button[data-v-3ef70c53] {\n   margin-top:4vh;\n}\n"],"sourceRoot":""}]);
+
+// exports
+
+
+/***/ }),
+/* 212 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('nuxt-link', {
+    staticClass: "button is-primary",
+    class: {
+      'is-loading': _vm.isLoading
+    },
+    attrs: {
+      "to": _vm.to
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.isLoading = !_vm.isLoading
+      }
+    }
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+
+/***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(211);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(48)("4a0e7eb8", content, true);
+
+/***/ }),
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipesAsCards__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipesAsCards___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_RecipesAsCards__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_RecipeAsPromotedBanner__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_RecipeAsPromotedBanner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_RecipeAsPromotedBanner__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ButtonLink__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ButtonLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_ButtonLink__);
 //
 //
 //
@@ -4009,32 +4089,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: { RecipesAsCards: __WEBPACK_IMPORTED_MODULE_0__components_RecipesAsCards___default.a, ButtonLink: __WEBPACK_IMPORTED_MODULE_2__components_ButtonLink___default.a, RecipeAsPromotedBanner: __WEBPACK_IMPORTED_MODULE_1__components_RecipeAsPromotedBanner___default.a },
+  props: {
+    recipePromoted: { type: Object, default: {} },
+    recipesLatest: { type: Array, default: function _default() {
+        return [];
+      } },
+    recipesByCategories: { type: Array, default: function _default() {
+        return [];
+      } }
+  }
+});
+
+/***/ }),
+/* 220 */,
+/* 221 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
@@ -4063,65 +4141,77 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 221 */,
 /* 222 */,
 /* 223 */,
 /* 224 */,
 /* 225 */,
-/* 226 */
+/* 226 */,
+/* 227 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_Recipes__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail__ = __webpack_require__(240);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_RecipesAsCards__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_RecipesAsCards___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_RecipesAsCards__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_Recipes__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_PageRecipesIndex__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_PageRecipesIndex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_PageRecipesIndex__);
 
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   transition: 'page',
-  components: { RecipeAsDetail: __WEBPACK_IMPORTED_MODULE_3__components_RecipeAsDetail___default.a, RecipesAsCards: __WEBPACK_IMPORTED_MODULE_4__components_RecipesAsCards___default.a },
+  components: { PageRecipesIndex: __WEBPACK_IMPORTED_MODULE_4__components_PageRecipesIndex___default.a },
   asyncData: function () {
-    var _ref2 = __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(_ref) {
-      var params = _ref.params;
-      var recipe, recipesByCategory;
+    var _ref = __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
+      var promises;
       return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              _context.next = 2;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findOneById(params.id);
+              promises = [];
 
-            case 2:
-              recipe = _context.sent;
-              _context.next = 5;
-              return __WEBPACK_IMPORTED_MODULE_2__services_Recipes__["a" /* default */].findAllByCategoryName(recipe.category.name, 4);
+              // get 4 latest recipes
+
+              promises.push(__WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllLatest(4));
+
+              // get 4 recipes for each category
+              promises.push(__WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllCategories().then(function (categories) {
+                return __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise___default.a.all(categories.map(function (category) {
+                  return __WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllByCategoryName(category.name, 4);
+                })).then(function (recipesByCategory) {
+                  return categories.map(function (category, index) {
+                    category.recipes = recipesByCategory[index];
+                    return category;
+                  });
+                });
+              }));
+
+              // get a single promoted recipe
+              promises.push(__WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllPromoted(1).then(function (r) {
+                return r[0];
+              }));
+
+              return _context.abrupt('return', __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise___default.a.all(promises).then(function (promisesResults) {
+                return {
+                  recipesLatest: promisesResults[0],
+                  recipesByCategories: promisesResults[1],
+                  recipePromoted: promisesResults[2]
+                };
+              }));
 
             case 5:
-              recipesByCategory = _context.sent;
-              return _context.abrupt('return', { recipe: recipe, recipesByCategory: recipesByCategory });
-
-            case 7:
             case 'end':
               return _context.stop();
           }
@@ -4129,8 +4219,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }, _callee, this);
     }));
 
-    function asyncData(_x) {
-      return _ref2.apply(this, arguments);
+    function asyncData() {
+      return _ref.apply(this, arguments);
     }
 
     return asyncData;
@@ -4138,57 +4228,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 227 */,
 /* 228 */,
 /* 229 */,
-/* 230 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(47)(true);
-// imports
-
-
-// module
-exports.push([module.i, ".icons[data-v-6b1c7ed8]{width:40px}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contenta_vue/components/RecipeAsDetail.vue"],"names":[],"mappings":"AACA,wBACE,UAAY,CACb","file":"RecipeAsDetail.vue","sourcesContent":["\n.icons[data-v-6b1c7ed8] {\n  width: 40px;\n}\n"],"sourceRoot":""}]);
-
-// exports
-
-
-/***/ }),
-/* 231 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/difficulty.67f1bc4.svg";
-
-/***/ }),
-/* 232 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/serves.e88d7ff.svg";
-
-/***/ }),
+/* 230 */,
+/* 231 */,
+/* 232 */,
 /* 233 */,
 /* 234 */,
 /* 235 */,
 /* 236 */,
 /* 237 */,
 /* 238 */,
-/* 239 */,
-/* 240 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
-function injectStyle (ssrContext) {
-  __webpack_require__(259)
-}
 var Component = __webpack_require__(17)(
   /* script */
-  __webpack_require__(220),
+  __webpack_require__(219),
   /* template */
-  __webpack_require__(250),
+  __webpack_require__(249),
   /* styles */
-  injectStyle,
+  null,
   /* scopeId */
-  "data-v-6b1c7ed8",
+  null,
   /* moduleIdentifier (server only) */
   null
 )
@@ -4197,142 +4259,124 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 241 */,
+/* 240 */,
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(17)(
+  /* script */
+  __webpack_require__(221),
+  /* template */
+  __webpack_require__(252),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
 /* 242 */,
 /* 243 */,
 /* 244 */,
-/* 245 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('RecipeAsDetail', {
-    attrs: {
-      "recipe": _vm.recipe
-    }
-  }), _c('h3', {
-    staticClass: "title is-3 has-text-centered"
-  }, [_vm._v("More recipes from category "), _c('strong', [_vm._v(_vm._s(_vm.recipe.category.name))])]), _c('section', {
-    staticClass: "container"
-  }, [_c('RecipesAsCards', {
-    attrs: {
-      "recipes": _vm.recipesByCategory
-    }
-  })], 1)], 1)
-},staticRenderFns: []}
-
-/***/ }),
+/* 245 */,
 /* 246 */,
 /* 247 */,
 /* 248 */,
-/* 249 */,
-/* 250 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 249 */
+/***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('section', {
+  return _c('div', [_c('RecipeAsPromotedBanner', {
+    attrs: {
+      "recipe": _vm.recipePromoted
+    }
+  }), _c('div', {
+    staticClass: "container"
+  }, [_c('section', [_c('h3', {
+    staticClass: "title is-3 has-text-centered"
+  }, [_vm._v(" Latest recipes ")]), _c('RecipesAsCards', {
+    attrs: {
+      "recipes": _vm.recipesLatest,
+      "more-link": "/recipes-latest"
+    }
+  }), _c('div', {
+    staticClass: "has-text-centered"
+  }, [_c('ButtonLink', {
+    attrs: {
+      "to": "/recipes-latest"
+    }
+  }, [_vm._v("View more")])], 1)], 1), _vm._l((_vm.recipesByCategories), function(category, categoryIndex) {
+    return _c('section', {
+      key: categoryIndex
+    }, [_c('h3', {
+      staticClass: "title is-3 has-text-centered"
+    }, [_vm._v(_vm._s(category.name))]), _c('RecipesAsCards', {
+      attrs: {
+        "title": "Recipes",
+        "recipes": category.recipes
+      }
+    }), _c('div', {
+      staticClass: "has-text-centered"
+    }, [_c('ButtonLink', {
+      attrs: {
+        "to": '/recipes-category/' + category.name
+      }
+    }, [_vm._v("View more")])], 1)], 1)
+  })], 2)], 1)
+},staticRenderFns: []}
+
+/***/ }),
+/* 250 */,
+/* 251 */,
+/* 252 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', {
     staticClass: "hero is-primary"
   }, [_c('div', {
     staticClass: "hero-body"
   }, [_c('div', {
     staticClass: "container"
-  }, [_c('h1', {
-    staticClass: "title is-1"
-  }, [_vm._v(" " + _vm._s(_vm.recipe.title) + " ")])])])]), _c('div', {
-    staticClass: "container"
-  }, [_c('section', [_c('div', {
+  }, [_c('div', {
     staticClass: "columns"
   }, [_c('div', {
     staticClass: "column"
-  }, [_c('img', {
+  }, [_c('h2', {
+    staticClass: "title is-2"
+  }, [_vm._v(" PROMOTED RECIPE  ")]), _c('h3', {
+    staticClass: "title is-3"
+  }, [_vm._v(_vm._s(_vm.recipe.title) + " ")])]), _c('div', {
+    staticClass: "column"
+  }, [(_vm.recipe.image) ? _c('img', {
     directives: [{
       name: "lazy",
       rawName: "v-lazy",
       value: (_vm.recipe.image.name),
       expression: "recipe.image.name"
     }]
-  })]), _c('div', {
-    staticClass: "column"
-  }, [_c('div', {
-    staticClass: "columns"
-  }, [_c('div', {
-    staticClass: "column has-text-centered"
-  }, [_vm._m(0), _vm._v("\n              Preparation Time : " + _vm._s(_vm.recipe.preparationTime) + "\n            ")]), _c('div', {
-    staticClass: "column has-text-centered"
-  }, [_vm._m(1), _vm._v("\n              Cooking time : " + _vm._s(_vm.recipe.totalTime) + "\n            ")])]), _c('div', {
-    staticClass: "columns"
-  }, [_c('div', {
-    staticClass: "column has-text-centered"
-  }, [_vm._m(2), _vm._v("\n              Serves : " + _vm._s(_vm.recipe.numberOfServices) + "\n            ")]), _c('div', {
-    staticClass: "column has-text-centered"
-  }, [_vm._m(3), _vm._v("\n              Difficulty : " + _vm._s(_vm.recipe.Difficulty) + "\n            ")])])])])]), _c('section', [_c('h2', {
-    staticClass: "title is-2"
-  }, [_vm._v(" What you'll need and how to make this dish")]), _c('div', {
-    staticClass: "columns"
-  }, [_c('div', {
-    staticClass: "column"
-  }, [_c('div'), _c('h2', {
-    staticClass: "title is-2"
-  }, [_vm._v(" Ingredients ")]), _c('ul', {
-    staticClass: "ingredients"
-  }, _vm._l((_vm.recipe.ingredients), function(ingredient, index) {
-    return _c('li', {
-      key: index
-    }, [_vm._v("\n              " + _vm._s(ingredient) + "\n            ")])
-  }))]), _c('div', {
-    staticClass: "column"
-  }, [_c('h2', {
-    staticClass: "title is-2"
-  }, [_vm._v(" Method ")]), _c('p', [_vm._v("\n          " + _vm._s(_vm.recipe.instructions) + "\n          ")])])])])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('img', {
-    staticClass: "icons",
-    attrs: {
-      "src": __webpack_require__(214)
-    }
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('img', {
-    staticClass: "icons",
-    attrs: {
-      "src": __webpack_require__(214)
-    }
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('img', {
-    staticClass: "icons",
-    attrs: {
-      "src": __webpack_require__(232)
-    }
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('img', {
-    staticClass: "icons",
-    attrs: {
-      "src": __webpack_require__(231)
-    }
-  })])
-}]}
+  }) : _vm._e()])])])])])
+},staticRenderFns: []}
 
 /***/ }),
-/* 251 */,
-/* 252 */,
 /* 253 */,
 /* 254 */,
 /* 255 */,
-/* 256 */,
-/* 257 */,
-/* 258 */,
-/* 259 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 256 */
+/***/ (function(module, exports) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(230);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(48)("3ca5d05a", content, true);
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('PageRecipesIndex', _vm._b({}, 'PageRecipesIndex', {
+    recipePromoted: _vm.recipePromoted,
+    recipesLatest: _vm.recipesLatest,
+    recipesByCategories: _vm.recipesByCategories
+  }))
+},staticRenderFns: []}
 
 /***/ })
 ]));
