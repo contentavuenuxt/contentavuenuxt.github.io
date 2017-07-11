@@ -1,13 +1,13 @@
 webpackJsonp([5],{
 
-/***/ 140:
+/***/ 185:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(17)(
+var Component = __webpack_require__(19)(
   /* script */
-  __webpack_require__(222),
+  __webpack_require__(225),
   /* template */
-  __webpack_require__(253),
+  __webpack_require__(256),
   /* styles */
   null,
   /* scopeId */
@@ -21,12 +21,12 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 215:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion__ = __webpack_require__(239);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppVersion___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_AppVersion__);
 //
 //
@@ -62,16 +62,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: { AppVersion: __WEBPACK_IMPORTED_MODULE_0__components_AppVersion___default.a },
-  data: function data() {
-    return {
-      displayMobileMenu: false
-    };
+  methods: {
+    setMenuMobileIsOpened: function setMenuMobileIsOpened() {
+      this.$store.commit('setMenuMobileIsOpened', !this.$store.state.menuMobileIsOpened);
+    }
   }
 });
 
 /***/ }),
 
-/***/ 216:
+/***/ 219:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -83,7 +83,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-var packageJson = __webpack_require__(260);
+var packageJson = __webpack_require__(263);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return { packageJson: packageJson };
@@ -92,14 +92,14 @@ var packageJson = __webpack_require__(260);
 
 /***/ }),
 
-/***/ 222:
+/***/ 225:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppNavigation__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppNavigation__ = __webpack_require__(238);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppNavigation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_AppNavigation__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_AppFooter__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_AppFooter__ = __webpack_require__(237);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_AppFooter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_AppFooter__);
 //
 //
@@ -118,29 +118,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 228:
+/***/ 231:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(47)(true);
+exports = module.exports = __webpack_require__(51)(true);
 // imports
 
 
 // module
-exports.push([module.i, ".nuxt-link-exact-active[data-v-1433635e]{color:#363636}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contenta_vue/components/AppNavigation.vue"],"names":[],"mappings":"AACA,yCACE,aAAc,CACf","file":"AppNavigation.vue","sourcesContent":["\n.nuxt-link-exact-active[data-v-1433635e] {\n  color:#363636;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, ".nuxt-link-exact-active[data-v-1433635e]{color:#363636}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contenta_vue/components/AppNavigation.vue"],"names":[],"mappings":"AAAA,yCAAyC,aAAa,CAAC","file":"AppNavigation.vue","sourcesContent":[".nuxt-link-exact-active[data-v-1433635e]{color:#363636}"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 234:
+/***/ 237:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(17)(
+var Component = __webpack_require__(19)(
   /* script */
   null,
   /* template */
-  __webpack_require__(255),
+  __webpack_require__(258),
   /* styles */
   null,
   /* scopeId */
@@ -154,17 +154,17 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 235:
+/***/ 238:
 /***/ (function(module, exports, __webpack_require__) {
 
 function injectStyle (ssrContext) {
-  __webpack_require__(257)
+  __webpack_require__(260)
 }
-var Component = __webpack_require__(17)(
+var Component = __webpack_require__(19)(
   /* script */
-  __webpack_require__(215),
+  __webpack_require__(218),
   /* template */
-  __webpack_require__(242),
+  __webpack_require__(245),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -178,14 +178,14 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 236:
+/***/ 239:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(17)(
+var Component = __webpack_require__(19)(
   /* script */
-  __webpack_require__(216),
+  __webpack_require__(219),
   /* template */
-  __webpack_require__(254),
+  __webpack_require__(257),
   /* styles */
   null,
   /* scopeId */
@@ -199,7 +199,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 242:
+/***/ 245:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -214,41 +214,29 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("\n        UMAMI food magazine "), _c('br'), _c('AppVersion')], 1)]), _c('span', {
     staticClass: "nav-toggle",
     on: {
-      "click": function($event) {
-        _vm.displayMobileMenu = !_vm.displayMobileMenu
-      }
+      "click": _vm.setMenuMobileIsOpened
     }
   }, [_c('span'), _c('span'), _c('span')]), _c('div', {
     staticClass: "nav-right nav-menu",
     class: {
-      'is-active': _vm.displayMobileMenu
+      'is-active': this.$store.state.menuMobileIsOpened
     }
   }, [_c('nuxt-link', {
     staticClass: "nav-item",
     attrs: {
       "to": "/"
-    },
-    nativeOn: {
-      "click": function($event) {
-        _vm.displayMobileMenu = false
-      }
     }
   }, [_vm._v(" Home ")]), _c('nuxt-link', {
     staticClass: "nav-item",
     attrs: {
       "to": "/recipes"
-    },
-    nativeOn: {
-      "click": function($event) {
-        _vm.displayMobileMenu = false
-      }
     }
   }, [_vm._v(" Recipes ")])], 1)])])
 },staticRenderFns: []}
 
 /***/ }),
 
-/***/ 253:
+/***/ 256:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -257,7 +245,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 254:
+/***/ 257:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -268,7 +256,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 255:
+/***/ 258:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -301,21 +289,21 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 257:
+/***/ 260:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(228);
+var content = __webpack_require__(231);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(48)("2f84756a", content, true);
+var update = __webpack_require__(52)("2f84756a", content, true);
 
 /***/ }),
 
-/***/ 260:
+/***/ 263:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -327,11 +315,7 @@ module.exports = {
 	"dependencies": {
 		"@nuxtjs/pwa": "latest",
 		"axios": "^0.16.2",
-		"d8-jsonapi-querystring": "0.0.7",
-		"d8-subrequests": "0.0.4",
-		"dev-debug": "node --debug node_modules/.bin/nuxt",
 		"jsonapi-parse": "^1.2.0",
-		"lodash": "^4.17.4",
 		"nuxt": "latest",
 		"vue-lazyload": "^1.0.5",
 		"waterwheel": "^1.3.3"
