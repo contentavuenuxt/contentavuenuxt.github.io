@@ -320,7 +320,7 @@ var update = __webpack_require__(48)("2f84756a", content, true);
 
 module.exports = {
 	"name": "contenta_vue_nuxt",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Nuxt.js client for Contenta CMS",
 	"author": "yann <yann.boisselier@gmail.com>",
 	"private": true,
