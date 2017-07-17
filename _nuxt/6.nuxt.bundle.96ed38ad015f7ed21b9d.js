@@ -162,7 +162,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "has-text-centered container"
   }, [_c('appSection', [_c('h1', {
     staticClass: "title is-4"
-  }, [_vm._v("Sorry, API server is unreachable for now ")]), _c('img', {
+  }, [_vm._v("Sorry, our API server is unreachable for now ")]), _c('img', {
     attrs: {
       "src": __webpack_require__(264)
     }
