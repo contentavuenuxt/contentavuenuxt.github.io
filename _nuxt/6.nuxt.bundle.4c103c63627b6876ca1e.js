@@ -1,4 +1,4 @@
-webpackJsonp([7],{
+webpackJsonp([6],{
 
 /***/ 186:
 /***/ (function(module, exports, __webpack_require__) {
@@ -21,6 +21,68 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ 194:
+/***/ (function(module, exports, __webpack_require__) {
+
+function injectStyle (ssrContext) {
+  __webpack_require__(199)
+}
+var Component = __webpack_require__(20)(
+  /* script */
+  null,
+  /* template */
+  __webpack_require__(198),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-90f118ea",
+  /* moduleIdentifier (server only) */
+  null
+)
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 197:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(51)(true);
+// imports
+
+
+// module
+exports.push([module.i, "section[data-v-90f118ea]{margin-bottom:10vh}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contenta_vue/components/AppSection.vue"],"names":[],"mappings":"AACA,yBACE,kBAAoB,CACrB","file":"AppSection.vue","sourcesContent":["\nsection[data-v-90f118ea] {\n  margin-bottom: 10vh;\n}\n"],"sourceRoot":""}]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 198:
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('section', [_vm._t("default")], 2)
+},staticRenderFns: []}
+
+/***/ }),
+
+/***/ 199:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(197);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(52)("e9dc3d4a", content, true);
+
+/***/ }),
+
 /***/ 239:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -28,6 +90,8 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ContactForm__ = __webpack_require__(271);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ContactForm___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_ContactForm__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_AppSection__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_AppSection___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_AppSection__);
 //
 //
 //
@@ -43,13 +107,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: { ContactForm: __WEBPACK_IMPORTED_MODULE_0__components_ContactForm___default.a }
+  components: { ContactForm: __WEBPACK_IMPORTED_MODULE_0__components_ContactForm___default.a, AppSection: __WEBPACK_IMPORTED_MODULE_1__components_AppSection___default.a }
 });
 
 /***/ }),
@@ -123,13 +185,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('div', {
     staticClass: "content"
-  }, [_c('h1', [_vm._v("Get in touch")]), _c('div', {
+  }, [_c('h1', {
+    staticClass: "has-text-centered"
+  }, [_vm._v("Get in touch")]), _c('div', {
     staticClass: "columns"
   }, [_c('div', {
-    staticClass: "column is-half"
-  }, [_c('ContactForm')], 1), _c('div', {
-    staticClass: "column"
-  })])])])])
+    staticClass: "column is-half is-offset-one-quarter"
+  }, [_c('ContactForm')], 1)])])])])
 },staticRenderFns: []}
 
 /***/ }),
@@ -181,8 +243,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('textarea', {
     staticClass: "textarea"
   })])]), _c('div', {
+    staticClass: "has-text-centered"
+  }, [_c('div', {
     staticClass: "button is-primary"
-  }, [_vm._v("\n    Envoyer\n  ")])])
+  }, [_vm._v("\n      Envoyer\n    ")])])])
 }]}
 
 /***/ }),
