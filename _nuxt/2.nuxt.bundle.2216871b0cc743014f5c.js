@@ -1,13 +1,13 @@
-webpackJsonp([0],{
+webpackJsonp([2],{
 
-/***/ 187:
+/***/ 192:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(20)(
   /* script */
-  __webpack_require__(249),
+  __webpack_require__(253),
   /* template */
-  __webpack_require__(296),
+  __webpack_require__(304),
   /* styles */
   null,
   /* scopeId */
@@ -1266,122 +1266,19 @@ var update = __webpack_require__(52)("4a0e7eb8", content, true);
 
 /***/ }),
 
-/***/ 236:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsCard__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsCard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_RecipeAsCard__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: { RecipeAsCard: __WEBPACK_IMPORTED_MODULE_0__components_RecipeAsCard___default.a },
-  props: {
-    nodes: { type: Array, default: [] }
-  }
-});
-
-/***/ }),
-
-/***/ 237:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppSection__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppSection___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_AppSection__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: { AppSection: __WEBPACK_IMPORTED_MODULE_0__components_AppSection___default.a }
-});
-
-/***/ }),
-
-/***/ 238:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ButtonLink__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ButtonLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_ButtonLink__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: { ButtonLink: __WEBPACK_IMPORTED_MODULE_0__components_ButtonLink___default.a }
-});
-
-/***/ }),
-
-/***/ 239:
+/***/ 242:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipesAsCards__ = __webpack_require__(220);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipesAsCards___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_RecipesAsCards__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_ButtonLink__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_ButtonLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_ButtonLink__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_MonthEdition__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_MonthEdition___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_MonthEdition__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_RecipeAsPromotedBanner__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_RecipeAsPromotedBanner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_RecipeAsPromotedBanner__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ButtonLink__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_ButtonLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_ButtonLink__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_AppSection__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_AppSection___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_AppSection__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_HomePromotedNodes__ = __webpack_require__(270);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_HomePromotedNodes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_HomePromotedNodes__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_HomeWidgets__ = __webpack_require__(271);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_HomeWidgets___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_HomeWidgets__);
 //
 //
 //
@@ -1410,38 +1307,73 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
 
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: { RecipesAsCards: __WEBPACK_IMPORTED_MODULE_0__components_RecipesAsCards___default.a, MonthEdition: __WEBPACK_IMPORTED_MODULE_2__components_MonthEdition___default.a, ButtonLink: __WEBPACK_IMPORTED_MODULE_1__components_ButtonLink___default.a, AppSection: __WEBPACK_IMPORTED_MODULE_3__components_AppSection___default.a, HomePromotedNodes: __WEBPACK_IMPORTED_MODULE_4__components_HomePromotedNodes___default.a, HomeWidgets: __WEBPACK_IMPORTED_MODULE_5__components_HomeWidgets___default.a },
+  components: { RecipesAsCards: __WEBPACK_IMPORTED_MODULE_0__components_RecipesAsCards___default.a, ButtonLink: __WEBPACK_IMPORTED_MODULE_2__components_ButtonLink___default.a, RecipeAsPromotedBanner: __WEBPACK_IMPORTED_MODULE_1__components_RecipeAsPromotedBanner___default.a, AppSection: __WEBPACK_IMPORTED_MODULE_3__components_AppSection___default.a },
   props: {
-    latestRecipes: { type: Array, default: [] },
-    latestPromoted: { type: Array, default: [] }
+    recipePromoted: { type: Object, default: {} },
+    recipesLatest: { type: Array, default: function _default() {
+        return [];
+      } },
+    recipesByCategories: { type: Array, default: function _default() {
+        return [];
+      } }
   }
 });
 
 /***/ }),
 
-/***/ 249:
+/***/ 246:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppSection__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_AppSection___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_AppSection__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_ButtonLink__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_ButtonLink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_ButtonLink__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: { ButtonLink: __WEBPACK_IMPORTED_MODULE_1__components_ButtonLink___default.a, AppSection: __WEBPACK_IMPORTED_MODULE_0__components_AppSection___default.a },
+  props: {
+    recipe: { type: Object, default: {} }
+  }
+});
+
+/***/ }),
+
+/***/ 253:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1453,8 +1385,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_Recipes__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_PageIndex__ = __webpack_require__(273);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_PageIndex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_PageIndex__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_PageRecipesIndex__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_PageRecipesIndex___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_PageRecipesIndex__);
 
 
 
@@ -1462,28 +1394,51 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   transition: 'page',
-  components: { PageIndex: __WEBPACK_IMPORTED_MODULE_4__components_PageIndex___default.a },
+  components: { PageRecipesIndex: __WEBPACK_IMPORTED_MODULE_4__components_PageRecipesIndex___default.a },
   asyncData: function () {
-    var _ref2 = __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(_ref) {
-      var params = _ref.params;
+    var _ref = __WEBPACK_IMPORTED_MODULE_2__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_helpers_asyncToGenerator___default()(__WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.mark(function _callee() {
+      var promises;
       return __WEBPACK_IMPORTED_MODULE_0__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              return _context.abrupt('return', __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise___default.a.all([__WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllLatest(4), __WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findHomePromotedArticlesAndRecipes()]).then(function (values) {
+              promises = [];
+
+              // get 4 latest recipes
+
+              promises.push(__WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllLatest(4));
+
+              // get 4 recipes for each category
+              promises.push(__WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllCategories().then(function (categories) {
+                return __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise___default.a.all(categories.map(function (category) {
+                  return __WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllByCategoryName(category.name, 4);
+                })).then(function (recipesByCategory) {
+                  return categories.map(function (category, index) {
+                    category.recipes = recipesByCategory[index];
+                    return category;
+                  });
+                });
+              }));
+
+              // get a single promoted recipe
+              promises.push(__WEBPACK_IMPORTED_MODULE_3__services_Recipes__["a" /* default */].findAllPromoted(1).then(function (r) {
+                return r[0];
+              }));
+
+              return _context.abrupt('return', __WEBPACK_IMPORTED_MODULE_1__Applications_MAMP_htdocs_contenta_vue_node_modules_babel_runtime_core_js_promise___default.a.all(promises).then(function (promisesResults) {
                 return {
-                  latestRecipes: values[0],
-                  latestPromoted: values[1]
+                  recipesLatest: promisesResults[0],
+                  recipesByCategories: promisesResults[1],
+                  recipePromoted: promisesResults[2]
                 };
               }));
 
-            case 1:
+            case 5:
             case 'end':
               return _context.stop();
           }
@@ -1491,8 +1446,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }, _callee, this);
     }));
 
-    function asyncData(_x) {
-      return _ref2.apply(this, arguments);
+    function asyncData() {
+      return _ref.apply(this, arguments);
     }
 
     return asyncData;
@@ -1501,36 +1456,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 256:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(51)(true);
-// imports
-
-
-// module
-exports.push([module.i, "#book[data-v-16e42736]{max-height:40vh}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contenta_vue/components/MonthEdition.vue"],"names":[],"mappings":"AACA,uBACE,eAAgB,CACjB","file":"MonthEdition.vue","sourcesContent":["\n#book[data-v-16e42736] {\n  max-height: 40vh\n}\n"],"sourceRoot":""}]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 263:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/book.d98ea2b.svg";
-
-/***/ }),
-
-/***/ 270:
+/***/ 276:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(20)(
   /* script */
-  __webpack_require__(236),
+  __webpack_require__(242),
   /* template */
-  __webpack_require__(303),
+  __webpack_require__(294),
   /* styles */
   null,
   /* scopeId */
@@ -1544,14 +1477,14 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 271:
+/***/ 280:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(20)(
   /* script */
-  __webpack_require__(237),
+  __webpack_require__(246),
   /* template */
-  __webpack_require__(281),
+  __webpack_require__(298),
   /* styles */
   null,
   /* scopeId */
@@ -1565,193 +1498,100 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 272:
-/***/ (function(module, exports, __webpack_require__) {
-
-function injectStyle (ssrContext) {
-  __webpack_require__(307)
-}
-var Component = __webpack_require__(20)(
-  /* script */
-  __webpack_require__(238),
-  /* template */
-  __webpack_require__(285),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  "data-v-16e42736",
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 273:
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(20)(
-  /* script */
-  __webpack_require__(239),
-  /* template */
-  __webpack_require__(291),
-  /* styles */
-  null,
-  /* scopeId */
-  null,
-  /* moduleIdentifier (server only) */
-  null
-)
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 281:
+/***/ 294:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "has-text-centered"
-  }, [_c('div', {
-    staticClass: "columns"
-  }, [_c('div', {
-    staticClass: "column"
-  }, [_c('h4', {
-    staticClass: "title is-4"
-  }, [_vm._v("Dinners to impress")]), _c('p', [_vm._v("List recipes")])]), _c('div', {
-    staticClass: "column"
-  }, [_c('h4', {
-    staticClass: "title is-4"
-  }, [_vm._v("Learn to cook")]), _c('p', [_vm._v("Recipes for beginners")])]), _c('div', {
-    staticClass: "column"
-  }, [_c('h4', {
-    staticClass: "title is-4"
-  }, [_vm._v("Baked up")]), _c('p', [_vm._v("Delicious cake and bakes")])]), _c('div', {
-    staticClass: "column"
-  }, [_c('h4', {
-    staticClass: "title is-4"
-  }, [_vm._v("Quick and easy")]), _c('p', [_vm._v("20 minutes or less")])])])])
-}]}
-
-/***/ }),
-
-/***/ 285:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "columns"
-  }, [_c('div', {
-    staticClass: "column"
-  }, [_c('img', {
+  return _c('div', [_vm._v(" \"recipePromoted\" :recipe=\"recipePromoted\">"), _c('div', {
+    staticClass: "container"
+  }, [(_vm.recipesLatest) ? _c('AppSection', [_c('h3', {
+    staticClass: "title is-3 has-text-centered"
+  }, [_vm._v(" Latest recipes ")]), _c('RecipesAsCards', {
     attrs: {
-      "id": "book",
-      "src": __webpack_require__(263)
+      "recipes": _vm.recipesLatest,
+      "more-link": "/recipes-latest"
     }
-  })]), _c('div', {
-    staticClass: "column"
-  }, [_c('h3', {
-    staticClass: "title is-3"
-  }, [_vm._v("In this month's edition")]), _c('p', [_vm._v("\n      Dumque ibi diu moratur commeatus opperiens, quorum translationem ex Aquitania verni imbres solito crebriores prohibebant auctique torrentes, Herculanus advenit protector domesticus, Hermogenis ex magistro equitum filius, apud Constantinopolim, ut supra rettulimus, populari quondam turbela discerpti. quo verissime referente quae Gallus egerat, damnis super praeteritis maerens et futurorum timore suspensus angorem animi quam diu potuit emendabat.\n    ")])])])
-}]}
+  }), _c('div', {
+    staticClass: "has-text-centered"
+  }, [_c('ButtonLink', {
+    attrs: {
+      "to": "/recipes-latest"
+    }
+  }, [_vm._v("View more")])], 1)], 1) : _vm._e(), _vm._l((_vm.recipesByCategories), function(category, categoryIndex) {
+    return (_vm.recipesByCategories) ? _c('AppSection', {
+      key: categoryIndex
+    }, [_c('h3', {
+      staticClass: "title is-3 has-text-centered"
+    }, [_vm._v(_vm._s(category.name))]), _c('RecipesAsCards', {
+      attrs: {
+        "title": "Recipes",
+        "recipes": category.recipes
+      }
+    }), _c('div', {
+      staticClass: "has-text-centered"
+    }, [_c('ButtonLink', {
+      attrs: {
+        "to": '/recipes-category/' + category.name
+      }
+    }, [_vm._v("View more")])], 1)], 1) : _vm._e()
+  })], 2)])
+},staticRenderFns: []}
 
 /***/ }),
 
-/***/ 291:
+/***/ 298:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "home"
-  }, [_c('AppSection', {
+  return _c('AppSection', {
     staticClass: "hero is-primary"
   }, [_c('div', {
     staticClass: "hero-body"
   }, [_c('div', {
     staticClass: "container"
-  }, [_c('h1', {
-    staticClass: "title"
-  }, [_vm._v("\n          UMAMI FOOD MAGAZINE\n        ")])])])]), _c('AppSection', [_c('div', {
-    staticClass: "container"
-  }, [_c('h3', {
-    staticClass: "title is-3 has-text-centered"
-  }, [_vm._v("Latest promoted recipes and articles")]), _c('HomePromotedNodes', {
-    attrs: {
-      "nodes": _vm.latestPromoted
-    }
-  })], 1)]), _c('AppSection', [_c('MonthEdition')], 1), _c('AppSection', [_c('div', {
-    staticClass: "container"
-  }, [_c('HomeWidgets')], 1)]), _c('AppSection', {
-    staticClass: "home-recipes"
   }, [_c('div', {
-    staticClass: "container"
-  }, [_c('h3', {
-    staticClass: "title is-3 has-text-centered"
-  }, [_vm._v("Recipes")]), _c('h4', {
-    staticClass: "title is-4 has-text-centered"
-  }, [_vm._v("Explore recipes across every type of occasion, ingredient and skill level")]), _c('recipesAsCards', {
-    attrs: {
-      "recipes": _vm.latestRecipes,
-      "cardsByRow": "2"
-    }
-  })], 1)])], 1)
-},staticRenderFns: []}
-
-/***/ }),
-
-/***/ 296:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('PageIndex', _vm._b({}, 'PageIndex', {
-    latestRecipes: _vm.latestRecipes,
-    latestPromoted: _vm.latestPromoted
-  }))
-},staticRenderFns: []}
-
-/***/ }),
-
-/***/ 303:
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
     staticClass: "columns"
-  }, _vm._l((_vm.nodes), function(node, index) {
-    return _c('div', {
-      staticClass: "column",
-      class: {
-        'is-half': index == 0
-      }
-    }, [(node.contentType.type == 'recipe') ? _c('recipeAsCard', {
-      attrs: {
-        "recipe": node
-      }
-    }) : _vm._e(), (node.contentType.type == 'article') ? _c('div', [_vm._v(" There is not yet component to display article as card")]) : _vm._e()], 1)
-  }))
+  }, [_c('div', {
+    staticClass: "column"
+  }, [_c('h2', {
+    staticClass: "title is-2"
+  }, [_vm._v(" PROMOTED RECIPE ")]), _c('h3', {
+    staticClass: "title is-3"
+  }, [_vm._v(_vm._s(_vm.recipe.title) + " ")]), _c('ButtonLink', {
+    attrs: {
+      "button-class": "is-light",
+      "to": '/recipes/' + _vm.recipe.id
+    }
+  }, [_vm._v("View recipe")])], 1), _c('div', {
+    staticClass: "column"
+  }, [_c('nuxt-link', {
+    attrs: {
+      "to": '/recipes/' + _vm.recipe.id
+    }
+  }, [_c('figure', {
+    staticClass: "image is-3by2"
+  }, [(_vm.recipe.image) ? _c('img', {
+    directives: [{
+      name: "lazy",
+      rawName: "v-lazy",
+      value: (_vm.recipe.image.thumbnail.url),
+      expression: "recipe.image.thumbnail.url"
+    }]
+  }) : _vm._e()])])], 1)])])])])
 },staticRenderFns: []}
 
 /***/ }),
 
-/***/ 307:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 304:
+/***/ (function(module, exports) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(256);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(52)("c4b341ec", content, true);
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('PageRecipesIndex', _vm._b({}, 'PageRecipesIndex', {
+    recipePromoted: _vm.recipePromoted,
+    recipesLatest: _vm.recipesLatest,
+    recipesByCategories: _vm.recipesByCategories
+  }))
+},staticRenderFns: []}
 
 /***/ })
 
