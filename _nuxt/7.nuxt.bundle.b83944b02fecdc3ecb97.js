@@ -42,6 +42,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -115,11 +119,17 @@ module.exports = Component.exports
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return _c('AppSection', [_c('div', {
     staticClass: "container"
-  }, [_c('AppSection', [_c('ContactForm'), _c('div', {
+  }, [_c('div', {
     staticClass: "content"
-  }, [_c('h1', [_vm._v("Get in touch")]), _c('p', [_vm._v("\n        Hello there *_* ! Our contact page is coming soon !\n      ")])])], 1)], 1)
+  }, [_c('h1', [_vm._v("Get in touch")]), _c('div', {
+    staticClass: "columns"
+  }, [_c('div', {
+    staticClass: "column is-half"
+  }, [_c('ContactForm')], 1), _c('div', {
+    staticClass: "column"
+  })])])])])
 },staticRenderFns: []}
 
 /***/ }),
@@ -130,11 +140,49 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _vm._m(0)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('form', [_c('input', {
-    attrs: {
-      "type": "name"
-    }
-  })])
+  return _c('form', [_c('div', {
+    staticClass: "field"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("Your name ")]), _c('div', {
+    staticClass: "control"
+  }, [_c('input', {
+    staticClass: "input"
+  })])]), _c('div', {
+    staticClass: "field"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v("Your email adress ")]), _c('div', {
+    staticClass: "control"
+  }, [_c('input', {
+    staticClass: "input"
+  })])]), _c('div', {
+    staticClass: "field"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v(" Telephone ")]), _c('div', {
+    staticClass: "control"
+  }, [_c('input', {
+    staticClass: "input"
+  })])]), _c('div', {
+    staticClass: "field"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v(" Subject ")]), _c('div', {
+    staticClass: "control"
+  }, [_c('input', {
+    staticClass: "input"
+  })])]), _c('div', {
+    staticClass: "field"
+  }, [_c('label', {
+    staticClass: "label"
+  }, [_vm._v(" Email ")]), _c('div', {
+    staticClass: "control"
+  }, [_c('textarea', {
+    staticClass: "textarea"
+  })])]), _c('div', {
+    staticClass: "button is-primary"
+  }, [_vm._v("\n    Envoyer\n  ")])])
 }]}
 
 /***/ }),
