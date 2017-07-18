@@ -58,6 +58,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -337,7 +339,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "to": "/recipes"
     }
-  }, [_vm._v(" Recipes ")])], 1)])])
+  }, [_vm._v(" Recipes ")]), _c('a', {
+    staticClass: "nav-item",
+    attrs: {
+      "href": "https://github.com/contentacms/contenta_vue_nuxt"
+    }
+  }, [_vm._v(" Github ")]), _c('a', {
+    staticClass: "nav-item",
+    attrs: {
+      "href": "http://www.contentacms.org/"
+    }
+  }, [_vm._v(" ContentaCMS website ")])], 1)])])
 },staticRenderFns: []}
 
 /***/ }),
@@ -402,7 +414,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('AppTopBar'), _c('AppNavigation'), _c('nuxt'), _c('AppFooter'), _c('AppFooterSocket')], 1)
+  return _c('div', [_c('AppNavigation'), _c('nuxt'), _c('AppFooterSocket')], 1)
 },staticRenderFns: []}
 
 /***/ }),
@@ -502,7 +514,7 @@ var update = __webpack_require__(52)("05da5d38", content, true);
 
 module.exports = {
 	"name": "contenta_vue_nuxt",
-	"version": "0.6.5",
+	"version": "0.6.6",
 	"description": "Nuxt.js client for Contenta CMS",
 	"author": "yann <yann@yineo.fr>",
 	"private": true,
