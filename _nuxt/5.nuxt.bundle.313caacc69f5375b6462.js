@@ -60,6 +60,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -153,7 +155,7 @@ exports = module.exports = __webpack_require__(51)(true);
 
 
 // module
-exports.push([module.i, ".nuxt-link-exact-active[data-v-45081dd0]{color:#363636}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contentavuenuxt/components/AppNavigation.vue"],"names":[],"mappings":"AACA,yCACE,aAAc,CACf","file":"AppNavigation.vue","sourcesContent":["\n.nuxt-link-exact-active[data-v-45081dd0] {\n  color:#363636;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "@media screen and (max-width:999px){.navbar-end[data-v-45081dd0]{padding:.5rem 1rem}.navbar-menu[data-v-45081dd0]{display:block;overflow:hidden;max-height:0;padding:0 1rem;-webkit-transition:max-height .2s;-o-transition:max-height .2s;transition:max-height .2s}.navbar-menu.is-active[data-v-45081dd0]{max-height:100vh;-webkit-transition:max-height .5s;-o-transition:max-height .5s;transition:max-height .5s}}.nuxt-link-exact-active[data-v-45081dd0]{color:#363636}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contentavuenuxt/components/AppNavigation.vue"],"names":[],"mappings":"AAiDA,oCACA,6BACI,kBAAoB,CACvB,AACD,8BACI,cAAe,AACf,gBAAiB,AACjB,aAAgB,AAChB,eAAmB,AACnB,kCAAmC,AACnC,6BAA8B,AAC9B,yBAA4B,CAC/B,AACD,wCACI,iBAAkB,AAClB,kCAAmC,AACnC,6BAA8B,AAC9B,yBAA4B,CAC/B,CACA,AACD,yCACE,aAAe,CAChB","file":"AppNavigation.vue","sourcesContent":["\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* Create slide animation on mobile */\n@media screen and (max-width: 999px) {\n.navbar-end[data-v-45081dd0] {\n    padding:0.5rem 1rem;\n}\n.navbar-menu[data-v-45081dd0] {\n    display: block;\n    overflow: hidden;\n    max-height: 0px;\n    padding: 0rem 1rem;\n    -webkit-transition:max-height 0.2s;\n    -o-transition:max-height 0.2s;\n    transition: max-height 0.2s;\n}\n.navbar-menu.is-active[data-v-45081dd0] {\n    max-height: 100vh;\n    -webkit-transition:max-height 0.5s;\n    -o-transition:max-height 0.5s;\n    transition: max-height 0.5s;\n}\n}\n.nuxt-link-exact-active[data-v-45081dd0] {\n  color: #363636;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -345,42 +347,53 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: "container"
   }, [_c('nav', {
-    staticClass: "nav"
+    staticClass: "navbar"
   }, [_c('div', {
-    staticClass: "nav-left"
+    staticClass: "navbar-brand"
   }, [_c('span', {
-    staticClass: "nav-item"
-  }, [_vm._v("\n        UMAMI food magazine "), _c('br'), _c('AppVersion')], 1)]), _c('span', {
-    staticClass: "nav-toggle",
+    staticClass: "navbar-item"
+  }, [_vm._v("\n        UMAMI food magazine\n        "), _c('br'), _c('AppVersion')], 1), _c('div', {
+    staticClass: "navbar-burger burger",
+    class: {
+      'is-active': this.$store.state.menuMobileIsOpened
+    },
+    attrs: {
+      "data-target": "app-menu"
+    },
     on: {
       "click": _vm.setMenuMobileIsOpened
     }
-  }, [_c('span'), _c('span'), _c('span')]), _c('div', {
-    staticClass: "nav-right nav-menu",
+  }, [_c('span'), _c('span'), _c('span')])]), _c('div', {
+    staticClass: "navbar-menu",
     class: {
       'is-active': this.$store.state.menuMobileIsOpened
+    },
+    attrs: {
+      "id": "app-menu"
     }
+  }, [_c('div', {
+    staticClass: "navbar-end"
   }, [_c('nuxt-link', {
-    staticClass: "nav-item",
+    staticClass: "navbar-item",
     attrs: {
       "to": "/"
     }
   }, [_vm._v(" Home ")]), _c('nuxt-link', {
-    staticClass: "nav-item",
+    staticClass: "navbar-item",
     attrs: {
       "to": "/recipes"
     }
   }, [_vm._v(" Recipes ")]), _c('a', {
-    staticClass: "nav-item",
+    staticClass: "navbar-item",
     attrs: {
       "href": "https://github.com/contentacms/contenta_vue_nuxt"
     }
   }, [_vm._v(" Github ")]), _c('a', {
-    staticClass: "nav-item",
+    staticClass: "navbar-item",
     attrs: {
       "href": "http://www.contentacms.org/"
     }
-  }, [_vm._v(" ContentaCMS website ")])], 1)])])
+  }, [_vm._v(" ContentaCMS website ")])], 1)])])])
 },staticRenderFns: []}
 
 /***/ }),
@@ -514,7 +527,7 @@ var update = __webpack_require__(52)("50e25a22", content, true);
 
 module.exports = {
 	"name": "contenta_vue_nuxt",
-	"version": "0.6.6",
+	"version": "0.7.0",
 	"description": "Nuxt.js client for Contenta CMS",
 	"author": "yann <yann@yineo.fr>",
 	"private": true,

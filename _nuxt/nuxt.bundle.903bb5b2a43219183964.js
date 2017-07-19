@@ -900,8 +900,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vue_lazyload___default.a, {
-  attempt: 1,
-  loading: '/images/loading.gif'
+  attempt: 1
 });
 
 /***/ }),
