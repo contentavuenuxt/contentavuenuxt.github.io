@@ -7,7 +7,7 @@ var Component = __webpack_require__(20)(
   /* script */
   __webpack_require__(249),
   /* template */
-  __webpack_require__(307),
+  __webpack_require__(305),
   /* styles */
   null,
   /* scopeId */
@@ -35,7 +35,7 @@ var Component = __webpack_require__(20)(
   /* styles */
   injectStyle,
   /* scopeId */
-  "data-v-90f118ea",
+  "data-v-7ebe5011",
   /* moduleIdentifier (server only) */
   null
 )
@@ -53,7 +53,7 @@ exports = module.exports = __webpack_require__(51)(true);
 
 
 // module
-exports.push([module.i, "section[data-v-90f118ea]{margin-bottom:10vh}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contenta_vue/components/AppSection.vue"],"names":[],"mappings":"AACA,yBACE,kBAAoB,CACrB","file":"AppSection.vue","sourcesContent":["\nsection[data-v-90f118ea] {\n  margin-bottom: 10vh;\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "section[data-v-7ebe5011]{margin-bottom:10vh}", "", {"version":3,"sources":["/Applications/MAMP/htdocs/contentavuenuxt/components/AppSection.vue"],"names":[],"mappings":"AACA,yBACE,kBAAoB,CACrB","file":"AppSection.vue","sourcesContent":["\nsection[data-v-7ebe5011] {\n  margin-bottom: 10vh;\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -79,7 +79,7 @@ var content = __webpack_require__(197);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(52)("e9dc3d4a", content, true);
+var update = __webpack_require__(52)("91793158", content, true);
 
 /***/ }),
 
@@ -142,7 +142,7 @@ var Component = __webpack_require__(20)(
   /* script */
   null,
   /* template */
-  __webpack_require__(306),
+  __webpack_require__(296),
   /* styles */
   null,
   /* scopeId */
@@ -163,7 +163,7 @@ var Component = __webpack_require__(20)(
   /* script */
   __webpack_require__(239),
   /* template */
-  __webpack_require__(291),
+  __webpack_require__(290),
   /* styles */
   null,
   /* scopeId */
@@ -177,7 +177,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 291:
+/***/ 290:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -196,7 +196,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 306:
+/***/ 296:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -251,7 +251,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 307:
+/***/ 305:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
