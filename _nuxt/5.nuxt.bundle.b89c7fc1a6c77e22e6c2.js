@@ -353,7 +353,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('span', {
     staticClass: "navbar-item"
   }, [_vm._v("\n        UMAMI food magazine\n        "), _c('br'), _c('AppVersion')], 1), _c('div', {
-    staticClass: "navbar-burger burger",
+    staticClass: "navbar-burger",
     class: {
       'is-active': this.$store.state.menuMobileIsOpened
     },
