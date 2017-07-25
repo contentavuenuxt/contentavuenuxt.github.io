@@ -410,7 +410,7 @@ var findAllRecipesByCategoryName = function () {
  * Functions to get content from Contenta JSON API
  */
 
-var api = new __WEBPACK_IMPORTED_MODULE_4__ContentaJsonApi__["a" /* default */]("http://live-contentacms.pantheonsite.io");
+var api = new __WEBPACK_IMPORTED_MODULE_4__ContentaJsonApi__["a" /* default */]("https://live-contentacms.pantheonsite.io");
 
 
 

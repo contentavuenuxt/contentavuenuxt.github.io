@@ -527,7 +527,7 @@ var update = __webpack_require__(52)("50e25a22", content, true);
 
 module.exports = {
 	"name": "contenta_vue_nuxt",
-	"version": "0.8.0",
+	"version": "0.8.1",
 	"description": "Nuxt.js client for Contenta CMS",
 	"author": "yann <yann@yineo.fr>",
 	"private": true,
@@ -547,8 +547,7 @@ module.exports = {
 		"generate": "node_modules/.bin/nuxt generate",
 		"lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
 		"test": "karma start test/unit/karma.conf.js",
-		"precommit": "npm run test",
-		"deploy": "./deploy-to-github-pages.sh"
+		"precommit": "npm run test"
 	},
 	"devDependencies": {
 		"babel-eslint": "^7.1.1",
