@@ -7483,7 +7483,7 @@ if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(17);
+var isObject = __webpack_require__(16);
 module.exports = function(it){
   if(!isObject(it))throw TypeError(it + ' is not an object!');
   return it;
@@ -7650,12 +7650,6 @@ module.exports = $export;
 
 /***/ }),
 /* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(87);
-
-/***/ }),
-/* 16 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -7665,7 +7659,7 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = function(it){
@@ -7673,13 +7667,13 @@ module.exports = function(it){
 };
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = {};
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports) {
 
 // Store the HTTP methods here.
@@ -7690,6 +7684,12 @@ module.exports = {
   delete: 'delete'
 };
 
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(87);
 
 /***/ }),
 /* 20 */
@@ -8914,7 +8914,7 @@ module.exports = function(it){
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(17)
+var isObject = __webpack_require__(16)
   , document = __webpack_require__(4).document
   // in old IE typeof document.createElement is 'object'
   , is = isObject(document) && isObject(document.createElement);
@@ -8974,7 +8974,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(17);
+var isObject = __webpack_require__(16);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
 module.exports = function(it, S){
@@ -9013,7 +9013,7 @@ exports.f = __webpack_require__(0);
 __webpack_require__(151);
 var global        = __webpack_require__(4)
   , hide          = __webpack_require__(9)
-  , Iterators     = __webpack_require__(18)
+  , Iterators     = __webpack_require__(17)
   , TO_STRING_TAG = __webpack_require__(0)('toStringTag');
 
 for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
@@ -12943,7 +12943,7 @@ module.exports = function(it){
 
 var classof   = __webpack_require__(65)
   , ITERATOR  = __webpack_require__(0)('iterator')
-  , Iterators = __webpack_require__(18);
+  , Iterators = __webpack_require__(17);
 module.exports = __webpack_require__(2).getIteratorMethod = function(it){
   if(it != undefined)return it[ITERATOR]
     || it['@@iterator']
@@ -12969,7 +12969,7 @@ const JSONAPI = __webpack_require__(180);
 const Swagger = __webpack_require__(181);
 const OAuth = __webpack_require__(178);
 
-const methods = __webpack_require__(19);
+const methods = __webpack_require__(18);
 
 module.exports = class Waterwheel extends Base {
   /**
@@ -13423,7 +13423,7 @@ exports.default = _assign2.default || function (target) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(16)
+var cof = __webpack_require__(15)
   , TAG = __webpack_require__(0)('toStringTag')
   // ES3 wrong here
   , ARG = cof(function(){ return arguments; }()) == 'Arguments';
@@ -13465,7 +13465,7 @@ module.exports = !__webpack_require__(7) && !__webpack_require__(12)(function(){
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(16);
+var cof = __webpack_require__(15);
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
   return cof(it) == 'String' ? it.split('') : Object(it);
 };
@@ -13481,7 +13481,7 @@ var LIBRARY        = __webpack_require__(23)
   , redefine       = __webpack_require__(73)
   , hide           = __webpack_require__(9)
   , has            = __webpack_require__(8)
-  , Iterators      = __webpack_require__(18)
+  , Iterators      = __webpack_require__(17)
   , $iterCreate    = __webpack_require__(134)
   , setToStringTag = __webpack_require__(25)
   , getPrototypeOf = __webpack_require__(143)
@@ -13676,7 +13676,7 @@ if(!setTask || !clearTask){
     delete queue[id];
   };
   // Node.js 0.8-
-  if(__webpack_require__(16)(process) == 'process'){
+  if(__webpack_require__(15)(process) == 'process'){
     defer = function(id){
       process.nextTick(ctx(run, id, 1));
     };
@@ -13999,7 +13999,7 @@ module.exports = class Base {
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
-var Iterators  = __webpack_require__(18)
+var Iterators  = __webpack_require__(17)
   , ITERATOR   = __webpack_require__(0)('iterator')
   , ArrayProto = Array.prototype;
 
@@ -15106,7 +15106,7 @@ module.exports = function(fn, args, that){
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(16);
+var cof = __webpack_require__(15);
 module.exports = Array.isArray || function isArray(arg){
   return cof(arg) == 'Array';
 };
@@ -15158,7 +15158,7 @@ module.exports = function(object, el){
 /***/ (function(module, exports, __webpack_require__) {
 
 var META     = __webpack_require__(26)('meta')
-  , isObject = __webpack_require__(17)
+  , isObject = __webpack_require__(16)
   , has      = __webpack_require__(8)
   , setDesc  = __webpack_require__(6).f
   , id       = 0;
@@ -15220,7 +15220,7 @@ var global    = __webpack_require__(4)
   , Observer  = global.MutationObserver || global.WebKitMutationObserver
   , process   = global.process
   , Promise   = global.Promise
-  , isNode    = __webpack_require__(16)(process) == 'process';
+  , isNode    = __webpack_require__(15)(process) == 'process';
 
 module.exports = function(){
   var head, last, notify;
@@ -15519,7 +15519,7 @@ module.exports = __webpack_require__(2).getIterator = function(it){
 
 var addToUnscopables = __webpack_require__(127)
   , step             = __webpack_require__(135)
-  , Iterators        = __webpack_require__(18)
+  , Iterators        = __webpack_require__(17)
   , toIObject        = __webpack_require__(10);
 
 // 22.1.3.4 Array.prototype.entries()
@@ -15585,7 +15585,7 @@ var LIBRARY            = __webpack_require__(23)
   , ctx                = __webpack_require__(21)
   , classof            = __webpack_require__(65)
   , $export            = __webpack_require__(14)
-  , isObject           = __webpack_require__(17)
+  , isObject           = __webpack_require__(16)
   , aFunction          = __webpack_require__(35)
   , anInstance         = __webpack_require__(128)
   , forOf              = __webpack_require__(131)
@@ -17577,7 +17577,7 @@ module.exports = function listToStyles (parentId, list) {
 /* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const methods = __webpack_require__(19);
+const methods = __webpack_require__(18);
 
 module.exports = class Entity {
   /**
@@ -17759,8 +17759,8 @@ module.exports = class Entity {
 /* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const methods = __webpack_require__(19);
-const axios = __webpack_require__(15);
+const methods = __webpack_require__(18);
+const axios = __webpack_require__(19);
 const qs = __webpack_require__(77);
 
 module.exports = class OAuth {
@@ -17820,7 +17820,7 @@ module.exports = class OAuth {
 /***/ (function(module, exports, __webpack_require__) {
 
 const Base = __webpack_require__(80);
-const methods = __webpack_require__(19);
+const methods = __webpack_require__(18);
 
 module.exports = class Request extends Base {
   /**
@@ -17835,7 +17835,7 @@ module.exports = class Request extends Base {
   constructor(options, oauth) {
     super(options);
     this.oauth = oauth;
-    this.axios = __webpack_require__(15);
+    this.axios = __webpack_require__(19);
   }
 
   /**
@@ -17934,7 +17934,7 @@ module.exports = class Request extends Base {
 /* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const methods = __webpack_require__(19);
+const methods = __webpack_require__(18);
 
 const qs = __webpack_require__(77);
 
@@ -18132,7 +18132,7 @@ __webpack_require__(1);
 __webpack_require__(50);
 __webpack_require__(49);
 __webpack_require__(28);
-__webpack_require__(15);
+__webpack_require__(19);
 __webpack_require__(56);
 module.exports = __webpack_require__(55);
 

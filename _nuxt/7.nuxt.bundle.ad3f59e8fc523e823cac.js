@@ -5,9 +5,9 @@ webpackJsonp([7],{
 
 var Component = __webpack_require__(20)(
   /* script */
-  __webpack_require__(255),
+  __webpack_require__(250),
   /* template */
-  __webpack_require__(284),
+  __webpack_require__(279),
   /* styles */
   null,
   /* scopeId */
@@ -25,13 +25,13 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 function injectStyle (ssrContext) {
-  __webpack_require__(199)
+  __webpack_require__(197)
 }
 var Component = __webpack_require__(20)(
   /* script */
   null,
   /* template */
-  __webpack_require__(198),
+  __webpack_require__(196),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -45,7 +45,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 197:
+/***/ 195:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(51)(true);
@@ -60,7 +60,7 @@ exports.push([module.i, "section[data-v-7ebe5011]{margin-bottom:10vh}", "", {"ve
 
 /***/ }),
 
-/***/ 198:
+/***/ 196:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -69,13 +69,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 199:
+/***/ 197:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(197);
+var content = __webpack_require__(195);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -83,7 +83,7 @@ var update = __webpack_require__(52)("91793158", content, true);
 
 /***/ }),
 
-/***/ 245:
+/***/ 240:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -107,12 +107,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 255:
+/***/ 250:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_PageServerUnreachable__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_PageServerUnreachable__ = __webpack_require__(276);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_PageServerUnreachable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_PageServerUnreachable__);
 //
 //
@@ -126,21 +126,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 265:
+/***/ 260:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/server-unreachable.49499d2.gif";
 
 /***/ }),
 
-/***/ 281:
+/***/ 276:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(20)(
   /* script */
-  __webpack_require__(245),
+  __webpack_require__(240),
   /* template */
-  __webpack_require__(294),
+  __webpack_require__(289),
   /* styles */
   null,
   /* scopeId */
@@ -154,7 +154,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 284:
+/***/ 279:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -163,7 +163,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ }),
 
-/***/ 294:
+/***/ 289:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -173,7 +173,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "title is-4"
   }, [_vm._v("Sorry, our API server is unreachable for now ")]), _c('img', {
     attrs: {
-      "src": __webpack_require__(265)
+      "src": __webpack_require__(260)
     }
   })])], 1)
 },staticRenderFns: []}

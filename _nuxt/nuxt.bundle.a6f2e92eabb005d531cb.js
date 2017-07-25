@@ -850,12 +850,12 @@ function getModuleNamespace(storeData, namePath) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 // Check if server is up before loading page
 
 /* harmony default export */ __webpack_exports__["default"] = (function (context) {
-  return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get("https://dev-contentacms.pantheonsite.io" + '/api').catch(function (e) {
+  return __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get("http://live-contentacms.pantheonsite.io" + '/api').catch(function (e) {
     if (context.route.path != "/server-unreachable") {
       context.redirect("/server-unreachable");
     }
@@ -1524,7 +1524,7 @@ function getContext(context, app) {
     payload: context.payload,
     error: context.error,
     base: '/',
-    env: { "contentaJSONAPIBaseUrl": "https://dev-contentacms.pantheonsite.io" },
+    env: { "contentaJSONAPIBaseUrl": "http://live-contentacms.pantheonsite.io" },
     hotReload: context.hotReload || false
   };
   var next = context.next;
